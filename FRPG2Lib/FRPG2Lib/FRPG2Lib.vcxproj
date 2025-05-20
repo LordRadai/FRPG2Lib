@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppGUISystem\AppGUISystem.cpp" />
+    <ClCompile Include="dantelion2\Core\Graphics\Core\CGShaderResourceView.cpp" />
+    <ClCompile Include="dantelion2\Core\Graphics\Core\CGTexture.cpp" />
+    <ClCompile Include="dantelion2\Core\Graphics\DLTexture.cpp" />
+    <ClCompile Include="dantelion2\Core\Graphics\DLVertexTypes.cpp" />
+    <ClCompile Include="dantelion2\Core\Kernel\DLAllocator.cpp" />
+    <ClCompile Include="dantelion2\Core\Kernel\DLNew.cpp" />
+    <ClCompile Include="dantelion2\Core\Kernel\DLSyncObject.cpp" />
+    <ClCompile Include="dantelion2\Core\Text\DLFormat.cpp" />
+    <ClCompile Include="dantelion2\Core\Text\DLStringUtil.cpp" />
+    <ClCompile Include="dantelion2\Core\Util\DLReferenceCountObject.cpp" />
+    <ClCompile Include="DebugManager\DebugManager.cpp" />
+    <ClCompile Include="Draw\AppGUIRender.cpp" />
+    <ClCompile Include="Draw\DebugDraw.cpp" />
+    <ClCompile Include="Draw\DrawContext.cpp" />
+    <ClCompile Include="Draw\DrawParameters.cpp" />
+    <ClCompile Include="Draw\FontDrawContext.cpp" />
+    <ClCompile Include="Draw\HavokDebugDraw.cpp" />
+    <ClCompile Include="Draw\System\MetaInfoGroup.cpp" />
+    <ClCompile Include="Draw\System\MetaInfoManager.cpp" />
+    <ClCompile Include="GuiFramework\GUIComboBox\GUIComboBox.cpp" />
+    <ClCompile Include="GuiFramework\GUIComboTweaker\GUIComboTweaker.cpp" />
+    <ClCompile Include="GuiFramework\GUIEditBox\GUIEditBox.cpp" />
+    <ClCompile Include="GuiFramework\GUIHeapList\GUIHeapList.cpp" />
+    <ClCompile Include="GuiFramework\GUIHeapList\GUIHeapListItem.cpp" />
+    <ClCompile Include="GuiFramework\GUIListView\GUIListView.cpp" />
+    <ClCompile Include="GuiFramework\GUIListView\GUIListViewItem.cpp" />
+    <ClCompile Include="GuiFramework\GUIMultiNumericEditor\GUIMultiNumericEditor.cpp" />
+    <ClCompile Include="GuiFramework\GUIMultiTweaker\GUIMultiTweaker.cpp" />
+    <ClCompile Include="GuiFramework\GUIObject\GUIObject.cpp" />
+    <ClCompile Include="GuiFramework\GUIPopUpMenuNode\GUIPopUpMenuNode.cpp" />
+    <ClCompile Include="GuiFramework\GUIPopUpMenu\GUIPopUpMenu.cpp" />
+    <ClCompile Include="GuiFramework\GUIPropertyLabel\GUIPropertyLabel.cpp" />
+    <ClCompile Include="GuiFramework\GUIRangeTweaker\GUIRangeTweaker.cpp" />
+    <ClCompile Include="GuiFramework\GUIRangeTweakWidget\GUIRangeTweakWidget.cpp" />
+    <ClCompile Include="GuiFramework\GUIRootWindow\GUIRootWindow.cpp" />
+    <ClCompile Include="GuiFramework\GUITextEditorUtil\GUITextEditorUtil.cpp" />
+    <ClCompile Include="GuiFramework\GUITexture\GUITexture.cpp" />
+    <ClCompile Include="GuiFramework\GUITriggerTweaker\GUITriggerTweaker.cpp" />
+    <ClCompile Include="GuiFramework\GUITweakerDialog\GUITweakerDialog.cpp" />
+    <ClCompile Include="GuiFramework\GUITweakerGroup\GUITweakerGroup.cpp" />
+    <ClCompile Include="GuiFramework\GUIWidget\GUIWidget.cpp" />
+    <ClCompile Include="GuiFramework\GUIWindowBase\GUIWindowBase.cpp" />
+    <ClCompile Include="GuiFramework\GUIWindowManager\GUIWindowManager.cpp" />
+    <ClCompile Include="GuiFramework\Util\GUIText.cpp" />
+    <ClCompile Include="Havok\Physics\Collide\Shapes\Convex\hkpConvexVerticesShape.cpp" />
+    <ClCompile Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\QuickHull.cpp" />
+    <ClCompile Include="MainApp\MainApp.cpp" />
+    <ClCompile Include="Memory\Memory.cpp" />
+    <ClCompile Include="PX\CharacterRigidBody.cpp" />
+    <ClCompile Include="PX\PXCharacterCtrl.cpp" />
+    <ClCompile Include="PX\PXRigidBody.cpp" />
+    <ClCompile Include="Scene\Scene.cpp" />
+    <ClCompile Include="Scene\SceneManager.cpp" />
+    <ClCompile Include="Scene\SceneSelectScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppGUIRootWindow\AppGUIRootWindow.h" />
+    <ClInclude Include="AppGUISystem\AppGUISystem.h" />
+    <ClInclude Include="CameraOperator\CameraOperator.h" />
+    <ClInclude Include="CameraOperator\FreeCameraOperator.h" />
+    <ClInclude Include="CameraOperator\PerspectiveCameraOperator.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Core\CGBuffer.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Core\CGDepthStencilView.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Core\CGRenderTargetView.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Core\CGResource.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Core\CGShaderResourceView.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Core\CGTexture.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Core\CGUnorderedAccessView.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Core\CGView.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Core\Core.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLDrawContextDefines.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLDrawDevice.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLGfxReferenceCountObject.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLGPUResource.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLIndexBuffer.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLShader.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLSurface.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLTexture.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLVertexBuffer.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLVertexDecl.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLVertexTypes.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\Graphics.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLAllocator.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLAtomicInt.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLBiHeap.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLConditionSignal.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLDummySyncObject.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLEventSignal.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLHeapCapability.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLHeapIdentifier.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLLightMutex.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLMultiThreadingPolicy.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLMutex.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLNew.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLReadWriteLock.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLRegularHeap.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLRobustHeap.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLSemaphore.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLSingleSignal.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLSingleThreadingPolicy.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLSyncObject.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLWin32RuntimeHeapImpl.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\Kernel.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\SyncObjects.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\SyncTraits.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\Types.h" />
+    <ClInclude Include="dantelion2\Core\Math\DLColor.h" />
+    <ClInclude Include="dantelion2\Core\Math\DLMatrix.h" />
+    <ClInclude Include="dantelion2\Core\Math\DLQuaternion.h" />
+    <ClInclude Include="dantelion2\Core\Math\DLVector.h" />
+    <ClInclude Include="dantelion2\Core\Math\Math.h" />
+    <ClInclude Include="dantelion2\Core\Platform\GeneralUtility.h" />
+    <ClInclude Include="dantelion2\Core\Platform\Platform.h" />
+    <ClInclude Include="dantelion2\Core\Platform\Spec\win_32.h" />
+    <ClInclude Include="dantelion2\Core\Text\DLCharSet.h" />
+    <ClInclude Include="dantelion2\Core\Text\DLFormat.h" />
+    <ClInclude Include="dantelion2\Core\Text\DLStringUtil.h" />
+    <ClInclude Include="dantelion2\Core\Text\Text.h" />
+    <ClInclude Include="dantelion2\Core\Util\DLLifeCycleAdapter.h" />
+    <ClInclude Include="dantelion2\Core\Util\DLNonCopyable.h" />
+    <ClInclude Include="dantelion2\Core\Util\DLReferenceCountObject.h" />
+    <ClInclude Include="dantelion2\Core\Util\DLVector.h" />
+    <ClInclude Include="dantelion2\Core\Util\Util.h" />
+    <ClInclude Include="dantelion2\dantelion2.h" />
+    <ClInclude Include="DebugManager\AppDebugManager.h" />
+    <ClInclude Include="DebugManager\DebugManager.h" />
+    <ClInclude Include="Draw\AppGUIRender.h" />
+    <ClInclude Include="Draw\AppScreenSpaceShadow.h" />
+    <ClInclude Include="Draw\DebugDraw.h" />
+    <ClInclude Include="Draw\DrawContext.h" />
+    <ClInclude Include="Draw\DrawParameters.h" />
+    <ClInclude Include="Draw\FontDrawContext.h" />
+    <ClInclude Include="Draw\GX\GXCascadedShadowScene.h" />
+    <ClInclude Include="Draw\GX\GXDrawItem.h" />
+    <ClInclude Include="Draw\GX\GXFilter.h" />
+    <ClInclude Include="Draw\GX\GXRenderToTexture.h" />
+    <ClInclude Include="Draw\GX\GXScreenSpaceShadow.h" />
+    <ClInclude Include="Draw\GX\GXShadowMap.h" />
+    <ClInclude Include="Draw\GX\GXTestVolume.h" />
+    <ClInclude Include="Draw\HavokDebugDraw.h" />
+    <ClInclude Include="Draw\System\MetaInfoGroup.h" />
+    <ClInclude Include="Draw\System\MetaInfoItem.h" />
+    <ClInclude Include="Draw\System\MetaInfoManager.h" />
+    <ClInclude Include="Draw\Texture.h" />
+    <ClInclude Include="Filter\MetaInfoBase.h" />
+    <ClInclude Include="Filter\MetaInfoComboBase.h" />
+    <ClInclude Include="Filter\MetaInfoRangeBase.h" />
+    <ClInclude Include="Flver\FlverModelData.h" />
+    <ClInclude Include="Flver\MdlDmy.h" />
+    <ClInclude Include="Flver\MdlIdxBuf2.h" />
+    <ClInclude Include="Flver\MdlMtx.h" />
+    <ClInclude Include="Flver\MdlObj.h" />
+    <ClInclude Include="Flver\MdlPrim2.h" />
+    <ClInclude Include="Flver\MdlVtfBuf2.h" />
+    <ClInclude Include="Flver\MdlVtxDecl2.h" />
+    <ClInclude Include="FRPG2.h" />
+    <ClInclude Include="FRPG2Call.h" />
+    <ClInclude Include="FRPG2Globals.h" />
+    <ClInclude Include="GameManager\GameManager.h" />
+    <ClInclude Include="GuiFramework\GUIAutoVLayoutScroll\GUIAutoVLayoutScroll.h" />
+    <ClInclude Include="GuiFramework\GUIAutoVLayout\GUIautoVLayout.h" />
+    <ClInclude Include="GuiFramework\GUICallbackObject\GUICallbackObjectBase.h" />
+    <ClInclude Include="GuiFramework\GUIColorTweaker\GUIColorTweaker.h" />
+    <ClInclude Include="GuiFramework\GUIComboBox\GUIComboBox.h" />
+    <ClInclude Include="GuiFramework\GUIComboTweaker\GUIComboTweaker.h" />
+    <ClInclude Include="GuiFramework\GUIComboTweakWidget\GUIComboTweakWidget.h" />
+    <ClInclude Include="GuiFramework\GUIEditBox\GUIEditBox.h" />
+    <ClInclude Include="GuiFramework\GUIFont\GUIFont.h" />
+    <ClInclude Include="GuiFramework\GuiFramework.h" />
+    <ClInclude Include="GuiFramework\GUIHeapList\GUIHeapList.h" />
+    <ClInclude Include="GuiFramework\GUIHeapList\GUIHeapListItem.h" />
+    <ClInclude Include="GuiFramework\GUIListView\GUIListView.h" />
+    <ClInclude Include="GuiFramework\GUIListView\GUIListViewItem.h" />
+    <ClInclude Include="GuiFramework\GUIMsgReceiver\GUIMsgReceiver.h" />
+    <ClInclude Include="GuiFramework\GUIMultiNumericEditor\GUIMultiNumericEditor.h" />
+    <ClInclude Include="GuiFramework\GUIMultiTweaker\GUIMultiTweaker.h" />
+    <ClInclude Include="GuiFramework\GUINumericEditBox\GUINumericEditBox.h" />
+    <ClInclude Include="GuiFramework\GUIObject\GUIObject.h" />
+    <ClInclude Include="GuiFramework\GUIOnOffTweaker\GUIOnOffTweaker.h" />
+    <ClInclude Include="GuiFramework\GUIPopUpMenuItem\GUIPopUpMenuItem.h" />
+    <ClInclude Include="GuiFramework\GUIPopUpMenuNode\GUIPopUpMenuNode.h" />
+    <ClInclude Include="GuiFramework\GUIPopUpMenuSeparator\GUIPopUpMenuSeparator.h" />
+    <ClInclude Include="GuiFramework\GUIPopUpMenuString\GUIPopUpMenuString.h" />
+    <ClInclude Include="GuiFramework\GUIPopUpMenu\GUIPopUpMenu.h" />
+    <ClInclude Include="GuiFramework\GUIPropertyLabel\GUIPropertyLabel.h" />
+    <ClInclude Include="GuiFramework\GUIRangeData\GUIRangeDataBase.h" />
+    <ClInclude Include="GuiFramework\GUIRangeTweaker\GUIRangeTweaker.h" />
+    <ClInclude Include="GuiFramework\GUIRangeTweakWidget\GUIRangeTweakWidget.h" />
+    <ClInclude Include="GuiFramework\GUIRootWindow\GUIRootWindow.h" />
+    <ClInclude Include="GuiFramework\GUISystem\GUISystem.h" />
+    <ClInclude Include="GuiFramework\GUITextEditorUtil\GUITextEditorUtil.h" />
+    <ClInclude Include="GuiFramework\GUITextureList\GUITextureList.h" />
+    <ClInclude Include="GuiFramework\GUITextureViewer\GUITextureViewer.h" />
+    <ClInclude Include="GuiFramework\GUITexture\GUITexture.h" />
+    <ClInclude Include="GuiFramework\GUITexture\GUITextureBase.h" />
+    <ClInclude Include="GuiFramework\GUITriggerTweaker\GUITriggerTweaker.h" />
+    <ClInclude Include="GuiFramework\GUITweakerBase\GUITweakerBase.h" />
+    <ClInclude Include="GuiFramework\GUITweakerDialog\GUITweakerDialog.h" />
+    <ClInclude Include="GuiFramework\GUITweakerGroupItem\GUITweakerGroupItem.h" />
+    <ClInclude Include="GuiFramework\GUITweakerGroup\GUITweakerGroup.h" />
+    <ClInclude Include="GuiFramework\GUITweakerItem\GUITweakerItem.h" />
+    <ClInclude Include="GuiFramework\GUIWidget\GUIWidget.h" />
+    <ClInclude Include="GuiFramework\GUIWindowBase\GUIWindowBase.h" />
+    <ClInclude Include="GuiFramework\GUIWindowManager\GUIWindowManager.h" />
+    <ClInclude Include="GuiFramework\GUIWindowPainter\GUIWindowPainter.h" />
+    <ClInclude Include="GuiFramework\GUIYawPitchTweaker\GUIYawPitchTweaker.h" />
+    <ClInclude Include="GuiFramework\Util\GUIText.h" />
+    <ClInclude Include="GuiFramework\Util\MousePosData.h" />
+    <ClInclude Include="Havok\Animation\AnimationIncludes.h" />
+    <ClInclude Include="Havok\Animation\Physics2012Bridge\hkaRagdollInstsance.h" />
+    <ClInclude Include="Havok\Animation\Rig\hkaBone.h" />
+    <ClInclude Include="Havok\Animation\Rig\hkaSkeleton.h" />
+    <ClInclude Include="Havok\Common\hkAabb.h" />
+    <ClInclude Include="Havok\Common\hkBaseDefs.h" />
+    <ClInclude Include="Havok\Common\hkBaseObject.h" />
+    <ClInclude Include="Havok\Common\hkMotionState.h" />
+    <ClInclude Include="Havok\Common\hkReferencedObject.h" />
+    <ClInclude Include="Havok\Common\hkSimpleProperty.h" />
+    <ClInclude Include="Havok\Havok.h" />
+    <ClInclude Include="Havok\Physics\Collide\Dispatch\hkpBroadPhaseHandle.h" />
+    <ClInclude Include="Havok\Physics\Collide\Dispatch\hkpTypedBroadPhaseHandle.h" />
+    <ClInclude Include="Havok\Physics\Collide\hkpCdBody.h" />
+    <ClInclude Include="Havok\Physics\Collide\hkpCollidable.h" />
+    <ClInclude Include="Havok\Physics\Collide\hkpLinkedCollidable.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Compound\Collection\hkpExtendedMeshShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Compound\Collection\hkpListShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Compound\Collection\hkpShapeCollection.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Compound\Collection\hkpStorageExtendedMesh.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Compound\Tree\hkpBvTreeShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Compound\Tree\hkpMoppBvTreeShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\hkpBoxShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\hkpCapsuleShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\hkpConvexShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\hkpConvexTransformShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\hkpConvexTranslateShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\hkpConvexVerticesShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\hkpCylinderShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\hkpSphereShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\ConvexHull.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\HalfEdgeMesh.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\MathUtils.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\QuickHull.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\Structs\Mesh.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\Structs\Plane.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\Structs\Pool.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\Structs\Ray.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\Structs\Vector3.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\Structs\VertexDataSource.hpp" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Custom\CustomParam.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\Custom\CustomParamStorageExtendedMeshShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\hkpShape.h" />
+    <ClInclude Include="Havok\Physics\Collide\Shapes\ShapeContainer\hkpShapeContainer.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Collide\hkpContactListener.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Common\hkpMaterial.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Common\hkpWorldObject.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Entity\hkpEntity.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Entity\hkpEntityListener.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Entity\hkpRigidBody.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Motion\hkpMaxSizeMotion.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Motion\hkpMotion.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Phantom\hkpPhantom.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Phantom\hkpShapePhantom.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\Phantom\hkpSimpleShapePhantom.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\World\hkpWorld.h" />
+    <ClInclude Include="Havok\Physics\Dynamics\World\Listener\hkpWorldPostSimulationListener.h" />
+    <ClInclude Include="Havok\Physics\PhysicsIncludes.h" />
+    <ClInclude Include="Havok\Physics\Utilities\CharacterControl\CharacterRigidBody\hkpCharacterRigidBody.h" />
+    <ClInclude Include="Havok\Physics\Utilities\CharacterControl\CharacterRigidBody\hkpCharacterRigidBodyListener.h" />
+    <ClInclude Include="MainApp\MainApp.h" />
+    <ClInclude Include="Memory\HeapMemory.h" />
+    <ClInclude Include="Memory\Memory.h" />
+    <ClInclude Include="Memory\WinAssertHeapStrategy.h" />
+    <ClInclude Include="NetworkManager\NetworkManager.h" />
+    <ClInclude Include="Properties\Properties.h" />
+    <ClInclude Include="PX\CharacterRigidBody.h" />
+    <ClInclude Include="PX\PXBullet.h" />
+    <ClInclude Include="PX\PXCharacterControl.h" />
+    <ClInclude Include="PX\PXEntity.h" />
+    <ClInclude Include="PX\PXRagdoll.h" />
+    <ClInclude Include="PX\PXRigidBody.h" />
+    <ClInclude Include="PX\PXUserData.h" />
+    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="Scene\SceneManager.h" />
+    <ClInclude Include="Scene\SceneSelectScene.h" />
+    <ClInclude Include="Steam\SteamShutdown.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />
+    <None Include="dantelion2\Core\Kernel\DLBiHeapStrategy.inl" />
+    <None Include="dantelion2\Core\Kernel\DLDefaultHeapStrategy.inl" />
+    <None Include="dantelion2\Core\Kernel\DLDynamicHeap.inl" />
+    <None Include="dantelion2\Core\Kernel\DLSmallObjectWrapper.inl" />
+    <None Include="dantelion2\Core\Text\DLString.inl" />
+    <None Include="Filter\MetaInfo.inl" />
+    <None Include="Filter\MetaInfoCombo.inl" />
+    <None Include="Filter\MetaInfoParam.inl" />
+    <None Include="GuiFramework\GUICallbackObject\TGUICallbackObject.inl" />
+    <None Include="GuiFramework\GUIColorTweaker\TGUIColorTweaker.inl" />
+    <None Include="GuiFramework\GUIComboTweaker\TGUIComboTweaker.inl" />
+    <None Include="GuiFramework\GUIMultiTweaker\TGUIMultiTweaker.inl" />
+    <None Include="GuiFramework\GUIOnOffTweaker\TGUIOnOffTweaker.inl" />
+    <None Include="GuiFramework\GUIPropertyLabel\TGUIPropertyLabel.inl" />
+    <None Include="GuiFramework\GUIRangeData\TGUIRangeData.inl" />
+    <None Include="GuiFramework\GUIRangeTweaker\TGUIRangeTweaker.inl" />
+    <None Include="GuiFramework\GUIStringStorage\TGUIStringStorage.inl" />
+    <None Include="GuiFramework\GUIValueStringPairData\TGUIValueStringPairData.inl" />
+    <None Include="GuiFramework\Util\TGUIRect.inl" />
+    <None Include="Memory\DynamicHeapMemoryTemplate.inl" />
+    <None Include="packages.config" />
+    <None Include="Steam\CCallback.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d013c677-c74a-49b3-900c-10554d38026d}</ProjectGuid>
+    <RootNamespace>FRPG2Lib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Platform)\$(Configuration)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);NOMINMAX</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions);NOMINMAX</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\directxtk_uwp.2025.3.21.2\build\native\directxtk_uwp.targets" Condition="Exists('..\packages\directxtk_uwp.2025.3.21.2\build\native\directxtk_uwp.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\directxtk_uwp.2025.3.21.2\build\native\directxtk_uwp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\directxtk_uwp.2025.3.21.2\build\native\directxtk_uwp.targets'))" />
+  </Target>
+</Project>

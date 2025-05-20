@@ -1,0 +1,28 @@
+#pragma once
+#include "GUIFont/GUIFont.h"
+
+#include "GUITriggerTweaker/GUITriggerTweaker.h"
+#include "GUICallbackObject/TGUICallbackObject.inl"
+#include "GUIRangeTweaker/TGUIRangeTweaker.inl"
+#include "GUIMultiTweaker/TGUIMultiTweaker.inl"
+#include "GUIComboTweaker/TGUIComboTweaker.inl"
+#include "GUIPropertyLabel/TGUIPropertyLabel.inl"
+#include "GUIOnOffTweaker/TGUIOnOffTweaker.inl"
+#include "GUIColorTweaker/TGUIColorTweaker.inl"
+#include "GUIListView/GUIListView.h"
+#include "GUIHeapList/GUIHeapList.h"
+#include "GUIYawPitchTweaker/GUIYawPitchTweaker.h"
+#include "GUIEditBox/GUIEditBox.h"
+#include "GUITextureViewer/GUITextureViewer.h"
+#include "GUITextureList/GUITextureList.h"
+#include "GUITweakerDialog/GUITweakerDialog.h"
+#include "GUITweakerGroup/GUITweakerGroup.h"
+#include "GUIPopUpMenuNode/GUIPopUpMenuNode.h"
+#include "GUIPopUpMenu/GUIPopUpMenu.h"
+
+#include "GUIWindowManager/GUIWindowManager.h"
+#include "GUISystem/GUISystem.h"
+
+#include "Util/GUIText.h"
+#include "Util/TGUIRect.inl"
+#include "Util/MousePosData.h"
