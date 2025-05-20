@@ -1,6 +1,6 @@
 #include "FRPG2Globals.h"
 #include "PXRigidBody.h"
-#include "Draw/HavokDebugDraw.h"
+#include "Draw/DebugDraw/HavokDebugDraw.h"
 #include "Draw/DrawContext.h"
 
 void PXRigidBody::Draw(IDrawContext* pDrawContext, bool wireframe, bool showAabb, Vector4 color)
