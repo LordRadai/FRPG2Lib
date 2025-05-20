@@ -1,5 +1,4 @@
 # FRPG2Lib
-
 Library for modding Dark Souls II Scholar of the First Sin. Target version is 1.03
 
 ## Requirements
