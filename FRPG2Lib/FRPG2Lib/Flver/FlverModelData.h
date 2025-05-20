@@ -9,10 +9,6 @@
 #include "MdlVtfBuf2.h"
 #include "MdlVtxDecl2.h"
 #include "MdlDmy.h"
-#include <SimpleMath.h>
-#include <vector>
-
-using namespace DirectX::SimpleMath;
 
 namespace Flver
 {
@@ -27,27 +23,27 @@ namespace Flver
 		MdlVtxBuf2 m_mdlVtxBuf;
 		MdlVtxDecl2 m_mdlVtxDecl;
 		MdlMtx m_mdlMtx3;
-		short m_sVar1a0;
-		short m_sVar1a2;
-		int m_iVar1a4;
-		int m_lodLevel;
-		int m_iVar1ac;
-		bool m_bDraw;
-		bool m_bVar1b1;
-		bool m_bVar1b2;
-		bool m_bVar1b3;
-		int m_iVar1b4;
-		int m_iVar1b8;
-		int m_memoryRequirements;
-		int m_polygonCount;
-		int m_visiblePolygonCount;
-		int m_iVar1c8;
-		int m_iVar1cc;
+		dl_int16 m_sVar1a0;
+		dl_int16 m_sVar1a2;
+		dl_int m_iVar1a4;
+		dl_int m_lodLevel;
+		dl_int m_iVar1ac;
+		dl_bool m_bDraw;
+		dl_bool m_bVar1b1;
+		dl_bool m_bVar1b2;
+		dl_bool m_bVar1b3;
+		dl_int m_iVar1b4;
+		dl_int m_iVar1b8;
+		dl_int m_memoryRequirements;
+		dl_int m_polygonCount;
+		dl_int m_visiblePolygonCount;
+		dl_int m_iVar1c8;
+		dl_int m_iVar1cc;
 		DLMT::DL_VECTOR4 m_bbMin;
 		DLMT::DL_VECTOR4 m_bbMax;
-		DLUT::DLVector<void*> m_materials;
-		DLUT::DLVector<void*> m_textures;
-		void* m_pMdlSkeleton;
+		DLUT::DLVector<dl_pointer> m_materials;
+		DLUT::DLVector<dl_pointer> m_textures;
+		dl_pointer m_pMdlSkeleton;
 		DLKR::DLAllocator* m_pSkeletonAllocator;
 	};
 }

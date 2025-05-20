@@ -6,10 +6,10 @@ namespace Flver
 	struct MdlPrim2
 	{
 		void** _vfptr;
-		int m_numPrims;
-		void* m_pPrims;
-		bool m_bVar18;
+		dl_int m_numPrims;
+		dl_pointer m_pPrims;
+		dl_bool m_bVar18;
 		DLKR::DLAllocator* m_pAllocator;
-		void* m_pUnkData;
+		dl_pointer m_pUnkData;
 	};
 }

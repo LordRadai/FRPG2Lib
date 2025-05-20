@@ -6,13 +6,13 @@ namespace Flver
 	struct MdlVtxDecl2
 	{
 		void** _vfptr;
-		int m_iVar8;
-		void* m_pVar10;
-		void* m_pVar18;
-		void* m_pVar20;
-		int m_iVar28;
+		dl_int m_iVar8;
+		dl_pointer m_pVar10;
+		dl_pointer m_pVar18;
+		dl_pointer m_pVar20;
+		dl_int m_iVar28;
 		DLKR::DLAllocator* m_pAllocator;
 		DLKR::DLAllocator* m_pAllocator2;
-		void* m_pVar40;
+		dl_pointer m_pVar40;
 	};
 }

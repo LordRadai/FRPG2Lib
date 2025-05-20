@@ -6,9 +6,9 @@ namespace Flver
 	struct MdlObj
 	{
 		void** _vfptr;
-		int m_numObjects;
-		float* m_pPositions;
+		dl_int m_numObjects;
+		dl_float32* m_pPositions;
 		DLKR::DLAllocator* m_pAllocator;
-		wchar_t* m_pNames;
+		dl_wchar* m_pNames;
 	};
 }

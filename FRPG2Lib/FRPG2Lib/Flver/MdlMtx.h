@@ -7,7 +7,7 @@ namespace Flver
 	{
 		void** _vfptr;
 		DLKR::DLAllocator* m_pAllocator;
-		int m_numMaterials;
-		void* m_pMaterials;
+		dl_int m_numMaterials;
+		dl_pointer m_pMaterials;
 	};
 }

@@ -6,8 +6,8 @@ namespace Flver
 	struct MdlDmy
 	{
 		void** _vfptr;
-		int m_numDummies;
-		float* m_pDummies;
+		dl_int m_numDummies;
+		dl_float32* m_pDummies;
 		DLKR::DLAllocator* m_pAllocator;
 	};
 }

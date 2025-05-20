@@ -1,4 +1,6 @@
 #pragma once
+#include "dantelion2/dantelion2.h"
+
 #include "Havok/Havok.h"
 
 #include "PX/PXRagdoll.h"
@@ -17,3 +19,9 @@
 #include "MainApp/MainApp.h"
 #include "GameManager/GameManager.h"
 #include "NetworkManager/NetworkManager.h"
+
+#include "AppGUISystem/AppGUISystem.h"
+#include "AppGUIRootWindow/AppGUIRootWindow.h"
+#include "DebugManager/AppDebugManager.h"
+
+#include "Flver/FlverModelData.h"
