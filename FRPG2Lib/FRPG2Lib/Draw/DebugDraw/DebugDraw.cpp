@@ -1,8 +1,6 @@
 #include "DebugDraw.h"
-#include "FRPG2Globals.h"
 #include "FRPG2Call.h"
 #include "DrawParameters.h"
-#include <vector>
 
 #define SPHERE_STACKS 4
 #define SPHERE_SLICES 12
@@ -27,7 +25,7 @@ namespace DebugDraw
         points[2] = DLGR::DLVertexPositionColor(DLMT::DL_VECTOR3::UnitY, color);
         points[3] = DLGR::DLVertexPositionColor(DLMT::DL_VECTOR3::UnitZ, color);
 
-        std::vector<uint16_t> indices;
+		DLUT::DLVector<dl_uint16> indices;
         indices.push_back(0);
         indices.push_back(1);
         indices.push_back(0);
@@ -84,7 +82,7 @@ namespace DebugDraw
         DLGR::DLVertexPositionColor bot_vertices[numStacks][numSlices];
         DLGR::DLVertexPositionColor mid_vertices[numSlices];
 
-        std::vector<DLGR::DLVertexPositionColor> vertices;
+		DLUT::DLVector<DLGR::DLVertexPositionColor> vertices;
         vertices.reserve(numVertices);
 
         if (!wireframe)
@@ -98,7 +96,7 @@ namespace DebugDraw
 
         DLMT::DL_MATRIX44 rotation = DLMT::GetRotationFrom2Vectors(center_top, center_bot);
 
-        std::vector<DLMT::DL_VECTOR3> mid_sections;
+        DLUT::DLVector<DLMT::DL_VECTOR3> mid_sections;
         mid_sections.reserve(numHeightSegments);
 
         for (size_t i = 0; i < numHeightSegments; i++)
@@ -174,7 +172,7 @@ namespace DebugDraw
 
         vertices.push_back(bot_vertex);
 
-        std::vector<uint16_t> indices;
+        DLUT::DLVector<uint16_t> indices;
 
         const int topFirstIndex = 1;
 
@@ -291,7 +289,7 @@ namespace DebugDraw
             for (size_t i = 0; i < vertices.size(); i++)
                 vertices[i].m_color = DLMT::DL_VECTOR4(color);
 
-            std::vector<uint16_t> indices_fill;
+            DLUT::DLVector<uint16_t> indices_fill;
 
             // Top hemisphere
             {
@@ -435,7 +433,7 @@ namespace DebugDraw
         DLGR::DLVertexPositionColor top_vertices[numStacks][numSlices];
         DLGR::DLVertexPositionColor bot_vertices[numStacks][numSlices];
 
-        std::vector<DLGR::DLVertexPositionColor> vertices;
+        DLUT::DLVector<DLGR::DLVertexPositionColor> vertices;
         vertices.reserve(numVertices);
 
         if (!wireframe)
@@ -486,7 +484,7 @@ namespace DebugDraw
 
         vertices.push_back(bot_vertex);
 
-        std::vector<uint16_t> indices;
+        DLUT::DLVector<uint16_t> indices;
 
         const int topFirstIndex = 1;
 
@@ -579,7 +577,7 @@ namespace DebugDraw
             for (size_t i = 0; i < vertices.size(); i++)
                 vertices[i].m_color = DLMT::DL_VECTOR4(color);
 
-            std::vector<uint16_t> indices_fill;
+            DLUT::DLVector<uint16_t> indices_fill;
 
             // Top hemisphere
             {
@@ -719,7 +717,7 @@ namespace DebugDraw
         DLGR::DLVertexPositionColor top_vertices[numSlices];
         DLGR::DLVertexPositionColor bot_vertices[numSlices];
 
-        std::vector<DLGR::DLVertexPositionColor> vertices;
+        DLUT::DLVector<DLGR::DLVertexPositionColor> vertices;
         vertices.reserve(numVertices);
 
         DLMT::DL_VECTOR4 v_color = color;
@@ -767,7 +765,7 @@ namespace DebugDraw
 
         vertices.push_back(bot_vertex);
 
-        std::vector<uint16_t> indices;
+        DLUT::DLVector<uint16_t> indices;
 
         const int topFirstIndex = 1;
 
@@ -838,7 +836,7 @@ namespace DebugDraw
             for (size_t i = 0; i < vertices.size(); i++)
                 vertices[i].m_color = DLMT::DL_VECTOR4(color);
 
-            std::vector<uint16_t> indices_fill;
+            DLUT::DLVector<uint16_t> indices_fill;
 
             // Top hemisphere
             {
@@ -911,7 +909,7 @@ namespace DebugDraw
         DLGR::DLVertexPositionColor b1, b2, b3, b4;
         DLGR::DLVertexPositionColor t1, t2, t3, t4;
 
-        std::vector<DLGR::DLVertexPositionColor> vertices;
+        DLUT::DLVector<DLGR::DLVertexPositionColor> vertices;
         vertices.reserve(8);
 
         b1.m_position.x = -halfExtents.x;
@@ -971,7 +969,7 @@ namespace DebugDraw
         {
             v_color = DirectX::Colors::Black;
 
-            std::vector<uint16_t> indices_fill;
+            DLUT::DLVector<uint16_t> indices_fill;
 
             b1.m_color = DLMT::DL_VECTOR4(color);
             b2.m_color = DLMT::DL_VECTOR4(color);
@@ -1083,7 +1081,7 @@ namespace DebugDraw
             5, 7
         };
 
-        std::vector<uint16_t> indices;
+        DLUT::DLVector<uint16_t> indices;
         indices.reserve(std::size(s_indices));
 
         for (size_t i = 0; i < std::size(s_indices); i++)
@@ -1111,7 +1109,7 @@ namespace DebugDraw
         DLGR::DLVertexPositionColor b1, b2, b3, b4;
         DLGR::DLVertexPositionColor t1, t2, t3, t4;
 
-        std::vector<DLGR::DLVertexPositionColor> vertices;
+        DLUT::DLVector<DLGR::DLVertexPositionColor> vertices;
         vertices.reserve(8);
 
         b1.m_position.x = center.x - halfExtents.x;
@@ -1197,7 +1195,7 @@ namespace DebugDraw
 
 		DLMT::DL_VECTOR4 v_color = color;
 
-        constexpr int sphere_seg = ARC_SLICES;
+        constexpr dl_int sphere_seg = ARC_SLICES;
         dl_float32 correction = DirectX::XM_PI;
 
         DLMT::DL_VECTOR3 bottom_vertices_1[sphere_seg];
@@ -1211,7 +1209,7 @@ namespace DebugDraw
         DLMT::DL_VECTOR3 center_top = DLMT::DL_VECTOR3(0, height, 0);
         DLMT::DL_VECTOR3 center_bot = DLMT::DL_VECTOR3(0, -height, 0);
 
-        std::vector<DLGR::DLVertexPositionColor> vertices;
+        DLUT::DLVector<DLGR::DLVertexPositionColor> vertices;
 
         center_vertex = DLMT::DL_VECTOR3::Zero;
         center_top_vertex = center_top;
@@ -1270,7 +1268,7 @@ namespace DebugDraw
         vertices.push_back(DLGR::DLVertexPositionColor(center_top_vertex, v_color));
         vertices.push_back(DLGR::DLVertexPositionColor(center_bot_vertex, v_color));
 
-        std::vector<uint16_t> indices;
+        DLUT::DLVector<uint16_t> indices;
 
         for (size_t i = 0; i < sphere_seg; i++)
         {
@@ -1335,13 +1333,13 @@ namespace DebugDraw
 		DrawContext->DrawIndexed(DLGR::DLPRIMTYPE_LINELIST, 0, vertices.size(), indices.size(), indices.data(), DLGR::DLINDEXFMT_U16, vertices.data(), sizeof(DLGR::DLVertexPositionColor));
     }
 
-    void DrawMesh(IDrawContext* DrawContext, DLMT::DL_MATRIX44 transform, std::vector<DLMT::DL_VECTOR3> vertices, std::vector<dl_uint> indices, std::vector<dl_uint> indicesWireframe, dl_bool wireframe, DLMT::DL_VECTOR4 color)
+    void DrawMesh(IDrawContext* DrawContext, DLMT::DL_MATRIX44 transform, DLUT::DLVector<DLMT::DL_VECTOR3> vertices, DLUT::DLVector<dl_uint> indices, DLUT::DLVector<dl_uint> indicesWireframe, dl_bool wireframe, DLMT::DL_VECTOR4 color)
     {
 		DebugDrawParameters drawInfo(DrawContext);
 		drawInfo.ApplyTransform(&transform);
         
         DLMT::DL_VECTOR4 v_color = color;
-		std::vector<DLGR::DLVertexPositionColor> dlVertices;
+		DLUT::DLVector<DLGR::DLVertexPositionColor> dlVertices;
 
 		dlVertices.reserve(vertices.size());
 
