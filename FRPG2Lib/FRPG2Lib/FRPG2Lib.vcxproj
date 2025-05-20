@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -71,6 +71,8 @@
     <ClCompile Include="PX\CharacterRigidBody.cpp" />
     <ClCompile Include="PX\PXCharacterCtrl.cpp" />
     <ClCompile Include="PX\PXRigidBody.cpp" />
+    <ClCompile Include="ResourceManager\AppresourceManager.cpp" />
+    <ClCompile Include="ResourceObject\FileResourceObject.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
     <ClCompile Include="Scene\SceneSelectScene.cpp" />
@@ -164,6 +166,12 @@
     <ClInclude Include="Draw\System\MetaInfoItem.h" />
     <ClInclude Include="Draw\System\MetaInfoManager.h" />
     <ClInclude Include="Draw\Texture.h" />
+    <ClInclude Include="ResourceManager\AppResourceManager.h" />
+    <ClInclude Include="ResourceObject\CommonbndFileCap.h" />
+    <ClInclude Include="ResourceObject\FileResourceObject.h" />
+    <ClInclude Include="ResourceObject\FontBinderFileResourceObject.h" />
+    <ClInclude Include="ResourceObject\RegulationResourceObject.h" />
+    <ClInclude Include="ResourceObject\ResourceObject.h" />
     <ClInclude Include="Filter\MetaInfoBase.h" />
     <ClInclude Include="Filter\MetaInfoComboBase.h" />
     <ClInclude Include="Filter\MetaInfoRangeBase.h" />
@@ -301,6 +309,9 @@
     <ClInclude Include="PX\PXRagdoll.h" />
     <ClInclude Include="PX\PXRigidBody.h" />
     <ClInclude Include="PX\PXUserData.h" />
+    <ClInclude Include="ResourceManager\AppResourceManagerBase.h" />
+    <ClInclude Include="ResourceManager\LiveResourceManager.h" />
+    <ClInclude Include="ResourceManager\ResourceMemoryWatchdog.h" />
     <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Scene\SceneManager.h" />
     <ClInclude Include="Scene\SceneSelectScene.h" />
