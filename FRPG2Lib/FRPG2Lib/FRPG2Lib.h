@@ -29,3 +29,5 @@
 #include "Filter/MetaInfo.inl"
 #include "Filter/MetaInfoCombo.inl"
 #include "Filter/MetaInfoParam.inl"
+
+#include "FRPG2Globals.h"
