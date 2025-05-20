@@ -2,6 +2,7 @@
 #include "dantelion2/dantelion2.h"
 #include "Steam/SteamShutdown.h"
 #include "Steam/CCallback.inl"
+#include "ResourceManager/AppResourceManager.h"
 
 class GameManager
 {
@@ -13,7 +14,7 @@ public:
     dl_pointer m_pCharacterManager;
     dl_pointer m_pCameraManager;
     dl_pointer m_pAiManager;
-    dl_pointer m_pAppResourceManager;
+    AppResourceManager* m_pAppResourceManager;
     dl_pointer m_pMapManager;
     dl_pointer m_pEnemyGeneratorManager;
     dl_pointer m_pTargetManager;
