@@ -12,7 +12,8 @@
 #include "CameraOperator/FreeCameraOperator.h"
 
 #include "Draw/DrawContext.h"
-#include "Draw/DrawParameters.h"
+#include "Draw/DebugDraw/DebugDraw.h"
+#include "Draw/DebugDraw/HavokDebugDraw.h"
 
 #include "Memory/Memory.h"
 

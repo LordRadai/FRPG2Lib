@@ -1,7 +1,7 @@
 #pragma once
-#include "DrawContext.h"
+#include "../DrawContext.h"
 
-class DrawParameters
+class DebugDrawParameters
 {
 	IDrawContext* m_pDrawContext = nullptr;
 	int iVar4 = 0;
@@ -10,6 +10,6 @@ class DrawParameters
 	int m_iVar50 = -1;
 
 public:
-	DrawParameters(IDrawContext* pDrawContext);
+	DebugDrawParameters(IDrawContext* pDrawContext);
 	void ApplyTransform(Matrix* pTransform);
 };
