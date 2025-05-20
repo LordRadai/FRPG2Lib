@@ -22,7 +22,7 @@ namespace DLTX
 		
 		DLBasicString(DLKR::DLAllocator* pAllocator) : std::basic_string<_Elem, _Traits>(), m_pAllocator(pAllocator), m_charset(CS_PLATFORM) {}
 
-        DLBasicString(const _Elem* str, DLKR::DLAllocator* pAllocator, dl_int32 charset = CS_PLATFORM) : std::basic_string<_Elem, _Traits>(str)
+        DLBasicString(const _Elem* str, DLKR::DLAllocator* pAllocator = nullptr, dl_int32 charset = CS_PLATFORM) : std::basic_string<_Elem, _Traits>(str)
         {
 #ifndef _DEBUG
             this->m_pAllocator = pAllocator;

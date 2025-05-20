@@ -24,7 +24,7 @@ public:
 	DebugManager();
 
 	virtual ~DebugManager();
-	virtual void Update(dl_float32* pDeltaTime);
+	virtual void Update(dl_float32 deltaTime);
 	virtual dl_bool Initialize();
 	virtual void Finalize();
 

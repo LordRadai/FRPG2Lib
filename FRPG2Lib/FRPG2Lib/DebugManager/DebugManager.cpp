@@ -3,7 +3,7 @@
 
 typedef void(_fastcall* oConstructor)(DebugManager* pThis);
 typedef void(_fastcall* oDestructor)(DebugManager* pThis);
-typedef void(_fastcall* oUpdate)(DebugManager* pThis, dl_float32* pDeltaTime);
+typedef void(_fastcall* oUpdate)(DebugManager* pThis, dl_float32 deltaTime);
 typedef dl_bool(_fastcall* oLoadResources)(DebugManager* pThis);
 typedef void(_fastcall* oFinalize)(DebugManager* pThis);
 
@@ -19,9 +19,9 @@ DebugManager::~DebugManager()
 	FRPG2_CALL(oDestructor, 0xaf48a0, this);
 }
 
-void DebugManager::Update(dl_float32* pDeltaTime)
+void DebugManager::Update(dl_float32 deltaTime)
 {
-	FRPG2_CALL(oUpdate, 0xaf4910, this, pDeltaTime);
+	FRPG2_CALL(oUpdate, 0xaf4910, this, deltaTime);
 }
 
 dl_bool DebugManager::Initialize()

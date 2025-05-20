@@ -9,5 +9,6 @@ class SceneManager
 	Scene* m_pCopyOfScene;
 
 public:
+	Scene* GetScene() const { return m_pScene; }
 	void SetScene(Scene* pScene);
 };
