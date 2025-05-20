@@ -6,6 +6,8 @@
 class GameManager
 {
     void** _vfptr;
+
+public:
     DLKR::DLAllocator* m_pAllocator;
     dl_pointer m_pDamageManager;
     dl_pointer m_pCharacterManager;
@@ -156,6 +158,7 @@ class GameManagerImp : public GameManager
         dl_uchar field21_0x3f;
     };
 
+public:
     dl_float32 field1_0x2480;
     dl_float32 field2_0x2484;
     GameManagerCallbackObjectBase* field3_0x2488;

@@ -1,6 +1,10 @@
 #pragma once
 #include <Windows.h>
 
+class KatanaMainApp;
+class GameManagerImp;
+class NetworkManager;
+
 extern HMODULE g_moduleAddr;
 
 #define KATANA_MAIN_APP (*(KatanaMainApp**)((UINT64)g_moduleAddr + 0x16751f8))
