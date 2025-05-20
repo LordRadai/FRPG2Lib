@@ -1,5 +1,5 @@
 #include "PXCharacterControl.h"
-#include "Draw/HavokDebugDraw.h"
+#include "Draw/DebugDraw/HavokDebugDraw.h"
 
 void PXCharacterRigidBody::Draw(IDrawContext* pDrawContext, bool wireframe, bool showAabb, Vector4 color)
 {

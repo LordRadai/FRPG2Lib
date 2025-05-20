@@ -32,11 +32,11 @@
     <ClCompile Include="dantelion2\Core\Util\DLReferenceCountObject.cpp" />
     <ClCompile Include="DebugManager\DebugManager.cpp" />
     <ClCompile Include="Draw\AppGUIRender.cpp" />
-    <ClCompile Include="Draw\DebugDraw.cpp" />
+    <ClCompile Include="Draw\DebugDraw\DebugDraw.cpp" />
+    <ClCompile Include="Draw\DebugDraw\DrawParameters.cpp" />
+    <ClCompile Include="Draw\DebugDraw\HavokDebugDraw.cpp" />
     <ClCompile Include="Draw\DrawContext.cpp" />
-    <ClCompile Include="Draw\DrawParameters.cpp" />
     <ClCompile Include="Draw\FontDrawContext.cpp" />
-    <ClCompile Include="Draw\HavokDebugDraw.cpp" />
     <ClCompile Include="Draw\System\MetaInfoGroup.cpp" />
     <ClCompile Include="Draw\System\MetaInfoManager.cpp" />
     <ClCompile Include="GuiFramework\GUIComboBox\GUIComboBox.cpp" />
@@ -148,9 +148,10 @@
     <ClInclude Include="DebugManager\DebugManager.h" />
     <ClInclude Include="Draw\AppGUIRender.h" />
     <ClInclude Include="Draw\AppScreenSpaceShadow.h" />
-    <ClInclude Include="Draw\DebugDraw.h" />
+    <ClInclude Include="Draw\DebugDraw\DebugDraw.h" />
+    <ClInclude Include="Draw\DebugDraw\DrawParameters.h" />
+    <ClInclude Include="Draw\DebugDraw\HavokDebugDraw.h" />
     <ClInclude Include="Draw\DrawContext.h" />
-    <ClInclude Include="Draw\DrawParameters.h" />
     <ClInclude Include="Draw\FontDrawContext.h" />
     <ClInclude Include="Draw\GX\GXCascadedShadowScene.h" />
     <ClInclude Include="Draw\GX\GXDrawItem.h" />
@@ -159,7 +160,6 @@
     <ClInclude Include="Draw\GX\GXScreenSpaceShadow.h" />
     <ClInclude Include="Draw\GX\GXShadowMap.h" />
     <ClInclude Include="Draw\GX\GXTestVolume.h" />
-    <ClInclude Include="Draw\HavokDebugDraw.h" />
     <ClInclude Include="Draw\System\MetaInfoGroup.h" />
     <ClInclude Include="Draw\System\MetaInfoItem.h" />
     <ClInclude Include="Draw\System\MetaInfoManager.h" />

@@ -60,19 +60,10 @@
     <ClCompile Include="Draw\AppGUIRender.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Draw\DebugDraw.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Draw\DrawContext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Draw\DrawParameters.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Draw\FontDrawContext.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Draw\HavokDebugDraw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GuiFramework\GUIComboBox\GUIComboBox.cpp">
@@ -178,6 +169,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Scene\SceneSelectScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\DebugDraw\DebugDraw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\DebugDraw\DrawParameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw\DebugDraw\HavokDebugDraw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -428,19 +428,10 @@
     <ClInclude Include="Draw\AppScreenSpaceShadow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Draw\DebugDraw.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Draw\DrawContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Draw\DrawParameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Draw\FontDrawContext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Draw\HavokDebugDraw.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Draw\Texture.h">
@@ -869,6 +860,15 @@
     <ClInclude Include="GuiFramework\Util\MousePosData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Draw\DebugDraw\DebugDraw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\DebugDraw\DrawParameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw\DebugDraw\HavokDebugDraw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl">
@@ -937,5 +937,6 @@
     <None Include="Steam\CCallback.inl">
       <Filter>Header Files</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
