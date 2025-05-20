@@ -857,7 +857,7 @@
     <ClInclude Include="Steam\SteamShutdown.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FRPG2.h">
+    <ClInclude Include="FRPG2Lib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FRPG2Call.h">
