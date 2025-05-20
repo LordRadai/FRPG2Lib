@@ -25,3 +25,7 @@
 #include "DebugManager/AppDebugManager.h"
 
 #include "Flver/FlverModelData.h"
+
+#include "Filter/MetaInfo.inl"
+#include "Filter/MetaInfoCombo.inl"
+#include "Filter/MetaInfoParam.inl"
