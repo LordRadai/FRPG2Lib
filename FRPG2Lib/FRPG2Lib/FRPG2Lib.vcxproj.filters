@@ -937,6 +937,5 @@
     <None Include="Steam\CCallback.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

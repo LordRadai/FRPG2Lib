@@ -1,5 +1,6 @@
 #pragma once
-#include "FRPG2.h"
+#include "dantelion2/dantelion2.h"
+#include "DrawContext.h"
 #include <vector>
 
 namespace DebugDraw

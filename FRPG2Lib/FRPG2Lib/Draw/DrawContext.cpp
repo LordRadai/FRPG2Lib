@@ -1,7 +1,6 @@
 #include "DrawContext.h"
 #include "Memory/Memory.h"
 #include "FRPG2Globals.h"
-#include "FRPG2.h"
 #include "FRPG2Call.h"
 
 typedef void(_fastcall* oClearRenderTargetView)(IDrawContext* pThis, int numTargets, uint32_t color);

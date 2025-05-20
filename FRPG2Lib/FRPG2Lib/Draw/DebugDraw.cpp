@@ -1,5 +1,6 @@
 #include "DebugDraw.h"
 #include "FRPG2Globals.h"
+#include "DrawParameters.h"
 
 #define SPHERE_STACKS 4
 #define SPHERE_SLICES 12
