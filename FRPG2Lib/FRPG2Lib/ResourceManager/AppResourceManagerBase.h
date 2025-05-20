@@ -13,6 +13,7 @@ class AppResourceManagerBase : public LiveResourceManager
         dl_uint m_iVar4;
     };
 
+public:
     DLKRD::HeapAllocator<DLKR::DLDynamicHeap<WinAssertHeapStrategy<DLKR::DLBiHeapStrategy<DLKR::DLRobustHeap, DLKR::DLMultiThreadingPolicy>>>>* m_pResourceAllocator;
     DLKRD::HeapAllocator<DLKR::DLDynamicHeap<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>>>* m_pUnkAllocator;
     dl_pointer m_pFlverResourceFactory;

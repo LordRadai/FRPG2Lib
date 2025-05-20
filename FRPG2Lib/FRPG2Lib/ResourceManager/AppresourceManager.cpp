@@ -8,7 +8,7 @@ FontBinderFileResourceObject* AppResourceManager::LoadFont(const dl_wchar* filen
 	return FRPG2_CALL(oLoadFont, 0x2dd8e0, this, filename, fontID, pAllocator, pAllocator2, fileFlags);
 }
 
-dl_bool AppResourceManager::LoadAndCreateFontResource(const dl_wchar* filename, dl_uint fontID, DLKR::DLAllocator* pAllocator, DLKR::DLAllocator* pAllocator2, dl_uint fileFlags = 65)
+dl_bool AppResourceManager::LoadAndCreateFontResource(const dl_wchar* filename, dl_uint fontID, DLKR::DLAllocator* pAllocator, DLKR::DLAllocator* pAllocator2, dl_uint fileFlags)
 {
 	FontBinderFileResourceObject* pFontBinderFileResource = LoadFont(filename, fontID, pAllocator, pAllocator2, fileFlags);
 

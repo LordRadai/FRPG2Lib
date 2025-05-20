@@ -2,14 +2,17 @@
 #include "dantelion2/dantelion2.h"
 #include "ResourceMemoryWatchdog.h"
 #include "Memory/WinAssertHeapStrategy.h"
+#include "ResourceObject/ResourceObject.h"
 
 class LiveResourceManager
 {
     void** _vfptr;
+
+public:
     dl_int m_iVar8;
     DLKR::DLAllocator* m_pAllocator;
     dl_pointer field7_0x18;
-    DLUT::DLVector<dl_pointer>* field8_0x20;
+    DLUT::DLVector<ResourceObject*>* m_pRegisteredResources;
     dl_pointer field9_0x28;
     dl_int field10_0x30;
     dl_int field14_0x34;
