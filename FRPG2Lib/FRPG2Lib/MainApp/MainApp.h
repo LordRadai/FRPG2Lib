@@ -3,6 +3,7 @@
 #include "Scene/SceneManager.h"
 #include "Properties/Properties.h"
 #include "DebugManager/AppDebugManager.h"
+#include "Memory/Memory.h"
 
 struct DeltaTimeData 
 {
@@ -42,6 +43,9 @@ class AppGUISystem;
 
 class MainApp
 {
+    void** _vfptr;
+
+public:
     enum DrawExecutionMode : dl_uchar
     {
         EXECMODE_IMMEDIATE,
@@ -50,11 +54,11 @@ class MainApp
         EXECMODE_NUM
     };
 
-    class HeapMemory
+    class HeapMemoryList
     {
         dl_bool m_bInitialised;
-		DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_systemHeap;
-		DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLBiHeapStrategy<DLKR::DLRobustHeap, DLKR::DLMultiThreadingPolicy>>> m_globalHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_systemHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLBiHeapStrategy<DLKR::DLRobustHeap, DLKR::DLMultiThreadingPolicy>>> m_globalHeap;
         DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_fileDataHeap;
         DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_soundSystemHeap;
         DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLBiHeapStrategy<DLKR::DLBiHeap, DLKR::DLMultiThreadingPolicy>>> m_networkHeap;
@@ -65,16 +69,16 @@ class MainApp
         DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLSmallObjectWrapper<DLKR::DLRegularHeap, 0, 4096, 80, 8>, DLKR::DLMultiThreadingPolicy>>> m_guiDefaultHeap;
         DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_graphicsMainHeap;
         dl_uint m_heapSizes[20];
-		DLKR::DLBackAllocator m_backAllocator;
-		HeapMemory* m_pRegisteredHeaps[161];
+        DLKR::DLBackAllocator m_backAllocator;
+        HeapMemory* m_pRegisteredHeaps[161];
         dl_size m_numRegisteredHeaps;
-        dl_pointer m_pVar39C8;
-        dl_int m_iVar39D0;
+        HeapMemory** m_pRootHeaps;
+        dl_int m_numRootHeaps;
+
+    public:
+        void CreateHeapListGUI();
     };
 
-    void** _vfptr;
-
-public:
     HWND m_hwnd;
     dl_uint* field2_0x10;
     HCURSOR m_hcursor;
@@ -89,7 +93,7 @@ public:
     dl_char field12_0x35;
     dl_char field13_0x36;
     dl_char field14_0x37;
-    dl_pointer m_pMainHeapMemory;
+    HeapMemoryList* m_pMainHeapMemory;
     dl_pointer m_pGraphicsContext;
     dl_pointer m_pMainApp0x48;
     dl_pointer m_pFileManager;

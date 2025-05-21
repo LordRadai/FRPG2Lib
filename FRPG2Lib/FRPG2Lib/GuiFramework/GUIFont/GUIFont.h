@@ -15,12 +15,12 @@ namespace GuiFramework
 
 		static void* operator new(size_t size)
 		{
-			return DLKR::AllocateAligned(sizeof(GUIFont), 8, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::AllocateAligned(sizeof(GUIFont), 8, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		static void operator delete(void* block)
 		{
-			return DLKR::Free(block, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::Free(block, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		DLMT::DL_COLOR_32 m_color;

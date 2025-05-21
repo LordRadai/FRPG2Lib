@@ -25,12 +25,12 @@ public:
 
 	static void* operator new(size_t size)
 	{
-		return DLKR::AllocateAligned(sizeof(FontDrawContext), 8, GetHeap(HEAPTYPE_TEMP));
+		return DLKR::AllocateAligned(sizeof(FontDrawContext), 8, GetRootHeap(HEAPTYPE_TEMP));
 	}
 
 	static void operator delete(void* block)
 	{
-		return DLKR::Free(block, GetHeap(HEAPTYPE_TEMP));
+		return DLKR::Free(block, GetRootHeap(HEAPTYPE_TEMP));
 	}
 
 	FontDrawContext(IDrawContext* pDrawContext);

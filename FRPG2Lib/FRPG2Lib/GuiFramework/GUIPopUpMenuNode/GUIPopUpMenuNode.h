@@ -4,10 +4,9 @@
 #include "../GUIPopUpMenuSeparator/GUIPopUpMenuSeparator.h"
 #include "../GUIPopUpMenu/GUIPopUpMenu.h"
 
-class AppGUISystem;
-
 namespace GuiFramework
 {
+	class GUISystem;
 	class GUIPopUpMenu;
 
 	enum GUIPopUpMenuNodeFlags
@@ -27,16 +26,16 @@ namespace GuiFramework
 
 	public:
 		GUIPopUpMenuNode() {}
-		GUIPopUpMenuNode(AppGUISystem* pAppGUISystem, GUIText* title, dl_uint param_3);
+		GUIPopUpMenuNode(GUISystem* pAppGUISystem, GUIText* title, dl_uint param_3);
 
 		static void* operator new(size_t size)
 		{
-			return DLKR::AllocateAligned(sizeof(GUIPopUpMenuNode), 8, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::AllocateAligned(sizeof(GUIPopUpMenuNode), 8, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		static void operator delete(void* block)
 		{
-			return DLKR::Free(block, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::Free(block, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		/*

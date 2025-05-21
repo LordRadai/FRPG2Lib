@@ -15,7 +15,7 @@ namespace GuiFramework
 			this->numElements = count;
 			this->pValues = pValues;
 
-			this->pOldValues = static_cast<T*>(DLKR::AllocateAligned(count * sizeof(T), 4, GetHeap(HEAPTYPE_GUIDEFAULT)));
+			this->pOldValues = static_cast<T*>(DLKR::AllocateAligned(count * sizeof(T), 4, GetRootHeap(HEAPTYPE_GUIDEFAULT)));
 
 			for (BYTE i = 0; i < count; i++)
 			{
@@ -36,7 +36,7 @@ namespace GuiFramework
 		{
 			if (this->pOldValues)
 			{
-				DLKR::Free(this->pOldValues, GetHeap(HEAPTYPE_GUIDEFAULT));
+				DLKR::Free(this->pOldValues, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 
 				this->pOldValues = nullptr;
 			}
@@ -94,12 +94,12 @@ namespace GuiFramework
 
 		static void* operator new(size_t size)
 		{
-			return DLKR::AllocateAligned(sizeof(TGUIMultiTweaker<T>), 8, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::AllocateAligned(sizeof(TGUIMultiTweaker<T>), 8, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		static void operator delete(void* block)
 		{
-			return DLKR::Free(block, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::Free(block, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		dl_uchar numElements = 0;

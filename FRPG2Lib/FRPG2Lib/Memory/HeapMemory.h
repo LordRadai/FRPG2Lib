@@ -6,7 +6,7 @@ class HeapMemory
 	struct HeapInfo
 	{
 		dl_char* m_pBuffer;
-		dl_char m_smallStr[8];
+		dl_pointer m_pVar8;
 		dl_size m_size;
 		dl_size m_capacity;
 		dl_char m_name[32];
@@ -20,11 +20,15 @@ class HeapMemory
 	};
 
 	void** _vfptr;
+	dl_size m_pVar8;
 	HeapMemory* m_pAllocatorMemory;
-	dl_size m_size;
 	HeapInfo m_heapInfo;
 	dl_uint m_blockID;
 	dl_size m_iVar90;
 	dl_size m_id;
 	dl_int16* m_pVarA0;
+
+public:
+	const dl_char* GetName() const { return this->m_heapInfo.m_pBuffer; }
+	DLKR::DLAllocator* GetAllocator();
 };

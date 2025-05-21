@@ -4,12 +4,12 @@
 
 typedef DLKR::DLAllocator*(_fastcall* oGetHeap)(int heapType);
 
-DLKR::DLAllocator* GetHeap(int heapType)
+DLKR::DLAllocator* GetRootHeap(int heapType)
 {
 	return FRPG2_CALL(oGetHeap, 0xaee210, heapType);
 }
 
-const wchar_t* GetHeapName(int heapType)
+const dl_wchar* GetRootHeapName(int heapType)
 {
 	switch (heapType)
 	{

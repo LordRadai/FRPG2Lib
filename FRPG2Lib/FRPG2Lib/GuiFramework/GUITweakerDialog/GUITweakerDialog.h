@@ -31,12 +31,12 @@ namespace GuiFramework
 
 		static void* operator new(size_t size)
 		{
-			return DLKR::AllocateAligned(sizeof(GUITweakerDialog), 8, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::AllocateAligned(sizeof(GUITweakerDialog), 8, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		static void operator delete(void* block)
 		{
-			return DLKR::Free(block, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::Free(block, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		void PopStackLevel();

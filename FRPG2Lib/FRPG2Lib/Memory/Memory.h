@@ -39,5 +39,5 @@ enum HeapType
 	HEAPTYPE_NUM
 };
 
-DLKR::DLAllocator* GetHeap(int heapType);
-const wchar_t* GetHeapName(int heapType);
+DLKR::DLAllocator* GetRootHeap(int heapType);
+const dl_wchar* GetRootHeapName(int heapType);

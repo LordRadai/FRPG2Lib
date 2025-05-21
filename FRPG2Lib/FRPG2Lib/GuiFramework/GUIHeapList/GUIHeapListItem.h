@@ -27,12 +27,12 @@ namespace GuiFramework
 
 		static void* operator new(size_t size)
 		{
-			return DLKR::AllocateAligned(sizeof(GUIHeapListItem), 8, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::AllocateAligned(sizeof(GUIHeapListItem), 8, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		static void operator delete(void* block)
 		{
-			return DLKR::Free(block, GetHeap(HEAPTYPE_GUIDEFAULT));
+			return DLKR::Free(block, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
 		static void FormatMemoryStringByType(dl_int* pDisplayFmt, DLTX::DLString* pBuffer, dl_size value);

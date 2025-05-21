@@ -55,6 +55,7 @@
     <ClCompile Include="GuiFramework\GUIRangeTweaker\GUIRangeTweaker.cpp" />
     <ClCompile Include="GuiFramework\GUIRangeTweakWidget\GUIRangeTweakWidget.cpp" />
     <ClCompile Include="GuiFramework\GUIRootWindow\GUIRootWindow.cpp" />
+    <ClCompile Include="GuiFramework\GUISystem\GUISystem.cpp" />
     <ClCompile Include="GuiFramework\GUITextEditorUtil\GUITextEditorUtil.cpp" />
     <ClCompile Include="GuiFramework\GUITexture\GUITexture.cpp" />
     <ClCompile Include="GuiFramework\GUITriggerTweaker\GUITriggerTweaker.cpp" />
@@ -67,6 +68,8 @@
     <ClCompile Include="Havok\Physics\Collide\Shapes\Convex\hkpConvexVerticesShape.cpp" />
     <ClCompile Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\QuickHull.cpp" />
     <ClCompile Include="MainApp\MainApp.cpp" />
+    <ClCompile Include="Memory\GlobalHeapList.cpp" />
+    <ClCompile Include="Memory\HeapMemory.cpp" />
     <ClCompile Include="Memory\Memory.cpp" />
     <ClCompile Include="PX\CharacterRigidBody.cpp" />
     <ClCompile Include="PX\PXCharacterCtrl.cpp" />
@@ -106,6 +109,7 @@
     <ClInclude Include="dantelion2\Core\Graphics\Graphics.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLAllocator.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLAtomicInt.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLBackAllocator.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLBiHeap.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLConditionSignal.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLDummySyncObject.h" />
@@ -166,6 +170,7 @@
     <ClInclude Include="Draw\System\MetaInfoItem.h" />
     <ClInclude Include="Draw\System\MetaInfoManager.h" />
     <ClInclude Include="Draw\Texture.h" />
+    <ClInclude Include="Memory\GlobalHeapList.h" />
     <ClInclude Include="ResourceManager\AppResourceManager.h" />
     <ClInclude Include="ResourceObject\CommonbndFileCap.h" />
     <ClInclude Include="ResourceObject\FileResourceObject.h" />

@@ -4,6 +4,7 @@
 #include "../GUIWindowPainter/GUIWindowPainter.h"
 #include "../GUIFont/GUIFont.h"
 #include "../GUIStringStorage/TGUIStringStorage.inl"
+#include "../GUIPopUpMenuNode/GUIPopUpMenuNode.h"
 #include "../Util/TGUIRect.inl"
 
 namespace GuiFramework
@@ -37,5 +38,15 @@ namespace GuiFramework
 
 	public:
 		GUIWindowManager* GetWindowManager() const { return m_pGUIWindowManager; }
+
+		GUITweakerDialog* AddTweakerDialog(const dl_wchar* title, dl_bool bUnique = false, dl_int width = 290, dl_int m_height = 400, dl_uint flags = GuiFramework::GUITweakerBase::GuiStyleFlags_Invisible | GuiFramework::GUITweakerBase::GuiStyleFlags_Titlebar | GuiFramework::GUITweakerBase::GuiStyleFlags_3DFrame | GuiFramework::GUITweakerBase::GuiStyleFlags_VScrollbar | GuiFramework::GUITweakerBase::GuiStyleFlags_Collapse | GuiFramework::GUITweakerBase::GuiStyleFlags_Destroy);
+		GUIPopUpMenuNode* AddPopUpMenuNode(const dl_wchar* title, dl_uint flags = 0);
+		dl_bool IsGUIOpen();
+
+		/*
+		* @brief Create GUISystem editor window.
+		* Make sure to allocate enough space in the heap for the window!
+		*/
+		void CreateSystemEditorGUI();
 	};
 }

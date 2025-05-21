@@ -3,13 +3,13 @@
 
 namespace GuiFramework
 {
-	typedef void(_fastcall* oAddGUIPopUpMenuNode)(GUIPopUpMenuNode* pThis, AppGUISystem* pAppGUISystem, GUIText* title, dl_uint styleFlags);
+	typedef void(_fastcall* oAddGUIPopUpMenuNode)(GUIPopUpMenuNode* pThis, GUISystem* pAppGUISystem, GUIText* title, dl_uint styleFlags);
 	typedef dl_bool(_fastcall* oSetChildFlags)(GUIPopUpMenuNode* pThis, dl_int id, dl_uint setMask, dl_uint clearMask);
 	typedef GUIPopUpMenuString*(_fastcall* oAddGUIPopUpMenuString)(GUIPopUpMenuNode* pThis, GUIText* title, dl_int id, dl_int index);
 	typedef GUIPopUpMenuSeparator*(_fastcall* oAddGUIPopUpMenuSeparator)(GUIPopUpMenuNode* pThis, dl_int id, dl_int index);
 	typedef GUIPopUpMenuNode*(_fastcall* oAddGUIPopUpMenuSubNode)(GUIPopUpMenuNode* pThis, GUIText* title, dl_int id, dl_int index);
 
-	GUIPopUpMenuNode::GUIPopUpMenuNode(AppGUISystem* pAppGUISystem, GUIText* title, dl_uint styleFlags)
+	GUIPopUpMenuNode::GUIPopUpMenuNode(GUISystem* pAppGUISystem, GUIText* title, dl_uint styleFlags)
 	{
 		FRPG2_CALL(oAddGUIPopUpMenuNode, 0x524b50, this, pAppGUISystem, title, styleFlags);
 	}
