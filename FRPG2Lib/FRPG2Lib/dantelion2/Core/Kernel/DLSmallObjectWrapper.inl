@@ -22,7 +22,6 @@ namespace DLKR
 		{
 			dl_size m_offset;
 			dl_size m_iVar8;
-			dl_size m_iVar10;
 			HeapBlockLink m_block;
 		};
 

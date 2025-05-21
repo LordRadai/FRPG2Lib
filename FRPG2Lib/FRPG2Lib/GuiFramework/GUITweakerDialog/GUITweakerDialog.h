@@ -42,7 +42,7 @@ namespace GuiFramework
 		void PopStackLevel();
 		GUITweakerGroup* GetLastTweakerGroup();
 
-		GUITweakerGroup* AddTweakerGroup(const dl_wchar* title, bool bExpanded);
+		GUITweakerGroup* AddTweakerGroup(const dl_wchar* title, dl_bool bExpanded = false);
 
 		TGUIOnOffTweaker<dl_uchar>* AddOnOffTweaker(const dl_wchar* title, dl_bool* v);
 

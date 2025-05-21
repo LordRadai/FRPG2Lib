@@ -50,6 +50,28 @@ class MainApp
         EXECMODE_NUM
     };
 
+    class HeapMemory
+    {
+        dl_bool m_bInitialised;
+		DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_systemHeap;
+		DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLBiHeapStrategy<DLKR::DLRobustHeap, DLKR::DLMultiThreadingPolicy>>> m_globalHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_fileDataHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_soundSystemHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLBiHeapStrategy<DLKR::DLBiHeap, DLKR::DLMultiThreadingPolicy>>> m_networkHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLSmallObjectWrapper<DLKR::DLRegularHeap, 0, 4096, 128, 16>, DLKR::DLMultiThreadingPolicy>>> m_stringHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_tempHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_temp2Heap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_debugHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLSmallObjectWrapper<DLKR::DLRegularHeap, 0, 4096, 80, 8>, DLKR::DLMultiThreadingPolicy>>> m_guiDefaultHeap;
+        DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_graphicsMainHeap;
+        dl_uint m_heapSizes[20];
+		DLKR::DLBackAllocator m_backAllocator;
+		HeapMemory* m_pRegisteredHeaps[161];
+        dl_size m_numRegisteredHeaps;
+        dl_pointer m_pVar39C8;
+        dl_int m_iVar39D0;
+    };
+
     void** _vfptr;
 
 public:
@@ -82,11 +104,11 @@ public:
     dl_pointer field27_0x98;
     sMainApp_0xa0 field28_0xa0;
     DeltaTimeData m_deltaTimeData;
-    dl_bool m_showFps;
-    dl_bool m_topMost;
-    dl_bool m_suppressUpdateTime;
-    dl_bool m_keyboardOperation;
-    dl_bool m_disableAppCursor;
+    dl_bool m_bShowFps;
+    dl_bool m_bKeepWindowOnTop;
+    dl_bool m_bSuppressUpdateTime;
+    dl_bool m_bKeyboardOperation;
+    dl_bool m_bDisableAppCursor;
     dl_bool m_bDrawAxisGizmo;
     dl_bool m_bKillTimer;
     dl_bool field37_0x137;

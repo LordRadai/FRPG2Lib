@@ -17,6 +17,7 @@ namespace GuiFramework
 			dl_int m_state;
 		};
 
+	protected:
 		dl_int m_isDrawing;
 		GUIWindowManager* m_pGUIWindowManager;
 		GUIWindowPainter* m_pGUIWindowPainter;

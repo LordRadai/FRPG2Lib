@@ -190,4 +190,6 @@ public:
     dl_int field34_0x2558;
     dl_int field35_0x255c;
     CCallback<GameManagerImp, SteamShutdown_t, false> m_steamShutdownCallback;
+
+	typedef void(_fastcall* oGameStateUpdate)(GameManagerImp* pThis, dl_float32* pDeltaTimeData);
 };

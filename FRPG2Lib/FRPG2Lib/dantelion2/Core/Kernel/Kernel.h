@@ -4,6 +4,7 @@
 #include "SyncObjects.h"
 #include "detail/HeapAllocator.inl"
 #include "DLWin32RuntimeHeapImpl.h"
+#include "DLBackAllocator.h"
 
 #include "DLDynamicHeap.inl"
 #include "DLSmallObjectWrapper.inl"
