@@ -1,5 +1,7 @@
 #pragma once
 #include "../GUIWidget/GUIWidget.h"
+#include "../GUIDropDownList/GUIDropDownList.h"
+#include "../GUINumericEditBox/GUINumericEditBox.h"
 
 namespace GuiFramework
 {
@@ -14,9 +16,8 @@ namespace GuiFramework
 
 		DLUT::DLVector<ValueStringPair> m_valueStringPairs;
 		TGUI_RECT<dl_uint16> m_rect;
-		dl_int m_iVar138;
-		dl_int m_iVar13C;
-		dl_pointer* m_pEditBox;
+		GUIDropDownList* m_pDropDownList;
+		GUINumericEditBox* m_pNumericEditBox;
 		dl_int m_selectedItem;
 
 		void SetDisplayItem(dl_int idx);

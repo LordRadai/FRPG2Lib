@@ -484,4 +484,5 @@ public:
     typedef void(_fastcall* oInitVirtualMemory)(dl_pointer pHeapMemoryList, dl_uint* pHeapSizes);
     typedef void(_fastcall* oInitialise)(KatanaMainApp* pThis, HINSTANCE hInstance, dl_uint64 param3, dl_uint64 param_4);
     typedef AppDebugManager*(_fastcall* oCreateAppDebugManager)(KatanaMainApp* pThis, DLKR::DLAllocator* pAllocator);
+    typedef dl_bool(_fastcall* oCreateScene)(KatanaMainApp* pThis);
 };

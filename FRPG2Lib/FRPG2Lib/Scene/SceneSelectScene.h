@@ -6,7 +6,7 @@
 class SceneSelectScene : public Scene
 {
     dl_bool m_bInit = false;
-    GuiFramework::GUITweakerDialog* pSceneSelectWindow = nullptr;
+    GuiFramework::GUITweakerDialog* m_pSceneSelectWindow = nullptr;
 
 public:
 	SceneSelectScene(dl_uint sceneID) : Scene(sceneID) {};

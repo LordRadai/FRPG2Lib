@@ -917,6 +917,27 @@
     <ClInclude Include="Memory\GlobalHeapList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Scene\ModelTestSceneImpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterResources\CharacterResources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager\GameManagerCallbackObject\GameManagerCallbackObject.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager\GameManagerCallbackObj\GameManagerCallbackObjBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager\GameManagerCallbackObject\GameManagerCallbackObjectBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiFramework\GUIListBox\GUIListBox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiFramework\GUIDropDownList\GUIDropDownList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl">

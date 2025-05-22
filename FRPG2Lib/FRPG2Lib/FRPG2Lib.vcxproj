@@ -86,6 +86,7 @@
     <ClInclude Include="CameraOperator\CameraOperator.h" />
     <ClInclude Include="CameraOperator\FreeCameraOperator.h" />
     <ClInclude Include="CameraOperator\PerspectiveCameraOperator.h" />
+    <ClInclude Include="CharacterResources\CharacterResources.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGBuffer.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGDepthStencilView.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGRenderTargetView.h" />
@@ -170,6 +171,11 @@
     <ClInclude Include="Draw\System\MetaInfoItem.h" />
     <ClInclude Include="Draw\System\MetaInfoManager.h" />
     <ClInclude Include="Draw\Texture.h" />
+    <ClInclude Include="GameManager\GameManagerCallbackObject\GameManagerCallbackObject.inl" />
+    <ClInclude Include="GameManager\GameManagerCallbackObj\GameManagerCallbackObjBase.h" />
+    <ClInclude Include="GameManager\GameManagerCallbackObject\GameManagerCallbackObjectBase.h" />
+    <ClInclude Include="GuiFramework\GUIDropDownList\GUIDropDownList.h" />
+    <ClInclude Include="GuiFramework\GUIListBox\GUIListBox.h" />
     <ClInclude Include="Memory\GlobalHeapList.h" />
     <ClInclude Include="ResourceManager\AppResourceManager.h" />
     <ClInclude Include="ResourceObject\CommonbndFileCap.h" />
@@ -317,6 +323,7 @@
     <ClInclude Include="ResourceManager\AppResourceManagerBase.h" />
     <ClInclude Include="ResourceManager\LiveResourceManager.h" />
     <ClInclude Include="ResourceManager\ResourceMemoryWatchdog.h" />
+    <ClInclude Include="Scene\ModelTestSceneImpl.h" />
     <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Scene\SceneManager.h" />
     <ClInclude Include="Scene\SceneSelectScene.h" />

@@ -11,4 +11,5 @@ class SceneManager
 public:
 	Scene* GetScene() const { return m_pScene; }
 	void SetScene(Scene* pScene);
+	void DestroyScene();
 };

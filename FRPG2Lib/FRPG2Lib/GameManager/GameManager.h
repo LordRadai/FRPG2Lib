@@ -3,6 +3,7 @@
 #include "Steam/SteamShutdown.h"
 #include "Steam/CCallback.inl"
 #include "ResourceManager/AppResourceManager.h"
+#include "GameManagerCallbackObject/GameManagerCallbackObject.inl"
 
 class GameManager
 {
@@ -111,26 +112,15 @@ public:
 
 class GameManagerImp : public GameManager
 {
-    class GameManagerCallbackObjectBase 
-    {
-        void*** _vfptr;
-        dl_pointer arg;
-        void* function;
-        dl_uchar field3_0x18;
-        dl_uchar field4_0x19;
-        dl_uchar field5_0x1a;
-        dl_uchar field6_0x1b;
-        dl_uchar field7_0x1c;
-    };
-
     enum FlowCommand : dl_uchar
     {
-        GameCommand_UnkTitle = 1,
-        GameCommand_ToTitle = 2,
-        GameCommand_QuitToTitle = 4,
-        GameCommand_QuitToInGame = 8,
-        GameCommand_LoadInGame = 16,
-        GameCommand_5 = 32
+        FLOWCMD_CHANGESTATE = 1,
+        FLOWCMD_TOTITLE = 2,
+        FLOWCMD_QUITTOTITLE = 4,
+        FLOWCMD_QUITTOINGAME = 8,
+        FLOWCMD_LOADINGAME = 16,
+        FLOWCMD_5 = 32,
+		FLOWCMD_6 = 64
     };
 
     struct InitLocationData 
@@ -159,13 +149,18 @@ class GameManagerImp : public GameManager
         dl_uchar field21_0x3f;
     };
 
+    struct GameManagerCreationInfo
+    {
+
+    };
+
 public:
     dl_float32 field1_0x2480;
     dl_float32 field2_0x2484;
-    GameManagerCallbackObjectBase* field3_0x2488;
-    GameManagerCallbackObjectBase* m_pIngameSceneCallback;
-    GameManagerCallbackObjectBase* field5_0x2498;
-    GameManagerCallbackObjectBase* field6_0x24a0;
+    GameManagerCallbackObjectBase* m_pGameState3Callback;
+    GameManagerCallbackObjectBase* m_pGamgeState11Callback;
+    GameManagerCallbackObjectBase* m_pUnkCallback;
+    GameManagerCallbackObjectBase* m_pGameState29Callback;
     dl_int m_playerStatusParamID;
     dl_int m_gameState;
     dl_uchar field9_0x24b0;
