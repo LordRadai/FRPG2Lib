@@ -46,6 +46,19 @@ class MainApp
     void** _vfptr;
 
 public:
+    struct WindowCreationInfo
+    {
+        dl_int windowX;
+        dl_int windowY;
+        dl_int width;
+        dl_int height;
+        dl_int iVar10;
+        dl_uint exStyle;
+        dl_uint style;
+        dl_bool bHasMenu;
+        HINSTANCE hInstance;
+    };
+
     enum DrawExecutionMode : dl_uchar
     {
         EXECMODE_IMMEDIATE,
@@ -124,17 +137,14 @@ public:
     dl_bool m_bResetWindowPos;
     dl_char field44_0x13e;
     dl_char field45_0x13f;
-    dl_uint m_defaultWidth;
-    dl_uint m_defaultHeight;
+    dl_uint m_screenWidth;
+    dl_uint m_screenHeight;
     dl_bool field48_0x148;
     dl_bool field49_0x149;
     dl_bool field50_0x14a;
     dl_bool field51_0x14b;
-    dl_int m_sampleType;
-    dl_char field53_0x150;
-    dl_char field54_0x151;
-    dl_char field55_0x152;
-    dl_char field56_0x153;
+    dl_int m_multiSampleType;
+    dl_bool m_bUseStandardWindowStyle;
     dl_uint m_fpsMode;
     dl_bool m_fixedDt;
     dl_char field59_0x159;
@@ -144,8 +154,8 @@ public:
     dl_char field63_0x15d;
     dl_char field64_0x15e;
     dl_char field65_0x15f;
-    Properties m_pConfigProperties;
-    Properties m_pUserConfigProperties;
+    Properties m_configProperties;
+    Properties m_userConfigProperties;
     DLUT::DLVector<dl_pointer>* m_pMessageListeners;
     dl_int field69_0x198;
     dl_char field70_0x19c;
@@ -482,7 +492,7 @@ public:
 	dl_uint m_titleMode;
 
     typedef void(_fastcall* oInitVirtualMemory)(dl_pointer pHeapMemoryList, dl_uint* pHeapSizes);
-    typedef void(_fastcall* oInitialise)(KatanaMainApp* pThis, HINSTANCE hInstance, dl_uint64 param3, dl_uint64 param_4);
+    typedef dl_bool(_fastcall* oInitialise)(KatanaMainApp* pThis, WindowCreationInfo* pWindowCreationInfo);
     typedef AppDebugManager*(_fastcall* oCreateAppDebugManager)(KatanaMainApp* pThis, DLKR::DLAllocator* pAllocator);
     typedef dl_bool(_fastcall* oCreateScene)(KatanaMainApp* pThis);
 };

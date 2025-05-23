@@ -192,6 +192,9 @@
     <ClCompile Include="Memory\GlobalHeapList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Properties\Properties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppGUIRootWindow\AppGUIRootWindow.h">

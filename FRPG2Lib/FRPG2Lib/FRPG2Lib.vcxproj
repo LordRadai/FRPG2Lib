@@ -71,6 +71,7 @@
     <ClCompile Include="Memory\GlobalHeapList.cpp" />
     <ClCompile Include="Memory\HeapMemory.cpp" />
     <ClCompile Include="Memory\Memory.cpp" />
+    <ClCompile Include="Properties\Properties.cpp" />
     <ClCompile Include="PX\CharacterRigidBody.cpp" />
     <ClCompile Include="PX\PXCharacterCtrl.cpp" />
     <ClCompile Include="PX\PXRigidBody.cpp" />

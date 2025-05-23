@@ -15,8 +15,16 @@ struct PropertyItem
     DLTX::DLString m_value;
 };
 
-struct Properties {
+class Properties 
+{
     PropertyItem* m_pRootProperty;
     dl_pointer field1_0x8;
     DLKR::DLAllocator* pAllocator;
+
+public:
+    dl_int GetIntProperty(DLTX::DLString name, dl_int defaultValue);
+    dl_bool GetBoolProperty(DLTX::DLString name, dl_bool defaultValue);
+    dl_float32 GetFloatProperty(DLTX::DLString name, dl_float32 defaultValue);
+    void GetStringProperty(DLTX::DLString* pBuf, DLTX::DLString name, DLTX::DLString defaultValue);
+    void SetPropertyValue(DLTX::DLString name, DLTX::DLString value);
 };
