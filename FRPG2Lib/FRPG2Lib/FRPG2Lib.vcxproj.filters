@@ -168,9 +168,6 @@
     <ClCompile Include="Scene\SceneManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Scene\SceneSelectScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Draw\DebugDraw\DebugDraw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -855,9 +852,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Scene\SceneManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\SceneSelectScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Steam\SteamShutdown.h">

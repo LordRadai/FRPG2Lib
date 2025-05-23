@@ -78,7 +78,6 @@
     <ClCompile Include="ResourceObject\FileResourceObject.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
-    <ClCompile Include="Scene\SceneSelectScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppGUIRootWindow\AppGUIRootWindow.h" />
@@ -326,7 +325,6 @@
     <ClInclude Include="Scene\ModelTestSceneImpl.h" />
     <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Scene\SceneManager.h" />
-    <ClInclude Include="Scene\SceneSelectScene.h" />
     <ClInclude Include="Steam\SteamShutdown.h" />
   </ItemGroup>
   <ItemGroup>
