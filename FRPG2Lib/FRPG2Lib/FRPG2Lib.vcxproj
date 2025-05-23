@@ -145,6 +145,16 @@
     <ClInclude Include="dantelion2\Core\Text\DLFormat.h" />
     <ClInclude Include="dantelion2\Core\Text\DLStringUtil.h" />
     <ClInclude Include="dantelion2\Core\Text\Text.h" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\DLUserInputDeviceImpl.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\DLUserInputMapperImpl.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\DLUserInputTraitsImpl.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\DynamicBitset.h" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\UserInputExtension.h" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\VirtualInputData.h" />
+    <ClInclude Include="dantelion2\Core\UserInput\DLUserInputDevice.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\DLUserInputMapper.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\DLUserInputTraits.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\UserInput.h" />
     <ClInclude Include="dantelion2\Core\Util\DLLifeCycleAdapter.h" />
     <ClInclude Include="dantelion2\Core\Util\DLNonCopyable.h" />
     <ClInclude Include="dantelion2\Core\Util\DLReferenceCountObject.h" />

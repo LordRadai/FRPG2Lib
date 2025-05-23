@@ -5,3 +5,4 @@
 #include "Core/Math/Math.h"
 #include "Core/Platform/Platform.h"
 #include "Core/Text/Text.h"
+#include "Core/UserInput/UserInput.h"

@@ -935,10 +935,41 @@
     <ClInclude Include="GuiFramework\GUIDropDownList\GUIDropDownList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< Updated upstream
     <ClInclude Include="InputManager\InputManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputManager\DeviceList.h">
+=======
+    <ClInclude Include="dantelion2\Core\UserInput\UserInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dantelion2\Core\UserInput\DLUserInputDevice.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dantelion2\Core\UserInput\details\DynamicBitset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dantelion2\Core\UserInput\details\VirtualInputData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dantelion2\Core\UserInput\details\UserInputExtension.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dantelion2\Core\UserInput\details\DLUserInputDeviceImpl.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dantelion2\Core\UserInput\DLUserInputTraits.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dantelion2\Core\UserInput\details\DLUserInputTraitsImpl.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dantelion2\Core\UserInput\DLUserInputMapper.inl">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dantelion2\Core\UserInput\details\DLUserInputMapperImpl.inl">
+>>>>>>> Stashed changes
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
