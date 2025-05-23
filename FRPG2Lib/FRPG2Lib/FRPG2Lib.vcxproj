@@ -152,6 +152,8 @@
     <ClInclude Include="dantelion2\Core\UserInput\details\UserInputExtension.h" />
     <ClInclude Include="dantelion2\Core\UserInput\details\VirtualInputData.h" />
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputDevice.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\DLUserInputDeviceOutputInterface.h" />
+    <ClInclude Include="dantelion2\Core\UserInput\DLUserInputDeviceRumbleInterface.h" />
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputMapper.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputTraits.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\UserInput.h" />
@@ -347,6 +349,7 @@
     <None Include="dantelion2\Core\Kernel\DLDynamicHeap.inl" />
     <None Include="dantelion2\Core\Kernel\DLSmallObjectWrapper.inl" />
     <None Include="dantelion2\Core\Text\DLString.inl" />
+    <None Include="dantelion2\Core\UserInput\details\PadDevice.inl" />
     <None Include="Filter\MetaInfo.inl" />
     <None Include="Filter\MetaInfoCombo.inl" />
     <None Include="Filter\MetaInfoParam.inl" />

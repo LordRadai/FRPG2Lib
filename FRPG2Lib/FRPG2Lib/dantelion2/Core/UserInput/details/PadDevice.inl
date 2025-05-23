@@ -1,0 +1,75 @@
+#pragma once
+#include "DLUserInputDeviceImpl.inl"
+#include "../DLUserInputDeviceRumbleInterface.h"
+
+namespace DLUID
+{
+	template<class ThreadingPolicy>
+	class PadDevice : public DLUserInputDeviceImpl<ThreadingPolicy>
+	{
+		DLUI::DLUserInputDeviceRumbleInterface m_rumbleInterface;
+		dl_int16 m_buttons;
+		dl_int m_iVar19C;
+		dl_int m_iVar1A0;
+		dl_float32 m_rightThumbX;
+		dl_float32 m_rightThumbY;
+		dl_float32 m_fVar1AC;
+		dl_float32 m_leftThumbX;
+		dl_float32 m_leftThumbY;
+		dl_float32 m_fVar1B8;
+		dl_float32 m_fVar1BC;
+		dl_float32 m_fVar1C0;
+		dl_float32 m_leftTrigger;
+		dl_float32 m_rightTrigger;
+		dl_float32 m_fVar1CC;
+		dl_float32 m_fVar1D0;
+		dl_float32 m_fVar1D4;
+		dl_float32 m_fVar1D8;
+		dl_float32 m_fVar1DC;
+		dl_float32 m_fVar1E0;
+		dl_float32 m_fVar1E4;
+		dl_float32 m_fVar1E8;
+		dl_float32 m_fVar1EC;
+		dl_float32 m_fVar1F0;
+		dl_float32 m_fVar1F4;
+		dl_float32 m_fVar1F8;
+		dl_float32 m_fVar1FC;
+		dl_float32 m_fVar200;
+		dl_float32 m_fVar204;
+		dl_float32 m_fVar208;
+		dl_float32 m_fVar20C;
+		dl_float32 m_fVar210;
+		dl_int m_iVar214;
+		dl_uchar m_unkData0[112];
+		dl_uchar m_unkData1[112];
+		dl_int m_iVar2F8;
+		dl_int m_iVar2FC;
+		dl_int m_iVar300;
+		dl_int m_iVar304;
+		dl_int m_iVar308;
+		dl_int m_iVar30C;
+		dl_int m_iVar310;
+		dl_int m_iVar314;
+		dl_int16 m_sVar318;
+		dl_int m_iVar31C;
+		dl_int m_iVar320;
+		dl_int m_iVar324;
+		dl_int m_iVar328;
+		dl_int m_iVar32C;
+		dl_int m_iVar330;
+		dl_int m_iVar334;
+		dl_bool m_bVar338;
+		dl_int m_iVar33C;
+		dl_int m_iVar340;
+		dl_int m_iVar344;
+		dl_int m_iVar348;
+		dl_int m_iVar34C;
+		dl_int m_iVar350;
+		dl_int m_iVar354;
+		dl_int m_iVar358;
+		dl_int m_iVar35C;
+		dl_int m_iVar360;
+		dl_int m_iVar364;
+		dl_int16 m_sVar368;
+	};
+}

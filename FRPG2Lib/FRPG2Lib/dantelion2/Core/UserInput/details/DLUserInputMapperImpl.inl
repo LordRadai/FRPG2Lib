@@ -4,7 +4,7 @@
 namespace DLUID
 {
 	template<class ThreadingPolicy>
-	class DLUserInputMapperImpl : public DLUserInputMapper<ThreadingPolicy>
+	class DLUserInputMapperImpl : public DLUI::DLUserInputMapper<ThreadingPolicy>
 	{
 	};
 }

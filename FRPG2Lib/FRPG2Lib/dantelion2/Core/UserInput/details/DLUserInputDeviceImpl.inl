@@ -4,7 +4,7 @@
 namespace DLUID
 {
 	template<class ThreadingPolicy>
-	class DLUserInputDeviceImpl : public DLUserInputDevice<ThreadingPolicy>
+	class DLUserInputDeviceImpl : public DLUI::DLUserInputDevice<ThreadingPolicy>
 	{
 		ThreadingPolicy m_sync;
 	};
