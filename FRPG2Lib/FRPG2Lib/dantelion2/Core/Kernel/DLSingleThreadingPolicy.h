@@ -1,8 +1,9 @@
 #pragma once
+#include "DLDummySyncObject.h"
 
 namespace DLKR
 {
-	class DLSingleThreadingPolicy
+	class DLSingleThreadingPolicy : public DLDummySyncObject
 	{
 	};
 }

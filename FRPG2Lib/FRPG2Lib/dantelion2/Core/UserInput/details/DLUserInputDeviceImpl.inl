@@ -7,5 +7,9 @@ namespace DLUID
 	class DLUserInputDeviceImpl : public DLUI::DLUserInputDevice<ThreadingPolicy>
 	{
 		ThreadingPolicy m_sync;
+		DLUT::DLVector<dl_pointer> m_vVar98;
+		dl_float32 m_fVarB8;
+		dl_float32 m_fVarBC;
+		DLUT::DLVector<dl_pointer> m_vVarC0;
 	};
 }

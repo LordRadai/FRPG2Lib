@@ -346,8 +346,8 @@
     <None Include="GuiFramework\GUIValueStringPairData\TGUIValueStringPairData.inl" />
     <None Include="GuiFramework\Util\TGUIRect.inl" />
     <None Include="Memory\DynamicHeapMemoryTemplate.inl" />
-    <None Include="packages.config" />
     <None Include="Steam\CCallback.inl" />
     <None Include="dantelion2\Core\UserInput\details\PadDevice.inl" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

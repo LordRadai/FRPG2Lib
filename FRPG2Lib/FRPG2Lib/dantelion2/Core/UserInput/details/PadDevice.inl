@@ -7,6 +7,14 @@ namespace DLUID
 	template<class ThreadingPolicy>
 	class PadDevice : public DLUserInputDeviceImpl<ThreadingPolicy>
 	{
+		dl_int m_iVarE0;
+		dl_float32 m_fVarE4;
+		dl_float32 m_fVarE8;
+		dl_int m_iVarEC;
+		dl_int m_iVarF0;
+		dl_int m_iVarF4;
+		dl_pointer m_pVarF8;
+		dl_pointer m_pVar100;
 		DLUI::DLUserInputDeviceRumbleInterface m_rumbleInterface;
 		dl_int16 m_buttons;
 		dl_int m_iVar19C;
