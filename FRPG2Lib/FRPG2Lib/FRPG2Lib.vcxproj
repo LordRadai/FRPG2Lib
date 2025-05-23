@@ -176,6 +176,8 @@
     <ClInclude Include="GameManager\GameManagerCallbackObject\GameManagerCallbackObjectBase.h" />
     <ClInclude Include="GuiFramework\GUIDropDownList\GUIDropDownList.h" />
     <ClInclude Include="GuiFramework\GUIListBox\GUIListBox.h" />
+    <ClInclude Include="InputManager\DeviceList.h" />
+    <ClInclude Include="InputManager\InputManager.h" />
     <ClInclude Include="Memory\GlobalHeapList.h" />
     <ClInclude Include="ResourceManager\AppResourceManager.h" />
     <ClInclude Include="ResourceObject\CommonbndFileCap.h" />

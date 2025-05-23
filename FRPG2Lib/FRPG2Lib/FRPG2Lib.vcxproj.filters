@@ -935,6 +935,12 @@
     <ClInclude Include="GuiFramework\GUIDropDownList\GUIDropDownList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InputManager\InputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager\DeviceList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl">
