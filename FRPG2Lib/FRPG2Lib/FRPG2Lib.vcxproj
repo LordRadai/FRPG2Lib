@@ -67,6 +67,8 @@
     <ClCompile Include="GuiFramework\Util\GUIText.cpp" />
     <ClCompile Include="Havok\Physics\Collide\Shapes\Convex\hkpConvexVerticesShape.cpp" />
     <ClCompile Include="Havok\Physics\Collide\Shapes\Convex\QuickHull\QuickHull.cpp" />
+    <ClCompile Include="InputManager\GamePad\GamePad.cpp" />
+    <ClCompile Include="InputManager\InputManager.cpp" />
     <ClCompile Include="MainApp\MainApp.cpp" />
     <ClCompile Include="Memory\GlobalHeapList.cpp" />
     <ClCompile Include="Memory\HeapMemory.cpp" />
@@ -192,9 +194,10 @@
     <ClInclude Include="GuiFramework\GUIDropDownList\GUIDropDownList.h" />
     <ClInclude Include="GuiFramework\GUIListBox\GUIListBox.h" />
     <ClInclude Include="InputManager\DeviceList.h" />
-    <ClInclude Include="InputManager\GamePad.h" />
+    <ClInclude Include="InputManager\GamePad\GamePad.h" />
     <ClInclude Include="InputManager\InputDevices.h" />
     <ClInclude Include="InputManager\InputManager.h" />
+    <ClInclude Include="InputManager\PadManager.h" />
     <ClInclude Include="Memory\GlobalHeapList.h" />
     <ClInclude Include="ResourceManager\AppResourceManager.h" />
     <ClInclude Include="ResourceObject\CommonbndFileCap.h" />

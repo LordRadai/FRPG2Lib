@@ -54,4 +54,6 @@ public:
 	dl_int m_cursorYPrev;
 	dl_int m_iVar680;
 	dl_int m_iVar684;
+
+	GamePad* GetMainGamePad();
 };

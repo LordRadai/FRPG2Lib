@@ -3,7 +3,7 @@
 #include "Scene/SceneManager.h"
 #include "Properties/Properties.h"
 #include "DebugManager/AppDebugManager.h"
-#include "InputManager/InputDevices.h"
+#include "InputManager/InputManager.h"
 #include "Memory/Memory.h"
 
 struct DeltaTimeData 

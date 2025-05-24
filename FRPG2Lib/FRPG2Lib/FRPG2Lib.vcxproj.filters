@@ -61,6 +61,8 @@
     <ClCompile Include="ResourceObject\FileResourceObject.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
+    <ClCompile Include="InputManager\GamePad\GamePad.cpp" />
+    <ClCompile Include="InputManager\InputManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppGUIRootWindow\AppGUIRootWindow.h" />
@@ -326,8 +328,9 @@
     <ClInclude Include="dantelion2\Core\UserInput\details\KeyboardDevice.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\details\MouseDevice.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\details\DummyDevice.inl" />
-    <ClInclude Include="InputManager\GamePad.h" />
     <ClInclude Include="InputManager\InputDevices.h" />
+    <ClInclude Include="InputManager\PadManager.h" />
+    <ClInclude Include="InputManager\GamePad\GamePad.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />
