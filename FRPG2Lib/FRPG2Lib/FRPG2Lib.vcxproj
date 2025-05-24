@@ -145,10 +145,13 @@
     <ClInclude Include="dantelion2\Core\Text\DLFormat.h" />
     <ClInclude Include="dantelion2\Core\Text\DLStringUtil.h" />
     <ClInclude Include="dantelion2\Core\Text\Text.h" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\DummyDevice.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\details\DLUserInputDeviceImpl.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\details\DLUserInputMapperImpl.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\details\DLUserInputTraitsImpl.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\details\DynamicBitset.h" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\KeyboardDevice.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\MouseDevice.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\details\UserInputExtension.h" />
     <ClInclude Include="dantelion2\Core\UserInput\details\VirtualInputData.h" />
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputDevice.inl" />
@@ -189,6 +192,8 @@
     <ClInclude Include="GuiFramework\GUIDropDownList\GUIDropDownList.h" />
     <ClInclude Include="GuiFramework\GUIListBox\GUIListBox.h" />
     <ClInclude Include="InputManager\DeviceList.h" />
+    <ClInclude Include="InputManager\GamePad.h" />
+    <ClInclude Include="InputManager\InputDevices.h" />
     <ClInclude Include="InputManager\InputManager.h" />
     <ClInclude Include="Memory\GlobalHeapList.h" />
     <ClInclude Include="ResourceManager\AppResourceManager.h" />

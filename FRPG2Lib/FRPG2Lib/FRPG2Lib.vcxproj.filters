@@ -323,6 +323,11 @@
     <ClInclude Include="Steam\SteamShutdown.h" />
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputDeviceOutputInterface.h" />
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputDeviceRumbleInterface.h" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\KeyboardDevice.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\MouseDevice.inl" />
+    <ClInclude Include="dantelion2\Core\UserInput\details\DummyDevice.inl" />
+    <ClInclude Include="InputManager\GamePad.h" />
+    <ClInclude Include="InputManager\InputDevices.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />

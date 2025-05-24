@@ -3,6 +3,7 @@
 #include "Scene/SceneManager.h"
 #include "Properties/Properties.h"
 #include "DebugManager/AppDebugManager.h"
+#include "InputManager/InputDevices.h"
 #include "Memory/Memory.h"
 
 struct DeltaTimeData 
@@ -111,7 +112,7 @@ public:
     dl_pointer m_pMainApp0x48;
     dl_pointer m_pFileManager;
     dl_pointer m_pFontDummySyncObject;
-    dl_pointer m_pInputManager;
+    InputManager* m_pInputManager;
     AppDebugManager* m_pAppDebugManager;
     dl_pointer m_pLogWindowManager;
     dl_pointer m_pFilterManager;
