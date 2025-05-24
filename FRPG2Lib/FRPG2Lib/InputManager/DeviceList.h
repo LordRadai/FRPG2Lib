@@ -14,5 +14,6 @@ class DeviceList
 	dl_int m_iVar58;
 	dl_pointer m_pVar60;
 	dl_int m_iVar68;
-	dl_int16 m_iVar6C;
+	dl_bool m_bVar6C;
+	dl_bool m_bVar6D;
 };

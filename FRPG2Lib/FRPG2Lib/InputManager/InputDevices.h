@@ -1,5 +1,5 @@
 #pragma once
-#include "GamePad/GamePad.h"
+#include "GamePad.h"
 #include "DeviceList.h"
 
 class InputManager;

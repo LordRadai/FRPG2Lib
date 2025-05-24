@@ -32,21 +32,19 @@ public:
 	dl_int m_iVar14;
 	sUnkState m_unkState0[2];
 	sUnkState m_unkState1[2];
-	sUnkState m_unkState2;
-	sUnkState m_unkState3;
-	sUnkState m_unkState4;
-	sUnkState m_unkState5;
-	sUnkState m_unkState6;
-	sUnkState m_unkState7;
-	dl_bool m_bVar518[256];
-	dl_uchar m_bVar618;
+	sUnkState m_unkState2[2];
+	sUnkState m_unkState3[2];
+	sUnkState m_unkState4[2];
+	sUnkState m_unkState5[2];
+	dl_uchar m_unkKeyStateFlag;
 	dl_uchar m_bVar619;
 	DLKR::DLAllocator* m_pAllocator;
 	dl_float32 m_fVar628[12];
 	dl_pointer m_pSoftKeyManager;
-	dl_int m_iVar660;
+	dl_bool m_bVar660;
+	dl_bool m_bVar661;
 	dl_int m_iVar664;
-	dl_int m_iVar668;
+	dl_int m_cursorViewCount;
 	dl_int m_mouseFlags;
 	dl_int m_cursorX;
 	dl_int m_cursorY;
@@ -54,6 +52,11 @@ public:
 	dl_int m_cursorYPrev;
 	dl_int m_iVar680;
 	dl_int m_iVar684;
+	dl_int m_iVar688;
 
 	GamePad* GetMainGamePad();
+	GamePad* GetGamePad(dl_int idx);
+
+	typedef dl_bool(_fastcall* oInitialize)(InputManager* pThis, DLKR::DLAllocator* pAllocator, dl_pointer param_2, dl_pointer param_3);
+	typedef void(_fastcall* oUpdate)(InputManager* pThis, dl_float32 deltaTime);
 };

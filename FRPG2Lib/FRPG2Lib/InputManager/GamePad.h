@@ -1,6 +1,6 @@
 #pragma once
 #include "dantelion2/dantelion2.h"
-#include "../DeviceList.h"
+#include "DeviceList.h"
 
 #define GAMEPAD_DPAD_UP          0x0001
 #define GAMEPAD_DPAD_DOWN        0x0002
@@ -21,24 +21,27 @@
 
 class GamePad
 {
+public:
 	DECLSPEC_ALIGN(8)
 	struct GamePadState
 	{
-		dl_int16 wButtons;
-		dl_int16 sVar2;
-		dl_uchar unk0[28];
-		DLMT::DL_VECTOR2 fLeftThumb;
-		DLMT::DL_VECTOR2 fRightThumb;
-		dl_uchar unk1[200];
+		dl_int16 wButtons = 0;
+		dl_int16 sVar2 = 0;
+		dl_uchar unk0[28] = { 0 };
+		DLMT::DL_VECTOR2 fLeftThumb = DLMT::DL_VECTOR2::Zero;
+		DLMT::DL_VECTOR2 fRightThumb = DLMT::DL_VECTOR2::Zero;
+		dl_uchar unk1[200] = { 0 };
 	};
 
+private:
 	dl_int m_gamePadID;
 	GamePadState m_state;
 	GamePadState m_statePrev;
 	DeviceList* m_pDeviceList;
 	dl_int m_iVar200;
 	dl_int m_iVar204;
-	dl_int16 m_svar208;
+	dl_bool m_bVar208;
+	dl_bool m_bVar209;
 	dl_int m_iVar20C;
 	dl_float32 m_fVar210;
 	dl_float32 m_fVar214;
@@ -67,10 +70,6 @@ class GamePad
 	dl_char m_unk[28];
 
 public:
-	dl_uint GetGamePadID() const { return m_gamePadID; }
-	DLMT::DL_VECTOR2 GetLeftThumb() const { return m_state.fLeftThumb; }
-	DLMT::DL_VECTOR2 GetRightThumb() const { return m_state.fRightThumb; }
-	dl_bool IsKeyPressed(dl_uint16 button) const;
-	dl_bool IsKeyReleased(dl_uint16 button) const;
-	dl_bool IsKeyHeld(dl_uint16 button) const;
+	dl_int GetGamePadID() const { return m_gamePadID; }
+	GamePadState GetState() const { return m_state; }
 };
