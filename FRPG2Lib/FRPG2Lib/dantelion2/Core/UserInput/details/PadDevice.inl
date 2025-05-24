@@ -13,7 +13,7 @@ namespace DLUID
 		dl_int m_iVarEC;
 		dl_int m_iVarF0;
 		dl_int m_iVarF4;
-		dl_pointer m_pVarF8;
+		HINSTANCE m_hHinstance;
 		dl_pointer m_pVar100;
 		DLUI::DLUserInputDeviceRumbleInterface m_rumbleInterface;
 		dl_int16 m_buttons;
