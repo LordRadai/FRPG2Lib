@@ -37,6 +37,7 @@
     <ClCompile Include="Draw\DebugDraw\HavokDebugDraw.cpp" />
     <ClCompile Include="Draw\DrawContext.cpp" />
     <ClCompile Include="Draw\FontDrawContext.cpp" />
+    <ClCompile Include="Draw\System\DrawSystem.cpp" />
     <ClCompile Include="Draw\System\MetaInfo\MetaInfoGroup.cpp" />
     <ClCompile Include="Draw\System\MetaInfo\MetaInfoManager.cpp" />
     <ClCompile Include="GuiFramework\GUIComboBox\GUIComboBox.cpp" />

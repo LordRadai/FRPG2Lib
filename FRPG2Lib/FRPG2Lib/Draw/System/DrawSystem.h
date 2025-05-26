@@ -10,37 +10,10 @@ class KatanaDrawSystem : public AppFlverShaderReloadListener, public AppSystemMe
 {
     struct sUnkStruct0 
     {
-        struct sData 
-        {
-            dl_float32 field0_0x0;
-            dl_float32 field1_0x4;
-            dl_float32 field2_0x8;
-            dl_float32 field3_0xc;
-            dl_float32 field4_0x10;
-            dl_float32 field5_0x14;
-            dl_float32 field6_0x18;
-            dl_bool field7_0x1c;
-            dl_float32 field11_0x20;
-            dl_float32 field12_0x24;
-            dl_float32 field13_0x28;
-            dl_float32 field18_0x30;
-            dl_float32 field19_0x34;
-            dl_float32 field20_0x38;
-            dl_float32 field21_0x3c;
-            dl_float32 field22_0x40;
-            dl_float32 field23_0x44;
-            dl_float32 field24_0x48;
-            dl_float32 field25_0x4c;
-            dl_float32 field26_0x50;
-            dl_float32 field27_0x54;
-            dl_float32 field28_0x58;
-            dl_float32 field29_0x5c;
-        };
-
         DLKR::DLAllocator* m_pAllocator;
         dl_int m_numElems;
         dl_int field2_0xc;
-        sData* field3_0x10;
+        dl_pointer* field3_0x10;
     };
 
     struct sUnkStruct1 
@@ -126,4 +99,7 @@ class KatanaDrawSystem : public AppFlverShaderReloadListener, public AppSystemMe
     dl_bool m_bDrawObjects;
     dl_bool m_bDrawMap;
     dl_bool field56_0x1fdf;
+
+public:
+    void CreateDrawSystemGUI();
 };

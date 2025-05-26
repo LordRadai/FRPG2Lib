@@ -97,8 +97,8 @@ public:
     dl_uint* field2_0x10;
     HCURSOR m_hcursor;
     dl_pointer field4_0x20;
-    dl_uint m_width;
-    dl_uint m_height;
+    dl_int m_width;
+    dl_int m_height;
     dl_bool m_isIconic;
     dl_char field8_0x31;
     dl_char field9_0x32;
@@ -192,7 +192,7 @@ public:
     dl_int64 field100_0x1f8;
     dl_int64 field101_0x200;
     dl_bool field102_0x208;
-    DrawExecutionMode m_drawExecMode;
+    dl_uchar m_drawExecMode;
     dl_char field104_0x20a;
     dl_char field105_0x20b;
     dl_char field106_0x20c;
