@@ -190,7 +190,7 @@ public:
     dl_int64 field100_0x1f8;
     dl_int64 field101_0x200;
     dl_bool field102_0x208;
-    dl_uchar m_drawExecMode;
+    dl_uchar field102_0x209;
     dl_char field104_0x20a;
     dl_char field105_0x20b;
     dl_char field106_0x20c;

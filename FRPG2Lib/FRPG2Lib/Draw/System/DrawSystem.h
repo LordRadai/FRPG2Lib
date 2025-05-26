@@ -116,13 +116,13 @@ public:
     dl_uchar field38_0xb02;
     dl_uchar field39_0xb03;
     dl_uchar field40_0xb04;
-    dl_uchar m_drawExecMode;
+    dl_uchar field40_0xb05;
     dl_uchar field42_0xb06;
     dl_uchar field43_0xb07;
     dl_bool field44_0xb08;
     dl_bool m_bSceneBegun;
     dl_bool field46_0xb0a;
-    dl_bool field47_0xb0b;
+    dl_uchar m_drawExecMode;
     dl_int field48_0xb0c;
     dl_pointer field49_0xb10;
     dl_int field50_0xb18;
