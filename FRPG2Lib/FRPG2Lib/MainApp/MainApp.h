@@ -11,6 +11,13 @@ class AppGUISystem;
 
 class MainApp
 {
+    struct sMainApp_0xa0
+    {
+		DLKR::DLAllocator* m_pAllocator;
+        dl_pointer m_pVar8;
+		DLUT::DLVector<dl_pointer> m_vVar10;
+    };
+
     struct DeltaTimeData
     {
         dl_float32 m_totalDeltaTimeSum;
@@ -100,9 +107,9 @@ public:
     dl_char field14_0x37;
     HeapMemoryList* m_pMainHeapMemory;
     DrawSystem* m_pDrawSystem;
-    dl_pointer m_pMainApp0x48;
+    dl_pointer m_pGraphicsHeapList;
     dl_pointer m_pFileManager;
-    dl_pointer m_pFontDummySyncObject;
+    dl_pointer m_pSystemFontResources;
     InputManager* m_pInputManager;
     AppDebugManager* m_pAppDebugManager;
     dl_pointer m_pLogWindowManager;
@@ -111,7 +118,7 @@ public:
     AppGUISystem* m_pAppGUISystem;
     dl_pointer field26_0x90;
     dl_pointer field27_0x98;
-    dl_pointer field28_0xa0;
+    sMainApp_0xa0 field28_0xa0;
     DeltaTimeData m_deltaTimeData;
     dl_bool m_bShowFps;
     dl_bool m_bKeepWindowOnTop;
