@@ -105,11 +105,12 @@
     <ClInclude Include="dantelion2\Core\Graphics\DLGPUResource.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLIndexBuffer.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLQuery.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLSDObjectFactory.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLShader.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLSurface.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLTexture.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLVertexBuffer.h" />
-    <ClInclude Include="dantelion2\Core\Graphics\DLVertexDecl.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLVertexDeclaration.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLVertexTypes.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Graphics.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLAllocator.h" />
@@ -164,7 +165,7 @@
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputMapper.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputTraits.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\UserInput.h" />
-    <ClInclude Include="dantelion2\Core\Util\DLLifeCycleAdapter.h" />
+    <ClInclude Include="dantelion2\Core\Util\DLLifecycleAdapter.h" />
     <ClInclude Include="dantelion2\Core\Util\DLNonCopyable.h" />
     <ClInclude Include="dantelion2\Core\Util\DLReferenceCountObject.h" />
     <ClInclude Include="dantelion2\Core\Util\DLVector.h" />
@@ -184,6 +185,7 @@
     <ClInclude Include="Draw\FontDrawContext.h" />
     <ClInclude Include="Draw\System\AppVignettingFilter.h" />
     <ClInclude Include="Draw\System\AppVolumeFogFilter.h" />
+    <ClInclude Include="Draw\System\DrawDevice.h" />
     <ClInclude Include="Draw\System\GX\GXAntiAliasingFilter.h" />
     <ClInclude Include="Draw\System\GX\GXCascadedShadowScene.h" />
     <ClInclude Include="Draw\System\GX\GXCubeMapBlurFilter.h" />

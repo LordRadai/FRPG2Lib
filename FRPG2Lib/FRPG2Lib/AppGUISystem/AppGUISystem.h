@@ -6,7 +6,7 @@ class AppGUISystem : public GuiFramework::GUISystem
 {
 	struct ShaderResources
 	{
-		DLGR::DLVertexDecl* m_pVertexDecls[3];
+		DLGR::DLVertexDeclaration* m_pVertexDecls[3];
 		DLGR::DLVertexShader* m_pVertexShaders[3];
 		DLGR::DLPixelShader* m_pPixelShaders[10];
 	};

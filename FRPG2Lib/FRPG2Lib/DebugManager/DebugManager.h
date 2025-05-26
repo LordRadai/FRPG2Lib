@@ -7,7 +7,7 @@ class DebugManager
 public:
 	struct ShaderPreset
 	{
-		DLGR::DLVertexDecl** m_ppVertexDecl;
+		DLGR::DLVertexDeclaration** m_ppVertexDecl;
 		DLGR::DLVertexShader** m_ppVertexShader;
 		DLGR::DLPixelShader** m_ppPixelShader;
 	};
@@ -16,7 +16,7 @@ public:
 	{
 		DLKR::DLAllocator* m_pAllocator;
 		ShaderPreset m_presets[7];
-		DLGR::DLVertexDecl** m_ppVertexDeclList[3];
+		DLGR::DLVertexDeclaration** m_ppVertexDeclList[3];
 		DLGR::DLVertexShader** m_ppVertexShaderList[5];
 		DLGR::DLPixelShader** m_ppPixelShaderList[3];
 	};

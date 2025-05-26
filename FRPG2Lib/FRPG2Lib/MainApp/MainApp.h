@@ -5,45 +5,36 @@
 #include "DebugManager/AppDebugManager.h"
 #include "InputManager/InputManager.h"
 #include "Memory/Memory.h"
-
-struct DeltaTimeData 
-{
-    dl_float32 m_totalDeltaTimeSum;
-    dl_float32 m_recentDeltaTimeSum;
-    dl_float32 m_rollingDeltaTimeSum;
-    dl_int m_currentDeltaTimeIndex;
-    dl_int m_consecutiveShortFrames;
-    dl_int field5_0x14;
-    dl_uint64 m_lastFrameCounter;
-    dl_uint64 m_performanceFrequency;
-    dl_uint64 field8_0x28;
-    dl_float32 m_deltaTime;
-    dl_float32 m_frameTimeAdjustment;
-    dl_uint64 m_frameCount;
-    dl_float32 m_lastFPSUpdateTime;
-    dl_float32 field13_0x44;
-    dl_float32 m_fps;
-    dl_float32 field15_0x4c;
-    dl_bool m_enableDynamicAdjustment;
-    dl_bool m_dynamicAdjustmentFlag;
-    dl_float32 m_frameTimeOffset;
-    dl_uint m_targetFrameRate;
-};
-
-struct sMainApp_0xa0 
-{
-    dl_pointer field0_0x0;
-    dl_pointer field1_0x8;
-    dl_pointer field2_0x10;
-    dl_pointer field3_0x18;
-    dl_pointer field4_0x20;
-    DLKR::DLAllocator* m_pAllocator;
-};
+#include "Draw/System/DrawSystem.h"
 
 class AppGUISystem;
 
 class MainApp
 {
+    struct DeltaTimeData
+    {
+        dl_float32 m_totalDeltaTimeSum;
+        dl_float32 m_recentDeltaTimeSum;
+        dl_float32 m_rollingDeltaTimeSum;
+        dl_int m_currentDeltaTimeIndex;
+        dl_int m_consecutiveShortFrames;
+        dl_int field5_0x14;
+        dl_uint64 m_lastFrameCounter;
+        dl_uint64 m_performanceFrequency;
+        dl_uint64 field8_0x28;
+        dl_float32 m_deltaTime;
+        dl_float32 m_frameTimeAdjustment;
+        dl_uint64 m_frameCount;
+        dl_float32 m_lastFPSUpdateTime;
+        dl_float32 field13_0x44;
+        dl_float32 m_fps;
+        dl_float32 field15_0x4c;
+        dl_bool m_enableDynamicAdjustment;
+        dl_bool m_dynamicAdjustmentFlag;
+        dl_float32 m_frameTimeOffset;
+        dl_uint m_targetFrameRate;
+    };
+
     void** _vfptr;
 
 public:
@@ -108,7 +99,7 @@ public:
     dl_char field13_0x36;
     dl_char field14_0x37;
     HeapMemoryList* m_pMainHeapMemory;
-    dl_pointer m_pGraphicsContext;
+    DrawSystem* m_pDrawSystem;
     dl_pointer m_pMainApp0x48;
     dl_pointer m_pFileManager;
     dl_pointer m_pFontDummySyncObject;
@@ -120,7 +111,7 @@ public:
     AppGUISystem* m_pAppGUISystem;
     dl_pointer field26_0x90;
     dl_pointer field27_0x98;
-    sMainApp_0xa0 field28_0xa0;
+    dl_pointer field28_0xa0;
     DeltaTimeData m_deltaTimeData;
     dl_bool m_bShowFps;
     dl_bool m_bKeepWindowOnTop;

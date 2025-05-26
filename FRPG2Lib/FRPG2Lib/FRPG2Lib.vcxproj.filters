@@ -89,7 +89,7 @@
     <ClInclude Include="dantelion2\Core\Graphics\DLSurface.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLTexture.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLVertexBuffer.h" />
-    <ClInclude Include="dantelion2\Core\Graphics\DLVertexDecl.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLVertexDeclaration.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLVertexTypes.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Graphics.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLAllocator.h" />
@@ -139,7 +139,7 @@
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputMapper.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\DLUserInputTraits.inl" />
     <ClInclude Include="dantelion2\Core\UserInput\UserInput.h" />
-    <ClInclude Include="dantelion2\Core\Util\DLLifeCycleAdapter.h" />
+    <ClInclude Include="dantelion2\Core\Util\DLLifecycleAdapter.h" />
     <ClInclude Include="dantelion2\Core\Util\DLNonCopyable.h" />
     <ClInclude Include="dantelion2\Core\Util\DLReferenceCountObject.h" />
     <ClInclude Include="dantelion2\Core\Util\DLVector.h" />
@@ -352,6 +352,8 @@
     <ClInclude Include="Draw\System\GX\GXCubeMapBlurFilter.h" />
     <ClInclude Include="PX\PXWorldPreSimulationListener.h" />
     <ClInclude Include="PX\PXWorldPostSimulationListener.h" />
+    <ClInclude Include="dantelion2\Core\Graphics\DLSDObjectFactory.h" />
+    <ClInclude Include="Draw\System\DrawDevice.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />

@@ -3,7 +3,7 @@
 namespace DLUT
 {
 	template<class Client>
-	class DLLifeCycleAdapter : public Client
+	class DLLifecycleAdapter : public Client
 	{
 	};
 }

@@ -30,7 +30,7 @@ namespace DLKR
 		dl_int m_iVar10;
 		dl_int m_iVar14;
 		HeapName m_name;
-		DLUT::DLLifeCycleAdapter<DLPlainReadWriteLock>* m_pLock;
+		DLUT::DLLifecycleAdapter<DLPlainReadWriteLock>* m_pLock;
 		dl_pointer m_pVar40;
 		dl_size m_iVar48;
 		dl_size m_iVar50;

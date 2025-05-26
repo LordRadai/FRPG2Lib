@@ -18,6 +18,12 @@ public:
 	DLGR::DLTexture2D* GetTexture() const { return this->m_pDLTexture; }
 };
 
+class TextureCube : public TextureBase
+{
+	dl_pointer m_pVar10;
+	dl_float32 m_fVar18;
+};
+
 class TextureVolume : public TextureBase
 {
 	dl_pointer m_pVar10;

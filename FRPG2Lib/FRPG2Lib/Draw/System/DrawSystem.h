@@ -5,6 +5,188 @@
 #include "GX/GXCubeMapBlurFilter.h"
 #include "AppSystemMessageListener/AppSystemMessageListener.h"
 #include "Flver/AppFlverShaderReloadListener.h"
+#include "DrawDevice.h"
+
+class DrawSystem 
+{
+    struct sGraphicsCtx_030 
+    {
+        struct sData 
+        {
+            dl_int width;
+            dl_int height;
+            dl_int field2_0x8;
+            dl_int field3_0xc;
+            dl_int field4_0x10;
+            dl_int field5_0x14;
+            dl_int field6_0x18;
+            dl_int field7_0x1c;
+            dl_int field8_0x20;
+            dl_int field9_0x24;
+            HWND field10_0x28;
+            dl_int field11_0x30;
+            dl_int field12_0x34;
+            HWND field13_0x38;
+            dl_int field14_0x40;
+            dl_int field15_0x44;
+            dl_int field16_0x48;
+            dl_int field17_0x4c;
+            dl_int field18_0x50;
+            dl_int field19_0x54;
+            dl_bool field20_0x58;
+            dl_bool field21_0x59;
+            dl_bool field22_0x5a;
+            dl_bool field23_0x5b;
+            dl_int field24_0x5c;
+            dl_int field25_0x60;
+            dl_int field26_0x64;
+            dl_int field27_0x68;
+            dl_int field28_0x6c;
+            dl_int field29_0x70;
+            dl_int field30_0x74;
+            dl_int field31_0x78;
+            dl_int field32_0x7c;
+        };
+
+        sData data[3];
+    };
+
+    struct SceneData 
+    {
+        dl_int width;
+        dl_int height;
+        dl_int defaultWidth;
+        dl_int defaultHeight;
+        dl_uchar windowMode;
+        dl_int field8_0x14;
+        dl_int field9_0x18;
+        dl_int field10_0x1c;
+        dl_int field11_0x20;
+        dl_int field12_0x24;
+        dl_int field13_0x28;
+        dl_int field14_0x2c;
+        dl_int field15_0x30;
+        dl_int field16_0x34;
+        dl_int field17_0x38;
+        dl_int field18_0x3c;
+        dl_int field19_0x40;
+        dl_int field20_0x44;
+        dl_bool field21_0x48;
+    };
+
+public:
+    DLKR::DLAllocator* m_pAllocator;
+    dl_uint m_viewportWidth;
+    dl_uint m_viewportHeight;
+    dl_int field3_0x10;
+    dl_int field4_0x14;
+    dl_bool field5_0x18;
+    dl_bool field6_0x19;
+    dl_bool field7_0x1a;
+    dl_bool field8_0x1b;
+    dl_bool field9_0x1c;
+    dl_bool field10_0x1d;
+    dl_bool field11_0x1e;
+    dl_bool field12_0x1f;
+    HWND m_hwnd;
+    dl_int m_fpsCap;
+    dl_int m_numRenderTargets;
+    sGraphicsCtx_030 field16_0x30;
+    DLGR::DLDrawDevice* m_pDLDrawDevice;
+    DLGR::DLSDObjectFactory* m_pDLSDObjectFactory;
+    Texture2D* m_pRenderTarget;
+    DLGR::DLSurface* m_pRenderTargetSurface;
+    Texture2D* m_pTexture1;
+    DLGR::DLSurface* m_pDLSurface1;
+    Texture2D* m_pTexture2;
+    TextureCube* m_pTextureCube;
+    dl_pointer m_pMdlErrorTexture;
+    DrawDevice m_drawDevice0;
+    DrawDevice m_drawDevice1;
+    DrawDevice m_drawDevice2;
+    DrawDevice m_drawDevice3;
+    DrawDeviceBase m_gameSceneDrawDevice;
+    dl_int field31_0xae8;
+    dl_int field32_0xaec;
+    dl_int field33_0xaf0;
+    dl_int field34_0xaf4;
+    DLGR::DLSurface* m_pDLSurface;
+    dl_uchar field36_0xb00;
+    dl_uchar field37_0xb01;
+    dl_uchar field38_0xb02;
+    dl_uchar field39_0xb03;
+    dl_uchar field40_0xb04;
+    dl_uchar m_drawMode;
+    dl_uchar field42_0xb06;
+    dl_uchar field43_0xb07;
+    dl_bool field44_0xb08;
+    dl_bool m_bSceneBegun;
+    dl_bool field46_0xb0a;
+    dl_bool field47_0xb0b;
+    dl_int field48_0xb0c;
+    dl_pointer field49_0xb10;
+    dl_int field50_0xb18;
+    dl_int field51_0xb1c;
+    dl_int field52_0xb20;
+    dl_int field53_0xb24;
+    DLGR::DLVertexDeclaration* m_pVertexDecl;
+    dl_int field55_0xb30;
+    dl_float32 field56_0xb34;
+    dl_float32 field57_0xb38;
+    dl_float32 field58_0xb3c;
+    dl_float32 field59_0xb40;
+    dl_float32 field60_0xb44;
+    dl_float32 field61_0xb48;
+    dl_float32 field62_0xb4c;
+    dl_float32 field63_0xb50;
+    dl_float32 field64_0xb54;
+    dl_float32 field65_0xb58;
+    dl_float32 field66_0xb5c;
+    dl_float32 field67_0xb60;
+    dl_float32 field68_0xb64;
+    dl_float32 field69_0xb68;
+    dl_float32 field70_0xb6c;
+    dl_int field71_0xb70;
+    dl_int field72_0xb74;
+    dl_int field73_0xb78;
+    dl_int field74_0xb7c;
+    dl_int field75_0xb80;
+    dl_bool field76_0xb84;
+    dl_int field80_0xb88;
+    dl_int field81_0xb8c;
+    DLUT::DLLifecycleAdapter<DLKR::DLPlainLightMutex> m_sync;
+    dl_int m_numRefs;
+    dl_int m_threadID;
+    DLUT::DLLifecycleAdapter<DLKR::DLPlainLightMutex> field85_0xbd0;
+    dl_pointer field86_0xc08[3];
+    dl_int field87_0xc20;
+    dl_int field88_0xc24;
+    dl_int field89_0xc28;
+    dl_int field90_0xc2c;
+    dl_int field91_0xc30;
+    dl_int field92_0xc34;
+    dl_int field93_0xc38;
+    dl_int field94_0xc3c;
+    DLGR::DLQuery* m_pDLQuery;
+    dl_int field96_0xc48;
+    dl_int field97_0xc4c;
+    dl_float32 field98_0xc50;
+    dl_float32 field99_0xc54;
+    SceneData m_sceneData;
+    SceneData m_sceneDataPrev;
+    dl_int field102_0xcf0;
+    dl_bool field103_0xcf4;
+    dl_int field107_0xcf8;
+    dl_int field108_0xcfc;
+    dl_int field109_0xd00;
+    dl_int field110_0xd04;
+    dl_int field111_0xd08;
+    dl_int field112_0xd0c;
+    dl_int field113_0xd10;
+    dl_int field114_0xd14;
+    dl_int field115_0xd18;
+    dl_int field116_0xd1c;
+};
 
 class KatanaDrawSystem : public AppFlverShaderReloadListener, public AppSystemMessageListener
 {

@@ -9,6 +9,7 @@
 #include "DLVertexTypes.h"
 #include "DLTexture.h"
 #include "DLSurface.h"
-#include "DLVertexDecl.h"
+#include "DLVertexDeclaration.h"
 #include "DLShader.h"
 #include "DLQuery.h"
+#include "DLSDObjectFactory.h"
