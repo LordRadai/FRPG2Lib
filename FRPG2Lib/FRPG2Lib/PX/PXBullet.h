@@ -1,59 +1,56 @@
 #pragma once
 #include "PXEntity.h"
-#include <SimpleMath.h>
-#include "Havok/Physics/Dynamics/Entity/hkpRigidBody.h"
-#include "Havok/Physics/Dynamics/Phantom/hkpSimpleShapePhantom.h"
-
-using namespace DirectX::SimpleMath;
+#include "Havok2012/Physics/Dynamics/Entity/hkpRigidBody.h"
+#include "Havok2012/Physics/Dynamics/Phantom/hkpSimpleShapePhantom.h"
 
 struct PXBulletBase : public PXEntity {
-    Vector4 m_position;
-    Vector4 m_rotation;
-    Vector4 field3_0x40;
-    Vector4 field4_0x50;
-    Vector4 field5_0x60;
-    Vector4 field6_0x70;
-    Vector4 field7_0x80;
-    Vector4 field8_0x90;
-    float field9_0xa0;
-    float field10_0xa4;
-    float field11_0xa8;
-    float field12_0xac;
-    float field13_0xb0;
-    float field14_0xb4;
-    float field15_0xb8;
-    float field16_0xbc;
-    float field17_0xc0;
-    int field18_0xc4;
-    float field19_0xc8;
-    float field20_0xcc;
-    float field21_0xd0;
-    float field22_0xd4;
-    float field23_0xd8;
-    float field24_0xdc;
-    float field25_0xe0;
-    float field26_0xe4;
+    DLMT::DL_VECTOR4 m_position;
+    DLMT::DL_VECTOR4 m_rotation;
+    DLMT::DL_VECTOR4 field3_0x40;
+    DLMT::DL_VECTOR4 field4_0x50;
+    DLMT::DL_VECTOR4 field5_0x60;
+    DLMT::DL_VECTOR4 field6_0x70;
+    DLMT::DL_VECTOR4 field7_0x80;
+    DLMT::DL_VECTOR4 field8_0x90;
+    dl_float32 field9_0xa0;
+    dl_float32 field10_0xa4;
+    dl_float32 field11_0xa8;
+    dl_float32 field12_0xac;
+    dl_float32 field13_0xb0;
+    dl_float32 field14_0xb4;
+    dl_float32 field15_0xb8;
+    dl_float32 field16_0xbc;
+    dl_float32 field17_0xc0;
+    dl_int field18_0xc4;
+    dl_float32 field19_0xc8;
+    dl_float32 field20_0xcc;
+    dl_float32 field21_0xd0;
+    dl_float32 field22_0xd4;
+    dl_float32 field23_0xd8;
+    dl_float32 field24_0xdc;
+    dl_float32 field25_0xe0;
+    dl_float32 field26_0xe4;
     PXUserData* m_pPXUserData;
 };
 
 struct PXBulletRigidBody : public PXBulletBase {
     void** _vfptr2;
-    sPXUserValue m_userValue;
+    PXUserValue m_userValue;
     Havok::hkpRigidBody* m_pHkpRigidBody[2];
-    int field6_0x118;
-    float field7_0x11c;
+    dl_int field6_0x118;
+    dl_float32 field7_0x11c;
 };
 
 struct PXBulletPhantom  : public PXBulletBase {
     Havok::hkpSimpleShapePhantom* m_pHkpShapePhantom;
-    int field2_0xf8;
-    float field3_0xfc;
-    float field4_0x100;
-    float field5_0x104;
-    float field6_0x108;
-    float field7_0x10c;
-    float field8_0x110;
-    float field9_0x114;
+    dl_int field2_0xf8;
+    dl_float32 field3_0xfc;
+    dl_float32 field4_0x100;
+    dl_float32 field5_0x104;
+    dl_float32 field6_0x108;
+    dl_float32 field7_0x10c;
+    dl_float32 field8_0x110;
+    dl_float32 field9_0x114;
     PXBulletPhantom* m_pPXBulletPhantom;
-    sPXUserValue m_userValue;
+    PXUserValue m_userValue;
 };

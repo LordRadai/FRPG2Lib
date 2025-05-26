@@ -1,5 +1,5 @@
 #pragma once
-#include "Havok/Physics/PhysicsIncludes.h"
+#include "Havok2012/Physics/PhysicsIncludes.h"
 #include "DebugDraw.h"
 
 static class HavokDebugDraw

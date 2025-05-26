@@ -1,5 +1,5 @@
 #pragma once
-#include "../Texture.h"
+#include "../../Texture.h"
 #include "GXDrawItem.h"
 
 class GXRenderToTexture : public GXDrawItem

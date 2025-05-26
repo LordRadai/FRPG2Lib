@@ -11,3 +11,4 @@
 #include "DLSurface.h"
 #include "DLVertexDecl.h"
 #include "DLShader.h"
+#include "DLQuery.h"

@@ -1,0 +1,203 @@
+#pragma once
+#include "dantelion2/dantelion2.h"
+#include "GX/GXRenderToTexture.h"
+#include "GX/GXCascadedShadowScene.h"
+#include "GX/GXSSAOFilter.h"
+#include "GX/GXAntiAliasingFilter.h"
+#include "GX/GXDepthScaleFilter.h"
+#include "GX/GXScreenSpaceShadow.h"
+#include "GX/GXToneMapFilter.h"
+#include "GX/GXLensSimulationFilter.h"
+#include "GX/GXLensFlareFilter.h"
+#include "AppFogFilter.h"
+#include "AppVolumeFogFilter.h"
+#include "AppLightFilter.h"
+#include "AppScreenSpaceShadow.h"
+#include "AppVignettingFilter.h"
+#include "AppBlackOutFilter.h"
+#include "MetaInfo/MetaInfoManager.h"
+#include "GX/GXDrawPixelQueryItem.h"
+
+class KatanaDrawScene 
+{
+    void** _vfptr;
+
+public:
+    struct QueryList 
+    {
+        struct QueryItem 
+        {
+            DLGR::DLQuery* m_pQuery0;
+            DLGR::DLQuery* m_pQuery1;
+            dl_bool field2_0x10;
+            dl_bool field3_0x11;
+            dl_int field6_0x14;
+            dl_int field10_0x18;
+            dl_int field11_0x1c;
+            dl_int field12_0x20;
+            dl_int field13_0x24;
+        };
+
+        QueryItem m_queryItems[4];
+        dl_int field1_0xa0;
+        dl_int field2_0xa4;
+        dl_int field3_0xa8;
+        dl_int field4_0xac;
+        dl_int field5_0xb0;
+        dl_int field6_0xb4;
+        dl_int field7_0xb8;
+        dl_int field8_0xbc;
+        dl_bool m_bInitalized;
+        dl_bool field10_0xc1;
+    };
+
+    struct CameraParameters 
+    {
+        DLMT::DL_MATRIX44 m_transform;
+        DLMT::DL_VECTOR4 m_focusPoint;
+        dl_float32 m_fov;
+        dl_float32 m_nearZ;
+        dl_float32 m_farZ;
+        dl_uint m_width;
+        dl_uint m_height;
+        dl_uint field7_0x64;
+        dl_float32 field8_0x68;
+        dl_int field9_0x6c;
+        dl_int field10_0x70;
+        dl_float32 field11_0x74;
+        dl_int field12_0x78;
+        dl_int field13_0x7c;
+    };
+
+    DLKR::DLAllocator* m_pAllocator;
+    dl_int m_width;
+    dl_int m_height;
+    dl_int field4_0x18;
+    dl_int field5_0x1c;
+    DLGR::DLSurface* m_pSurface0;
+    DLGR::DLSurface* m_pSurface1;
+    DLGR::DLTexture2D* m_pUnkTexture2D;
+    dl_int m_sceneFlags;
+    dl_bool field10_0x3c;
+    dl_bool field11_0x3d;
+    dl_bool field12_0x3e;
+    dl_bool field13_0x3f;
+    dl_bool field14_0x40;
+    dl_bool field15_0x41;
+    dl_bool field16_0x42;
+    dl_bool field17_0x43;
+    dl_bool field18_0x44;
+    dl_bool field19_0x45;
+    dl_bool field20_0x46;
+    dl_bool field21_0x47;
+    dl_bool field22_0x48;
+    dl_bool m_bFilterLoaded;
+    DLMT::DL_COLOR_32 m_backgroundColor;
+    DLMT::DL_COLOR_32 m_alternateDimensionBackgroundColor;
+    dl_int m_shadingMode;
+    dl_int m_enableLights;
+    GXRenderToTexture m_renderToTexture0;
+    GXRenderToTexture m_sourceSamplerTarget;
+    GXRenderToTexture m_velocityMapRenderTarget;
+    GXRenderToTexture m_renderToTexture3;
+    GXRenderToTexture m_depthSamplerTarget;
+    GXRenderToTexture m_GBuffer0Target;
+    GXRenderToTexture m_renderToTexture6;
+    GXRenderToTexture m_GBuffer1Target;
+    GXRenderToTexture m_lightAccumulationMap;
+    GXRenderToTexture m_lightSpecAccumulationMap;
+    GXRenderToTexture m_renderToTexture10;
+    GXRenderToTexture m_skyboxTexture;
+    GXRenderToTexture m_pWaterWaveRenderTarget;
+    GXRenderToTexture m_renderToTexture13;
+    GXRenderToTexture m_refractionMapTarget;
+    dl_int field49_0x948;
+    dl_int field50_0x94c;
+    GXSSAOFilter m_ssaoFilter;
+    GXCascadedShadowScene m_cascadedShadowScene;
+    AppScreenSpaceShadow m_appScreenSpaceShadow;
+    GXAntiAliasingFilter m_antiAliasingFilter;
+    GXToneMapFilter* m_pGXToneMapFilter;
+    GXDepthScaleFilter m_depthScaleFilter;
+    GXLensSimulationFilter* m_pGXLensSimulationFilter;
+    GXLensFlareFilter* m_pGXLensFlareFilter;
+    AppFogFilter* m_pAppFogFilter;
+    AppVolumeFogFilter* m_pAppVolumeFogFilter;
+    AppLightFilter* m_pAppLightFilter;
+    AppVignettingFilter* m_pAppVignetteFilter;
+    AppBlackOutFilter* m_pAppBlackOutFilter;
+    MetaInfoManager* m_pFilterMetaInfoManager;
+    dl_pointer m_pMSAAScaleRender;
+    dl_bool m_bSSAO;
+    dl_bool m_bMotionBlur;
+    dl_bool m_bAntiAliasing;
+    dl_bool m_bShadows;
+    dl_bool field70_0x1a64;
+    dl_bool m_bDynamicLights;
+    dl_bool m_bDynamicShadows;
+    dl_bool m_bDisableDepthScaleFilter;
+    dl_bool m_bDepthOfField;
+    dl_bool field75_0x1a69;
+    dl_bool field76_0x1a6a;
+    dl_bool field77_0x1a6b;
+    dl_float32 m_reflectionMapUpdateInterval1;
+    dl_float32 m_reflectionMapUpdateInterval2;
+    dl_bool field80_0x1a74;
+    dl_bool field81_0x1a75;
+    dl_bool m_bUseAnotherWorld;
+    dl_bool field83_0x1a77;
+    dl_bool m_bHasDrawn;
+    CameraParameters m_cameraParameters;
+    dl_bool field93_0x1b00;
+    dl_bool field94_0x1b01;
+    dl_bool m_bEnableReflections;
+    dl_bool field96_0x1b03;
+    dl_bool field97_0x1b04;
+    dl_bool field98_0x1b05;
+    dl_bool field99_0x1b06;
+    dl_bool field100_0x1b07;
+    dl_bool field101_0x1b08;
+    dl_bool field102_0x1b09;
+    dl_bool field103_0x1b0a;
+    dl_bool field104_0x1b0b;
+    dl_bool field105_0x1b0c;
+    dl_bool field106_0x1b0d;
+    dl_bool field107_0x1b0e;
+    dl_bool field108_0x1b0f;
+    dl_float32 field109_0x1b10;
+    dl_float32 field110_0x1b14;
+    dl_float32 field111_0x1b18;
+    dl_float32 field112_0x1b1c;
+    dl_float32 field113_0x1b20;
+    dl_float32 field114_0x1b24;
+    dl_float32 field115_0x1b28;
+    dl_float32 field116_0x1b2c;
+    dl_bool field117_0x1b30;
+    dl_bool field118_0x1b31;
+    dl_bool field119_0x1b32;
+    dl_bool m_bEnableWaterRippleEffect;
+    dl_float32 field121_0x1b34;
+    dl_int m_frameNumber;
+    dl_bool m_bDrawShadows;
+    dl_bool field124_0x1b3d;
+    dl_float32 field127_0x1b40;
+    dl_float32 field128_0x1b44;
+    dl_float32 field129_0x1b48;
+    dl_float32 field130_0x1b4c;
+    dl_int field131_0x1b50;
+    dl_int16 field132_0x1b54;
+    QueryList m_queryList;
+    dl_int16 field136_0x1c20;
+    dl_int field139_0x1c24;
+    dl_int field140_0x1c28;
+    dl_int field141_0x1c2c;
+    dl_int field142_0x1c30;
+    dl_int field143_0x1c34;
+    dl_int field147_0x1c38;
+    dl_pointer field152_0x1c40;
+    dl_int field153_0x1c48;
+    dl_int field154_0x1c4c;
+    DLKR::DLAllocator* field155_0x1c50;
+    GXDrawPixelQueryItem m_drawPixelQueryItem;
+    dl_bool field157_0x1cb0;
+};

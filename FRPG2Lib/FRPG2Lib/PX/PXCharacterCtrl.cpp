@@ -1,7 +1,7 @@
 #include "PXCharacterControl.h"
 #include "Draw/DebugDraw/HavokDebugDraw.h"
 
-void PXCharacterRigidBody::Draw(IDrawContext* pDrawContext, bool wireframe, bool showAabb, Vector4 color)
+void PXCharacterRigidBody::Draw(IDrawContext* pDrawContext, dl_bool wireframe, dl_bool showAabb, DLMT::DL_VECTOR4 color)
 {
 	if (this->m_pHkpCharacterRigidBody == nullptr)
 		return;

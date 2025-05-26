@@ -1,6 +1,6 @@
 #pragma once
 #include "GUITextureBase.h"
-#include "Draw/GX/GXRenderToTexture.h"
+#include "Draw/System/GX/GXRenderToTexture.h"
 
 namespace GuiFramework
 {

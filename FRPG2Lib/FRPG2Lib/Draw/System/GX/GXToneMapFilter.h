@@ -1,20 +1,6 @@
 #pragma once
-#include "GXDrawItem.h"
-#include "GXRenderToTexture.h"
-#include "dantelion2/dantelion2.h"
-
-class GXFilterBase : public GXDrawItem
-{
-
-};
-
-class GXDepthScaleFilter : public GXFilterBase
-{
-public:
-	GXRenderToTexture m_depthScale22;
-	GXRenderToTexture m_depthScale44;
-	dl_bool m_bInitialised;
-};
+#include "GXFilterBase.h"
+#include "../../Texture.h"
 
 class GXToneMapFilter : public GXFilterBase
 {

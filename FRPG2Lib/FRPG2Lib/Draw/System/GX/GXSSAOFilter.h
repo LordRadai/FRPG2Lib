@@ -1,0 +1,70 @@
+#pragma once
+#include "GXFilterBase.h"
+#include "GXRenderToTexture.h"
+
+class GXSSAOFilter : public GXFilterBase
+{
+    DLKR::DLAllocator* m_pAllocator;
+    dl_bool field2_0x10;
+    dl_pointer field6_0x14;
+    DLGR::DLTexture2D* field11_0x20;
+    DLGR::DLTexture2D* field12_0x28;
+    DLGR::DLTexture2D* field13_0x30;
+    DLGR::DLTexture2D* field14_0x38;
+    DLGR::DLTexture2D* field15_0x40;
+    DLGR::DLTexture2D* field16_0x48;
+    DLGR::DLTexture2D* field17_0x50;
+    DLGR::DLTexture2D* field18_0x58;
+    DLGR::DLTexture2D* field19_0x60;
+    GXRenderToTexture m_depthRenderTarget;
+    GXRenderToTexture m_ssaoMapTarget;
+    dl_int field22_0x198;
+    dl_bool field23_0x19c;
+    dl_int field27_0x1a0;
+    dl_int field28_0x1a4;
+    dl_float32 m_alpha;
+    dl_int field30_0x1ac;
+    dl_int field31_0x1b0;
+    dl_int field32_0x1b4;
+    dl_int field33_0x1b8;
+    dl_int field34_0x1bc;
+    dl_int field35_0x1c0;
+    dl_int field36_0x1c4;
+    dl_int field37_0x1c8;
+    dl_int field38_0x1cc;
+    dl_int field39_0x1d4;
+	dl_int field40_0x1d8;
+    dl_int field40_0x1dc;
+    dl_int field41_0x1e0;
+    dl_int field42_0x1e4;
+    dl_int field43_0x1e8;
+    dl_int field44_0x1ec;
+    dl_pointer field45_0x1f0;
+    dl_int field46_0x1f8;
+    dl_int field47_0x1fc;
+    dl_pointer field48_0x200;
+    dl_int field49_0x208;
+    dl_int field50_0x20c;
+    dl_pointer field51_0x210;
+    dl_int field52_0x218;
+    dl_bool field53_0x21c;
+    dl_pointer field57_0x220;
+    dl_pointer field58_0x228;
+    dl_pointer field59_0x230;
+    dl_pointer field60_0x238;
+    dl_pointer field61_0x240;
+    dl_pointer field62_0x248;
+    dl_pointer field63_0x250;
+    dl_pointer field64_0x258;
+    dl_pointer field65_0x260;
+    dl_pointer field66_0x268;
+    dl_pointer field67_0x270;
+    dl_pointer field68_0x278;
+    dl_pointer field69_0x280;
+    dl_pointer field70_0x288;
+    dl_pointer field71_0x290;
+    dl_pointer field72_0x298;
+    dl_bool field73_0x2a0;
+    dl_int field77_0x2a4;
+    dl_bool field78_0x2a8;
+};

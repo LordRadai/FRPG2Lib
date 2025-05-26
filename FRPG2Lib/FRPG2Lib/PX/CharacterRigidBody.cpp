@@ -2,7 +2,7 @@
 #include "Draw/DrawContext.h"
 #include "FRPG2Globals.h"
 
-void CharacterRigidBody::Draw(IDrawContext* pDrawContext, Vector4 color)
+void CharacterRigidBody::Draw(IDrawContext* pDrawContext, DLMT::DL_VECTOR4 color)
 {
 	if (!this->m_useKeyframedModelRigidBody)
 	{

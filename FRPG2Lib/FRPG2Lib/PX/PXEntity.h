@@ -2,22 +2,16 @@
 #include <Windows.h>
 #include "PXUserData.h"
 #include "dantelion2/dantelion2.h"
-#include "Havok/Havok.h"
-
-struct DynamicBitset : public DLUT::DLNonCopyable {
-    void** field1_0x8;
-    void** field2_0x10;
-    UINT field3_0x18;
-};
+#include "Havok2012/Havok2012.h"
 
 struct PXEntity {
     void** _vfptr;
     PXUserData* m_pPXUserData;
-    int field2_0x10;
-    void* m_pPXWorld;
+    dl_int field2_0x10;
+    dl_pointer m_pPXWorld;
 };
 
-struct sPXUserValue {
-    int value;
+struct PXUserValue {
+    dl_int value;
     PXEntity* pOwner;
 };
