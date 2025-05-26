@@ -95,7 +95,7 @@ public:
     DLMT::DL_COLOR_32 m_backgroundColor;
     DLMT::DL_COLOR_32 m_alternateDimensionBackgroundColor;
     dl_int m_shadingMode;
-    dl_int m_enableLights;
+    dl_int m_shadowMode;
     GXRenderToTexture m_renderToTexture0;
     GXRenderToTexture m_sourceSamplerTarget;
     GXRenderToTexture m_velocityMapRenderTarget;
@@ -107,8 +107,8 @@ public:
     GXRenderToTexture m_lightAccumulationMap;
     GXRenderToTexture m_lightSpecAccumulationMap;
     GXRenderToTexture m_renderToTexture10;
-    GXRenderToTexture m_skyboxTexture;
-    GXRenderToTexture m_pWaterWaveRenderTarget;
+    GXRenderToTexture m_backgroundTarget;
+    GXRenderToTexture m_waterWaveRenderTarget;
     GXRenderToTexture m_renderToTexture13;
     GXRenderToTexture m_refractionMapTarget;
     dl_int field49_0x948;

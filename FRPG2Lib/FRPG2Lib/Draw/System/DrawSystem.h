@@ -76,8 +76,8 @@ class DrawSystem
 
 public:
     DLKR::DLAllocator* m_pAllocator;
-    dl_uint m_viewportWidth;
-    dl_uint m_viewportHeight;
+    dl_int m_viewportWidth;
+    dl_int m_viewportHeight;
     dl_int field3_0x10;
     dl_int field4_0x14;
     dl_bool field5_0x18;
@@ -116,7 +116,7 @@ public:
     dl_uchar field38_0xb02;
     dl_uchar field39_0xb03;
     dl_uchar field40_0xb04;
-    dl_uchar m_drawMode;
+    dl_uchar m_drawExecMode;
     dl_uchar field42_0xb06;
     dl_uchar field43_0xb07;
     dl_bool field44_0xb08;
@@ -236,6 +236,7 @@ class KatanaDrawSystem : public AppFlverShaderReloadListener, public AppSystemMe
         dl_int field21_0x184;
     };
 
+public:
     DLKR::DLAllocator* m_pAllocator;
     KatanaDrawScene m_katanaDrawScene;
     KatanaDrawScene* m_pDrawingScene;
@@ -281,7 +282,4 @@ class KatanaDrawSystem : public AppFlverShaderReloadListener, public AppSystemMe
     dl_bool m_bDrawObjects;
     dl_bool m_bDrawMap;
     dl_bool field56_0x1fdf;
-
-public:
-    void CreateDrawSystemGUI();
 };

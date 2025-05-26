@@ -90,7 +90,7 @@ public:
     dl_pointer field4_0x20;
     dl_int m_width;
     dl_int m_height;
-    dl_bool m_isIconic;
+    dl_bool m_bIsIconic;
     dl_char field8_0x31;
     dl_char field9_0x32;
     dl_char field10_0x33;
@@ -475,7 +475,7 @@ public:
     dl_pointer m_pVar330;
 	SceneManager* m_pSceneManager;
 	dl_pointer m_pGXDrawSceneManager;
-	dl_pointer m_pKatanaDrawSystem;
+	KatanaDrawSystem* m_pKatanaDrawSystem;
 	dl_pointer m_pFeRenderSystem;
 	dl_pointer m_pVar358;
 	dl_pointer m_pVar360;

@@ -4,6 +4,7 @@
 
 class GXSSAOFilter : public GXFilterBase
 {
+public:
     DLKR::DLAllocator* m_pAllocator;
     dl_bool field2_0x10;
     dl_pointer field6_0x14;
