@@ -75,6 +75,14 @@ class DrawSystem
     };
 
 public:
+    enum DrawExecutionMode : dl_uchar
+    {
+        EXECMODE_IMMEDIATE,
+        EXECMODE_DEFERRED,
+
+        EXECMODE_NUM
+    };
+
     DLKR::DLAllocator* m_pAllocator;
     dl_int m_viewportWidth;
     dl_int m_viewportHeight;
@@ -123,7 +131,7 @@ public:
     dl_bool m_bSceneBegun;
     dl_bool field46_0xb0a;
     dl_uchar m_drawExecMode;
-    dl_int field48_0xb0c;
+    dl_bool field48_0xb0c;
     dl_pointer field49_0xb10;
     dl_int field50_0xb18;
     dl_int field51_0xb1c;
@@ -168,7 +176,7 @@ public:
     dl_int field93_0xc38;
     dl_int field94_0xc3c;
     DLGR::DLQuery* m_pDLQuery;
-    dl_int field96_0xc48;
+    dl_bool field96_0xc48;
     dl_int field97_0xc4c;
     dl_float32 field98_0xc50;
     dl_float32 field99_0xc54;
@@ -186,6 +194,8 @@ public:
     dl_int field114_0xd14;
     dl_int field115_0xd18;
     dl_int field116_0xd1c;
+
+    typedef dl_bool(_fastcall* oInitialize)(DrawSystem* pThis, dl_pointer pDrawSystemSettings);
 };
 
 class KatanaDrawSystem : public AppFlverShaderReloadListener, public AppSystemMessageListener

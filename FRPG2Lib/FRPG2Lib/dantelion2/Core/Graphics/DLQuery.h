@@ -1,13 +1,15 @@
 #pragma once
 #include "DLGfxReferenceCountObject.h"
+#include "DLDrawDevice.h"
 
 namespace DLGR
 {
 	class DLQuery : public DLGfxReferenceCountObject
 	{
-        dl_pointer field1_0x18;
+        DLGR::DLDrawDevice* m_pDrawDevice;
         dl_pointer field2_0x20;
-        dl_int16 field3_0x28;
+        dl_bool m_bHasBegun;
+        dl_bool m_bHasEnded;
         dl_int field6_0x2c;
         dl_int field7_0x30;
 	};

@@ -58,14 +58,6 @@ public:
         HINSTANCE hInstance;
     };
 
-    enum DrawExecutionMode : dl_uchar
-    {
-        EXECMODE_IMMEDIATE,
-        EXECMODE_DEFERRED,
-
-        EXECMODE_NUM
-    };
-
     class HeapMemoryList
     {
         dl_bool m_bInitialised;
