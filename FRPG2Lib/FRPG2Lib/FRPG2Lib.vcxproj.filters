@@ -49,7 +49,6 @@
     <ClCompile Include="GuiFramework\Util\GUIText.cpp" />
     <ClCompile Include="Havok2012\Physics\Collide\Shapes\Convex\hkpConvexVerticesShape.cpp" />
     <ClCompile Include="Havok2012\Physics\Collide\Shapes\Convex\QuickHull\QuickHull.cpp" />
-    <ClCompile Include="MainApp\MainApp.cpp" />
     <ClCompile Include="Memory\GlobalHeapList.cpp" />
     <ClCompile Include="Memory\HeapMemory.cpp" />
     <ClCompile Include="Memory\Memory.cpp" />

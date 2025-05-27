@@ -60,6 +60,7 @@ public:
 
     class HeapMemoryList
     {
+    public:
         dl_bool m_bInitialised;
         DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLDefaultHeapStrategy<DLKR::DLRegularHeap, DLKR::DLMultiThreadingPolicy>>> m_systemHeap;
         DynamicHeapMemoryTemplate<WinAssertHeapStrategy<DLKR::DLBiHeapStrategy<DLKR::DLRobustHeap, DLKR::DLMultiThreadingPolicy>>> m_globalHeap;
@@ -78,9 +79,6 @@ public:
         dl_size m_numRegisteredHeaps;
         HeapMemory** m_pRootHeaps;
         dl_int m_numRootHeaps;
-
-    public:
-        void CreateHeapListGUI();
     };
 
     HWND m_hwnd;
