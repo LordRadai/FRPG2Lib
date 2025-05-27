@@ -352,6 +352,7 @@
     <ClInclude Include="PX\PXWorldPostSimulationListener.h" />
     <ClInclude Include="dantelion2\Core\Graphics\DLSDObjectFactory.h" />
     <ClInclude Include="Draw\System\DrawDevice.h" />
+    <ClInclude Include="FilterManager\FilterManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />

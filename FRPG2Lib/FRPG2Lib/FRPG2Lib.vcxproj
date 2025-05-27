@@ -207,6 +207,7 @@
     <ClInclude Include="Draw\System\MetaInfo\MetaInfoItem.h" />
     <ClInclude Include="Draw\System\MetaInfo\MetaInfoManager.h" />
     <ClInclude Include="Draw\Texture.h" />
+    <ClInclude Include="FilterManager\FilterManager.h" />
     <ClInclude Include="Flver\AppFlverShaderReloadListener.h" />
     <ClInclude Include="GameManager\GameManagerCallbackObject\GameManagerCallbackObject.inl" />
     <ClInclude Include="GameManager\GameManagerCallbackObj\GameManagerCallbackObjBase.h" />

@@ -6,6 +6,7 @@
 #include "InputManager/InputManager.h"
 #include "Memory/Memory.h"
 #include "Draw/System/DrawSystem.h"
+#include "FilterManager/FilterManager.h"
 
 class AppGUISystem;
 
@@ -103,7 +104,7 @@ public:
     InputManager* m_pInputManager;
     AppDebugManager* m_pAppDebugManager;
     dl_pointer m_pLogWindowManager;
-    dl_pointer m_pFilterManager;
+    FilterManager* m_pFilterManager;
     dl_pointer m_pAppSoundManager;
     AppGUISystem* m_pAppGUISystem;
     dl_pointer field26_0x90;
