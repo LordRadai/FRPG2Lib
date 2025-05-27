@@ -76,9 +76,10 @@ namespace GuiFramework
 
 		GUITextureViewer* AddTextureViewer(const dl_wchar* title, GUITexture* pTexture);
 		GUITextureViewer* AddDLTexture2DViewer(const dl_wchar* title, DLGR::DLTexture2D* pTexture);
-		GUITweakerGroup* AddRenderToTextureViewer(const dl_wchar* title, GXRenderToTexture* pGXRenderToTexture);
 
 		GUITextureList* AddTextureList(const dl_wchar* title);
+
+		GUITweakerGroup* AddRenderToTextureList(const dl_wchar* title, GXRenderToTexture* pGXRenderToTexture);
 
 		TGUIPropertyLabel<dl_uchar>* AddPropertyLabelByte(const dl_wchar* title, dl_uchar* v);
 		TGUIPropertyLabel<dl_int16>* AddPropertyLabelShort(const dl_wchar* title, short* v);

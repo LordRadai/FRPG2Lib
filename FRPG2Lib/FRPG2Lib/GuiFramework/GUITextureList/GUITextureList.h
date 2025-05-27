@@ -9,5 +9,8 @@ namespace GuiFramework
 	{
 		GUITextureViewer* m_pTextureViewer;
 		GUIListView* m_pListView;
+
+	public:
+		dl_int AddTexture(const dl_wchar* name, GUITexture* pTexture, const dl_wchar* path = L"");
 	};
 }

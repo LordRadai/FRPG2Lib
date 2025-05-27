@@ -1,6 +1,7 @@
 #include "GUITweakerDialog.h"
 #include "FRPG2Call.h"
 #include "AppGUIRootWindow/AppGUIRootWindow.h"
+#include "../GUITweakerItem/TGUITweakerItem.h"
 
 namespace GuiFramework
 {
@@ -13,10 +14,10 @@ namespace GuiFramework
 	typedef TGUIColorTweaker<DLMT::DL_COLOR_32>* (_fastcall* oAddColorTweakerU32)(GUITweakerGroup* pThis, GUIText* title, uint32_t* v, dl_bool expanded);
 	typedef TGUIColorTweaker<DLMT2::DL_COLOR_U8>* (_fastcall* oAddColorTweakerU8)(GUITweakerGroup* pThis, GUIText* title, dl_uchar* v, dl_bool expanded);
 	typedef TGUIColorTweaker<DLMT::DL_VECTOR4>* (_fastcall* oAddColorTweakerVector4)(GUITweakerGroup* pThis, GUIText* title, dl_float32* v, dl_bool expanded);
-	typedef GUITriggerTweaker* (_fastcall* oAddTriggerTweaker)(GUITweakerGroup* pThis, GUIText* title);
-	typedef GUIYawPitchTweaker* (_fastcall* oAddYawPitchRollTweaker)(GUITweakerGroup* pThis, GUIText* title, dl_float32* v, dl_uint16 param_4);
-	typedef GUITextureViewer* (_fastcall* oAddTextureViewer)(GUITweakerGroup* pThis, GUIText* title, GUITexture* pTexture);
-	typedef GUITextureList* (_fastcall* oAddTextureList)(GUITweakerGroup* pThis, GUIText* title);
+	typedef GUITriggerTweaker*(_fastcall* oAddTriggerTweaker)(GUITweakerGroup* pThis, GUIText* title);
+	typedef GUIYawPitchTweaker*(_fastcall* oAddYawPitchRollTweaker)(GUITweakerGroup* pThis, GUIText* title, dl_float32* v, dl_uint16 param_4);
+	typedef TGUITweakerItem<GUITextureViewer>*(_fastcall* oAddTextureViewer)(GUITweakerGroup* pThis, GUIText* title, GUITexture* pTexture);
+	typedef TGUITweakerItem<GUITextureList>*(_fastcall* oAddTextureList)(GUITweakerGroup* pThis, GUIText* title);
 
 	GUITweakerDialog::GUITweakerDialog(AppGUIRootWindow* pAppGUIRootWindow, GUIText* title, dl_uint flags)
 	{
@@ -357,20 +358,20 @@ namespace GuiFramework
 		return propertyLabel;
 	}
 
-	GUITweakerGroup* GUITweakerDialog::AddRenderToTextureViewer(const dl_wchar* title, GXRenderToTexture* pGXRenderToTexture)
+	GUITweakerGroup* GUITweakerDialog::AddRenderToTextureList(const dl_wchar* title, GXRenderToTexture* pGXRenderToTexture)
 	{
 		GUITweakerGroup* pGroup = this->AddTweakerGroup(title, true);
 
 		if (pGroup)
 		{
-			GUITexture* guiTexture0 = new GUITexture(pGXRenderToTexture, 0);
-			this->AddTextureViewer(L"Texture0", guiTexture0);
+			GUITextureList* pTextureList = this->AddTextureList(L"Textures");
 
-			GUITexture* guiTexture1 = new GUITexture(pGXRenderToTexture, 1);
-			this->AddTextureViewer(L"Texture1", guiTexture1);
-
-			GUITexture* guiTexture2 = new GUITexture(pGXRenderToTexture, 2);
-			this->AddTextureViewer(L"Texture2", guiTexture2);
+			if (pTextureList)
+			{
+				pTextureList->AddTexture(L"Texture 0", new GUITexture(pGXRenderToTexture->GetTexture0().GetTexture()));
+				pTextureList->AddTexture(L"Texture 1", new GUITexture(pGXRenderToTexture->GetTexture1().GetTexture()));	
+				pTextureList->AddTexture(L"Texture 2", new GUITexture(pGXRenderToTexture->GetTexture2().GetTexture()));
+			}
 
 			this->AddPropertyLabelInt(L"Width", &pGXRenderToTexture->m_width);
 			this->AddPropertyLabelInt(L"Height", &pGXRenderToTexture->m_height);
@@ -390,10 +391,10 @@ namespace GuiFramework
 	{
 		GUIText guiTextItem(title);
 
-		GUITextureViewer* pTextureViewer = FRPG2_CALL(oAddTextureViewer, 0x54ca80, this->GetLastTweakerGroup(), &guiTextItem, pTexture);
+		TGUITweakerItem<GUITextureViewer>* pTextureViewer = FRPG2_CALL(oAddTextureViewer, 0x54ca80, this->GetLastTweakerGroup(), &guiTextItem, pTexture);
 		guiTextItem.Free();
 
-		return pTextureViewer;
+		return pTextureViewer->GetGUITweaker();
 	}
 
 	GUITextureViewer* GUITweakerDialog::AddDLTexture2DViewer(const dl_wchar* title, DLGR::DLTexture2D* pTexture)
@@ -407,9 +408,9 @@ namespace GuiFramework
 	{
 		GUIText guiTextItem(title);
 
-		GUITextureList* pTextureList = FRPG2_CALL(oAddTextureList, 0x54cd00, this->GetLastTweakerGroup(), &guiTextItem);
+		TGUITweakerItem<GUITextureList>* pTextureList = FRPG2_CALL(oAddTextureList, 0x54cd00, this->GetLastTweakerGroup(), &guiTextItem);
 		guiTextItem.Free();
 
-		return pTextureList;
+		return pTextureList->GetGUITweaker();
 	}
 }

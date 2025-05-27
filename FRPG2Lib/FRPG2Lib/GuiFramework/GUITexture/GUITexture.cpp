@@ -14,32 +14,6 @@ namespace GuiFramework
 		}
 	}
 
-	GUITexture::GUITexture(GXRenderToTexture* pRenderToTexture, uint32_t index)
-	{
-		DLGR::DLTexture2D* pTexture = nullptr;
-
-		switch (index)
-		{
-		case 0:
-			pTexture = pRenderToTexture->GetTexture0().GetTexture();
-			break;
-		case 1:
-			pTexture = pRenderToTexture->GetTexture1().GetTexture();
-			break;
-		case 2:
-			pTexture = pRenderToTexture->GetTexture2().GetTexture();
-			break;
-		}
-
-		this->m_pDLTexture = pTexture;
-
-		if (pTexture)
-		{
-			this->m_pDLTexture->Ref();
-			this->Initialize();
-		}
-	}
-
 	uint32_t GUITexture::getTextureWidth()
 	{
 		if (this->getTextureFormat() == 0)

@@ -8,7 +8,6 @@ namespace GuiFramework
 	{
 	public:
 		GUITexture(DLGR::DLTexture2D* pTexture);
-		GUITexture(GXRenderToTexture* pTexture, uint32_t index);
 
 		static void* operator new(size_t size)
 		{

@@ -17,5 +17,8 @@ namespace GuiFramework
 		dl_int m_iVar130;
 		dl_uint m_showInfoOptions;
 		dl_int m_fitOptions;
+
+	public:
+		void SetTexture(GUITexture* pTexture);
 	};
 }

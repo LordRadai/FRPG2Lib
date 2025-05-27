@@ -57,6 +57,8 @@
     <ClCompile Include="GuiFramework\GUIRootWindow\GUIRootWindow.cpp" />
     <ClCompile Include="GuiFramework\GUISystem\GUISystem.cpp" />
     <ClCompile Include="GuiFramework\GUITextEditorUtil\GUITextEditorUtil.cpp" />
+    <ClCompile Include="GuiFramework\GUITextureList\GUITextureList.cpp" />
+    <ClCompile Include="GuiFramework\GUITextureViewer\GUITextureViewer.cpp" />
     <ClCompile Include="GuiFramework\GUITexture\GUITexture.cpp" />
     <ClCompile Include="GuiFramework\GUITriggerTweaker\GUITriggerTweaker.cpp" />
     <ClCompile Include="GuiFramework\GUITweakerDialog\GUITweakerDialog.cpp" />
@@ -214,6 +216,7 @@
     <ClInclude Include="GameManager\GameManagerCallbackObject\GameManagerCallbackObjectBase.h" />
     <ClInclude Include="GuiFramework\GUIDropDownList\GUIDropDownList.h" />
     <ClInclude Include="GuiFramework\GUIListBox\GUIListBox.h" />
+    <ClInclude Include="GuiFramework\GUITweakerItem\TGUITweakerItem.h" />
     <ClInclude Include="InputManager\DeviceList.h" />
     <ClInclude Include="InputManager\GamePad.h" />
     <ClInclude Include="InputManager\InputDevices.h" />
