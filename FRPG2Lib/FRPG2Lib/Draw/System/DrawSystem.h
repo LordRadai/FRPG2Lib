@@ -75,14 +75,6 @@ class DrawSystem
     };
 
 public:
-    enum DrawExecutionMode : dl_uchar
-    {
-        EXECMODE_IMMEDIATE,
-        EXECMODE_DEFERRED,
-
-        EXECMODE_NUM
-    };
-
     DLKR::DLAllocator* m_pAllocator;
     dl_int m_viewportWidth;
     dl_int m_viewportHeight;
@@ -130,7 +122,7 @@ public:
     dl_bool field44_0xb08;
     dl_bool m_bSceneBegun;
     dl_bool field46_0xb0a;
-    dl_uchar m_drawExecMode;
+    dl_bool m_bMultiThreadRendering;
     dl_bool field48_0xb0c;
     dl_pointer field49_0xb10;
     dl_int field50_0xb18;
