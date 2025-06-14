@@ -16,7 +16,7 @@ namespace GuiFramework
 	public:
 		GUIObject() {}
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)((UINT64)(g_moduleAddr)+0x1616de8); }
+		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1616de8); }
 		virtual ~GUIObject() {}
 		virtual void onDestroy() {}
 		virtual void free();

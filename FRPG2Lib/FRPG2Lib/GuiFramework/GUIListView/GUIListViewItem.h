@@ -11,7 +11,7 @@ namespace GuiFramework
         GUIListViewItem() {}
         GUIListViewItem(GUIListView* pListView, GUIText* label);
 
-        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)((UINT64)(g_moduleAddr)+0x1618638); }
+        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1618638); }
         virtual ~GUIListViewItem() {}
         virtual void onDestroy();
         virtual int onUpdate(GUIText* param_1, int columnIdx) { return 0; }

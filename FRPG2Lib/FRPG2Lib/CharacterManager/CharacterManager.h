@@ -3,6 +3,7 @@
 #include "ResourceManager/AppResourceManagerBase.h"
 #include "ResourceObject/ParamFileResourceObject.h"
 #include "Network/PacketReceiver/NetPacketReceiver.h"
+#include "Draw/DrawContext.h"
 
 #define NUM_MAX_CHR 74
 #define NUM_MAX_PLAYER_CHR 6
@@ -142,9 +143,9 @@ public:
     dl_bool field121_0xd59;
     dl_bool field122_0xd5a;
     dl_bool m_bMultiThreadPreDrawTask;
-    dl_pointer* m_pChrAsmResidentManager;
+    dl_pointer m_pChrAsmResidentResManager;
     dl_pointer field129_0xd68;
-    dl_pointer* m_pGrabManager;
+    dl_pointer m_pGrabManager;
     NetPacketReceiver* m_pGrabPacketReceiver;
     NetPacketReceiver* m_pDamagePacketReceiver;
     NetPacketReceiver* m_pDeadPacketReceiver;
@@ -156,8 +157,15 @@ public:
     CharacterManager();
 	
     virtual ~CharacterManager();
+    virtual void Update(dl_float32* pDeltaTime);
+	virtual void RegisterPostPhysicsTasks(dl_float32* pDeltaTime);
+    virtual void RegisterPreDrawTasks(dl_float32* pDeltaTime);
+    virtual void DrawCharacterModels(dl_pointer pDrawCtxWrapper);
+    virtual void DrawUnknownModel(dl_pointer pDrawCtxWrapper);
+    virtual void DrawCharacterIcons(IDrawContext* pDrawContext);
 
     dl_bool Initialize();
     void ClearEntityListAndResources();
-    void FreePlayerCharactersAsmResources(dl_pointer pChrAsmCommonResData);
+
+    typedef void(_fastcall* oConstructor)(CharacterManager* pThis);
 };

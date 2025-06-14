@@ -8,7 +8,7 @@ namespace GuiFramework
 	public:
 		GUITweakerItem() : GUIMsgReceiver() {}
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)((UINT64)(g_moduleAddr)+0x1617d90); }
+		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617d90); }
 		virtual ~GUITweakerItem() {}
 		virtual void onDestroy() {}
 		virtual void update() {}

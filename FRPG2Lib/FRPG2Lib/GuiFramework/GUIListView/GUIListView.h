@@ -20,7 +20,7 @@ namespace GuiFramework
         GUIListView(GUIWidget* pRoot, GUIText* title, GUIWidgetInitData* param_3);
         GUIListView(GUIWidget* pRoot, GUIText* title, int flags, int param_4);
 
-        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)((UINT64)(g_moduleAddr)+0x16185d0); }
+        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x16185d0); }
         virtual ~GUIListView() {}
         virtual void onDestroy();
         virtual int onMouseOverContent(MousePosData* mousePos);

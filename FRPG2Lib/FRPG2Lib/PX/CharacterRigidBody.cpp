@@ -10,7 +10,7 @@ void CharacterRigidBody::Draw(IDrawContext* pDrawContext, DLMT::DL_VECTOR4 color
 		{
 			PXKeyframedRigidBody pxRigidBody = this->m_keyFramedRigidBodies[i];
 
-			if (pxRigidBody.m_pHkpRigidBody && (pxRigidBody.m_pHkpRigidBody->_vfptr == (void**)((UINT64)g_moduleAddr + 0x1126578)))
+			if (pxRigidBody.m_pHkpRigidBody && (pxRigidBody.m_pHkpRigidBody->_vfptr == (void**)(MODULE_ADDR + 0x1126578)))
 				pxRigidBody.Draw(pDrawContext, true, false, color);
 		}
 	}

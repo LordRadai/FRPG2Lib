@@ -10,7 +10,7 @@ namespace GuiFramework
 		GUIHeapList() {}
 		GUIHeapList(GUIWidget* pParent, GUIText* title);
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)((UINT64)(g_moduleAddr)+0x1878b58); }
+		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1878b58); }
 		virtual ~GUIHeapList() {}
 		virtual void onDestroy();
 		virtual void destroyChildren();

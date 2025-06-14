@@ -21,7 +21,7 @@ namespace GuiFramework
 			return DLKR::Free(block, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)((UINT64)(g_moduleAddr)+0x1617668); }
+		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617668); }
 		virtual ~GUIPropertyLabel() {}
 		virtual void onDestroy() { GUIWindowBase::onDestroy(); }
 		virtual void draw(AppGUIRender* pAppGUIRender);

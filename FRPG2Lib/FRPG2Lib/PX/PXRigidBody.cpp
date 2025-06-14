@@ -20,7 +20,7 @@ void PXKeyframedModelRigidBody::Draw(IDrawContext* pDrawContext, dl_bool wirefra
 	{
 		Havok::hkpRigidBody* pRigidBody = this->m_rigidBodyList[i];
 
-		if (pRigidBody && (pRigidBody->_vfptr == (void**)((UINT64)g_moduleAddr + 0x1126578)))
+		if (pRigidBody && (pRigidBody->_vfptr == (void**)(MODULE_ADDR + 0x1126578)))
 			HavokDebugDraw::DrawShape(pDrawContext, pRigidBody->getCollidableShape(), pRigidBody->getWorldPosition(), wireframe, showAabb, color);
 	}
 }

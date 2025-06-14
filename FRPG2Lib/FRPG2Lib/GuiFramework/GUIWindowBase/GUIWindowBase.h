@@ -36,7 +36,7 @@ namespace GuiFramework
     public:
         GUIWindowBase() : GUIMsgReceiver() {}
 
-        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)((UINT64)(g_moduleAddr)+0x1617520); }
+        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617520); }
         virtual ~GUIWindowBase() {}
         virtual void onDestroy();
         virtual dl_int onUpdate(GUIWindowBase* param_1) { return 0; }

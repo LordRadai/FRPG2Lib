@@ -8,7 +8,7 @@ namespace GuiFramework
     public:
         GUIWidget() : GUIWindowBase() {}
 
-        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)((UINT64)(g_moduleAddr)+0x1617980); }
+        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617980); }
         virtual ~GUIWidget() {}
         virtual void onDestroy();
         virtual int onUpdate(GUIWindowBase* param_1);

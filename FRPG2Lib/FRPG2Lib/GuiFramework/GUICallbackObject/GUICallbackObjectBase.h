@@ -8,7 +8,7 @@ namespace GuiFramework
 	public:
 		GUICallbackObjectBase() : GUIMsgReceiver() {}
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)((UINT64)(g_moduleAddr)+0x1616f00); }
+		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1616f00); }
 		virtual ~GUICallbackObjectBase() {}
 		virtual void invoke() {};
 

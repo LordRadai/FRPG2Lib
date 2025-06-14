@@ -10,7 +10,7 @@ class AppGUIRootWindow : public GuiFramework::GUIRootWindow
 	dl_int m_iVar120;
 
 public:
-	static void** GetVTableAddr() { return (void**)((UINT64)g_moduleAddr + 0x11dd908); }
+	static void** GetVTableAddr() { return (void**)(MODULE_ADDR + 0x11dd908); }
 };
 
 typedef dl_int(_fastcall* oOnMouseClicked)(AppGUIRootWindow* pThis, GuiFramework::MousePosData* mousePos);
