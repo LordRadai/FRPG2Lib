@@ -1,6 +1,8 @@
 #include "AppResourceManager.h"
 #include "FRPG2Call.h"
 
+typedef dl_pointer(_fastcall* oGetChrAsmCommonResData)(AppResourceManager* pThis);
+
 typedef FontBinderFileResourceObject*(_fastcall* oLoadFont)(AppResourceManager* pThis, const dl_wchar* filename, dl_uint fontID, DLKR::DLAllocator* pAllocator, DLKR::DLAllocator* pAllocator2, dl_uint fileFlags);
 
 FontBinderFileResourceObject* AppResourceManager::LoadFont(const dl_wchar* filename, dl_uint fontID, DLKR::DLAllocator* pAllocator, DLKR::DLAllocator* pAllocator2, dl_uint fileFlags)
@@ -22,4 +24,9 @@ dl_bool AppResourceManager::LoadAndCreateFontResource(const dl_wchar* filename, 
 	}
 
 	return false;
+}
+
+dl_pointer AppResourceManager::GetChrAsmCommonResData()
+{
+	return FRPG2_CALL(oGetChrAsmCommonResData, 0x2dddf0, this);
 }

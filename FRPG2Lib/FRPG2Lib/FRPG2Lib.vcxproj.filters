@@ -56,13 +56,14 @@
     <ClCompile Include="PX\CharacterRigidBody.cpp" />
     <ClCompile Include="PX\PXCharacterCtrl.cpp" />
     <ClCompile Include="PX\PXRigidBody.cpp" />
-    <ClCompile Include="ResourceManager\AppresourceManager.cpp" />
+    <ClCompile Include="ResourceManager\AppResourceManager.cpp" />
     <ClCompile Include="ResourceObject\FileResourceObject.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
     <ClCompile Include="InputManager\InputManager.cpp" />
     <ClCompile Include="GuiFramework\GUITextureViewer\GUITextureViewer.cpp" />
     <ClCompile Include="GuiFramework\GUITextureList\GUITextureList.cpp" />
+    <ClCompile Include="CharacterManager\CharacterManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppGUIRootWindow\AppGUIRootWindow.h" />
@@ -307,7 +308,7 @@
     <ClInclude Include="Memory\HeapMemory.h" />
     <ClInclude Include="Memory\Memory.h" />
     <ClInclude Include="Memory\WinAssertHeapStrategy.h" />
-    <ClInclude Include="NetworkManager\NetworkManager.h" />
+    <ClInclude Include="Network\NetworkManager\NetworkManager.h" />
     <ClInclude Include="Properties\Properties.h" />
     <ClInclude Include="PX\CharacterRigidBody.h" />
     <ClInclude Include="PX\PXBullet.h" />
@@ -356,6 +357,10 @@
     <ClInclude Include="Draw\System\DrawDevice.h" />
     <ClInclude Include="FilterManager\FilterManager.h" />
     <ClInclude Include="GuiFramework\GUITweakerItem\TGUITweakerItem.h" />
+    <ClInclude Include="CharacterManager\CharacterManager.h" />
+    <ClInclude Include="ResourceObject\ParamFileResourceObject.h" />
+    <ClInclude Include="ParamData\ParamData.h" />
+    <ClInclude Include="Network\PacketReceiver\NetPacketReceiver.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />

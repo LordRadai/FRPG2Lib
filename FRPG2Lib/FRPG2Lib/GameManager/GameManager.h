@@ -4,6 +4,7 @@
 #include "Steam/CCallback.inl"
 #include "ResourceManager/AppResourceManager.h"
 #include "GameManagerCallbackObject/GameManagerCallbackObject.inl"
+#include "CharacterManager/CharacterManager.h"
 
 class GameManager
 {
@@ -12,7 +13,7 @@ class GameManager
 public:
     DLKR::DLAllocator* m_pAllocator;
     dl_pointer m_pDamageManager;
-    dl_pointer m_pCharacterManager;
+    CharacterManager* m_pCharacterManager;
     dl_pointer m_pCameraManager;
     dl_pointer m_pAiManager;
     AppResourceManager* m_pAppResourceManager;

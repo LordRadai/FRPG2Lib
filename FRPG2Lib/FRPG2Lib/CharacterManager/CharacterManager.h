@@ -2,6 +2,7 @@
 #include "dantelion2/dantelion2.h"
 #include "ResourceManager/AppResourceManagerBase.h"
 #include "ResourceObject/ParamFileResourceObject.h"
+#include "Network/PacketReceiver/NetPacketReceiver.h"
 
 #define NUM_MAX_CHR 74
 #define NUM_MAX_PLAYER_CHR 6
@@ -11,8 +12,6 @@ typedef dl_pointer PlayerCtrl;
 
 class CharacterManager
 {
-    void** _vfptr;
-
 public:
     // Placeholder, actual content is unknown
     _declspec(align(8))
@@ -146,11 +145,19 @@ public:
     dl_pointer* m_pChrAsmResidentManager;
     dl_pointer field129_0xd68;
     dl_pointer* m_pGrabManager;
-    dl_pointer* m_pGrabPacketReceiver;
-    dl_pointer* m_pDamagePacketReceiver;
-    dl_pointer* m_pDeadPacketReceiver;
-    dl_pointer* m_pEquipPacketReceiver;
-    dl_pointer* m_pMotionPacketReceiver;
-    dl_pointer* m_pLockOnPacketReceiver;
-    dl_pointer* m_pStatusPacketReceiver;
+    NetPacketReceiver* m_pGrabPacketReceiver;
+    NetPacketReceiver* m_pDamagePacketReceiver;
+    NetPacketReceiver* m_pDeadPacketReceiver;
+    NetPacketReceiver* m_pEquipPacketReceiver;
+    NetPacketReceiver* m_pMotionPacketReceiver;
+    NetPacketReceiver* m_pLockOnPacketReceiver;
+    NetPacketReceiver* m_pStatusPacketReceiver;
+
+    CharacterManager();
+	
+    virtual ~CharacterManager();
+
+    dl_bool Initialize();
+    void ClearEntityListAndResources();
+    void FreePlayerCharactersAsmResources(dl_pointer pChrAsmCommonResData);
 };

@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AppGUISystem\AppGUISystem.cpp" />
+    <ClCompile Include="CharacterManager\CharacterManager.cpp" />
     <ClCompile Include="dantelion2\Core\Graphics\Core\CGShaderResourceView.cpp" />
     <ClCompile Include="dantelion2\Core\Graphics\Core\CGTexture.cpp" />
     <ClCompile Include="dantelion2\Core\Graphics\DLTexture.cpp" />
@@ -77,7 +78,7 @@
     <ClCompile Include="PX\CharacterRigidBody.cpp" />
     <ClCompile Include="PX\PXCharacterCtrl.cpp" />
     <ClCompile Include="PX\PXRigidBody.cpp" />
-    <ClCompile Include="ResourceManager\AppresourceManager.cpp" />
+    <ClCompile Include="ResourceManager\AppResourceManager.cpp" />
     <ClCompile Include="ResourceObject\FileResourceObject.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
@@ -89,6 +90,7 @@
     <ClInclude Include="CameraOperator\CameraOperator.h" />
     <ClInclude Include="CameraOperator\FreeCameraOperator.h" />
     <ClInclude Include="CameraOperator\PerspectiveCameraOperator.h" />
+    <ClInclude Include="CharacterManager\CharacterManager.h" />
     <ClInclude Include="CharacterResources\CharacterResources.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGBuffer.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGDepthStencilView.h" />
@@ -222,12 +224,15 @@
     <ClInclude Include="InputManager\InputDevices.h" />
     <ClInclude Include="InputManager\InputManager.h" />
     <ClInclude Include="Memory\GlobalHeapList.h" />
+    <ClInclude Include="Network\PacketReceiver\NetPacketReceiver.h" />
+    <ClInclude Include="ParamData\ParamData.h" />
     <ClInclude Include="PX\PXWorldPostSimulationListener.h" />
     <ClInclude Include="PX\PXWorldPreSimulationListener.h" />
     <ClInclude Include="ResourceManager\AppResourceManager.h" />
     <ClInclude Include="ResourceObject\CommonbndFileCap.h" />
     <ClInclude Include="ResourceObject\FileResourceObject.h" />
     <ClInclude Include="ResourceObject\FontBinderFileResourceObject.h" />
+    <ClInclude Include="ResourceObject\ParamFileResourceObject.h" />
     <ClInclude Include="ResourceObject\RegulationResourceObject.h" />
     <ClInclude Include="ResourceObject\ResourceObject.h" />
     <ClInclude Include="Draw\System\Filter\MetaInfoBase.h" />
@@ -358,7 +363,7 @@
     <ClInclude Include="Memory\HeapMemory.h" />
     <ClInclude Include="Memory\Memory.h" />
     <ClInclude Include="Memory\WinAssertHeapStrategy.h" />
-    <ClInclude Include="NetworkManager\NetworkManager.h" />
+    <ClInclude Include="Network\NetworkManager\NetworkManager.h" />
     <ClInclude Include="Properties\Properties.h" />
     <ClInclude Include="PX\CharacterRigidBody.h" />
     <ClInclude Include="PX\PXBullet.h" />
