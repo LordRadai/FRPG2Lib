@@ -1,6 +1,7 @@
 #include "CharacterManager.h"
 #include "FRPG2Call.h"
 
+typedef void(_fastcall* oConstructor)(CharacterManager* pThis, DLKR::DLAllocator* pAllocator);
 typedef void(_fastcall* oDestructor)(CharacterManager* pThis);
 typedef void(_fastcall* oUpdate)(CharacterManager* pThis, dl_float32* pDeltaTime);
 typedef void(_fastcall* oRegisterPostPhysicsTasks)(CharacterManager* pThis, dl_float32* pDeltaTime);
@@ -9,12 +10,11 @@ typedef void(_fastcall* oDrawCharacterModels)(CharacterManager* pThis, dl_pointe
 typedef void(_fastcall* oDrawUnknownModel)(CharacterManager* pThis, dl_pointer pDrawCtxWrapper);
 typedef void(_fastcall* oDrawCharacterIcons)(CharacterManager* pThis, IDrawContext* pDrawContext);
 
-typedef dl_bool(_fastcall* oInitialize)(CharacterManager* pThis);
 typedef void(_fastcall* oClearEntityListAndResources)(CharacterManager* pThis);
 
-CharacterManager::CharacterManager()
+CharacterManager::CharacterManager(DLKR::DLAllocator* pAllocator)
 {
-	FRPG2_CALL(oConstructor, 0x3546c0, this);
+	FRPG2_CALL(oConstructor, 0x3546c0, this, pAllocator);
 }
 
 CharacterManager::~CharacterManager()

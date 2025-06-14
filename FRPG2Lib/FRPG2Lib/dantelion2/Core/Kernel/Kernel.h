@@ -18,3 +18,5 @@
 
 #include "DLMultiThreadingPolicy.h"
 #include "DLSingleThreadingPolicy.h"
+
+#include "DLPanic.h"

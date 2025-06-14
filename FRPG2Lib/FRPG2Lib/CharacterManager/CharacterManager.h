@@ -154,7 +154,7 @@ public:
     NetPacketReceiver* m_pLockOnPacketReceiver;
     NetPacketReceiver* m_pStatusPacketReceiver;
 
-    CharacterManager();
+    CharacterManager(DLKR::DLAllocator* pAllocator);
 	
     virtual ~CharacterManager();
     virtual void Update(dl_float32* pDeltaTime);
@@ -167,5 +167,5 @@ public:
     dl_bool Initialize();
     void ClearEntityListAndResources();
 
-    typedef void(_fastcall* oConstructor)(CharacterManager* pThis);
+    typedef dl_bool(_fastcall* oInitialize)(CharacterManager* pThis);
 };

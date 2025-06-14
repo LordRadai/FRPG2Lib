@@ -15,3 +15,4 @@ extern HMODULE g_hModule;
 #define NETWORK_MANAGER (*(NetworkManager**)(MODULE_ADDR + 0x1616cf8))
 #define FRPG2_HINSTANCE (*(HINSTANCE*)(MODULE_ADDR + 0x16142b0))
 #define WORLD_HEAP_LIST (*(WorldHeapList**)(MODULE_ADDR + 0x1616cc0))
+#define DL_PANIC_MODE (*(dl_uint*)(MODULE_ADDR + 0x157d524))
