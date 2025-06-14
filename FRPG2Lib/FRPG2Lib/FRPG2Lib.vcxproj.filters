@@ -64,6 +64,7 @@
     <ClCompile Include="GuiFramework\GUITextureViewer\GUITextureViewer.cpp" />
     <ClCompile Include="GuiFramework\GUITextureList\GUITextureList.cpp" />
     <ClCompile Include="CharacterManager\CharacterManager.cpp" />
+    <ClCompile Include="dantelion2\Core\Kernel\DLPanic.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppGUIRootWindow\AppGUIRootWindow.h" />
@@ -362,6 +363,7 @@
     <ClInclude Include="ParamData\ParamData.h" />
     <ClInclude Include="Network\PacketReceiver\NetPacketReceiver.h" />
     <ClInclude Include="Network\Network.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLPanic.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />

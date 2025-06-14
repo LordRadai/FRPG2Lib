@@ -27,6 +27,7 @@
     <ClCompile Include="dantelion2\Core\Graphics\DLVertexTypes.cpp" />
     <ClCompile Include="dantelion2\Core\Kernel\DLAllocator.cpp" />
     <ClCompile Include="dantelion2\Core\Kernel\DLNew.cpp" />
+    <ClCompile Include="dantelion2\Core\Kernel\DLPanic.cpp" />
     <ClCompile Include="dantelion2\Core\Kernel\DLSyncObject.cpp" />
     <ClCompile Include="dantelion2\Core\Text\DLFormat.cpp" />
     <ClCompile Include="dantelion2\Core\Text\DLStringUtil.cpp" />
@@ -128,6 +129,7 @@
     <ClInclude Include="dantelion2\Core\Kernel\DLMultiThreadingPolicy.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLMutex.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLNew.h" />
+    <ClInclude Include="dantelion2\Core\Kernel\DLPanic.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLReadWriteLock.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLRegularHeap.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLRobustHeap.h" />
