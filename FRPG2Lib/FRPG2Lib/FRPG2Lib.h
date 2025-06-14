@@ -21,7 +21,7 @@
 
 #include "MainApp/MainApp.h"
 #include "GameManager/GameManager.h"
-#include "NetworkManager/NetworkManager.h"
+#include "Network/Network.h"
 
 #include "AppGUISystem/AppGUISystem.h"
 #include "AppGUIRootWindow/AppGUIRootWindow.h"

@@ -224,6 +224,7 @@
     <ClInclude Include="InputManager\InputDevices.h" />
     <ClInclude Include="InputManager\InputManager.h" />
     <ClInclude Include="Memory\GlobalHeapList.h" />
+    <ClInclude Include="Network\Network.h" />
     <ClInclude Include="Network\PacketReceiver\NetPacketReceiver.h" />
     <ClInclude Include="ParamData\ParamData.h" />
     <ClInclude Include="PX\PXWorldPostSimulationListener.h" />

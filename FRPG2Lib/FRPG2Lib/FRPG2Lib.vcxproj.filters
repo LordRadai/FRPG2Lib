@@ -361,6 +361,7 @@
     <ClInclude Include="ResourceObject\ParamFileResourceObject.h" />
     <ClInclude Include="ParamData\ParamData.h" />
     <ClInclude Include="Network\PacketReceiver\NetPacketReceiver.h" />
+    <ClInclude Include="Network\Network.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />
