@@ -41,3 +41,16 @@ enum HeapType
 
 DLKR::DLAllocator* GetRootHeap(int heapType);
 const dl_wchar* GetRootHeapName(int heapType);
+
+class Memory
+{
+	void** _vfptr;
+	DLKR::DLAllocator* m_pAllocator;
+	dl_pointer m_pVar10;
+	dl_pointer m_pVar18;
+	dl_bool m_bVar20;
+	dl_bool m_bVar21;
+
+public:
+	dl_pointer FindParamEntry(dl_uint rowID);
+};

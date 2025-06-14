@@ -3,6 +3,7 @@
 #include "FRPG2Call.h"
 
 typedef DLKR::DLAllocator*(_fastcall* oGetHeap)(int heapType);
+typedef dl_pointer(_fastcall* oFindParamEntry)(Memory* pThis, dl_uint rowID);
 
 DLKR::DLAllocator* GetRootHeap(int heapType)
 {
@@ -56,4 +57,9 @@ const dl_wchar* GetRootHeapName(int heapType)
 	default:
 		return L"Unknown";
 	}
+}
+
+dl_pointer Memory::FindParamEntry(dl_uint rowID)
+{
+	return FRPG2_CALL(oFindParamEntry, 0x3e8f0, this, rowID);
 }
