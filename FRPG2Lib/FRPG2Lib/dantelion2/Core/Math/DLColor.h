@@ -25,7 +25,7 @@ namespace DLMT
 
 	namespace DL_COLORS
 	{
-		static const DL_VECTOR4 WHITE = {1.f, 1.f, 1.f, 1.f};
+		static const DL_VECTOR4 WHITE = { 1.f, 1.f, 1.f, 1.f };
 		static const DL_VECTOR4 BLACK = { 0.f, 0.f, 0.f, 1.f };
 		static const DL_VECTOR4 RED = { 1.f, 0.f, 0.f, 1.f };
 		static const DL_VECTOR4 GREEN = { 0.f, 1.f, 0.f, 1.f };

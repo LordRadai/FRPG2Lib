@@ -11,5 +11,5 @@ class DebugDrawParameters
 
 public:
 	DebugDrawParameters(IDrawContext* pDrawContext);
-	void ApplyTransform(Matrix* pTransform);
+	void ApplyTransform(const Matrix& transform);
 };

@@ -17,7 +17,7 @@ namespace DebugDraw
     void DrawIndexedTest(IDrawContext* DrawContext, DLMT::DL_MATRIX44 transform, DLMT::DL_VECTOR4 color)
     {
 		DebugDrawParameters drawInfo(DrawContext);
-		drawInfo.ApplyTransform(&transform);
+		drawInfo.ApplyTransform(transform);
 
 		DLGR::DLVertexPositionColor points[4];
 		points[0] = DLGR::DLVertexPositionColor(DLMT::DL_VECTOR3::Zero, color);
@@ -71,7 +71,7 @@ namespace DebugDraw
         const int numVertices = 2 * numHemisphereVertices + numHeightSegments * numSlices;
 
         DebugDrawParameters drawInfo(DrawContext);
-        drawInfo.ApplyTransform(&transform);
+        drawInfo.ApplyTransform(transform);
 
         DLMT::DL_VECTOR4 color_f32 = color;
 
@@ -423,7 +423,7 @@ namespace DebugDraw
         const int numVertices = 2 * numHemisphereVertices;
 
         DebugDrawParameters drawInfo(DrawContext);
-        drawInfo.ApplyTransform(&transform);
+        drawInfo.ApplyTransform(transform);
 
         DLMT::DL_VECTOR4 color_f32 = color;
 
@@ -709,7 +709,7 @@ namespace DebugDraw
         const int numVertices = 2 * numHemisphereVertices;
 
         DebugDrawParameters drawInfo(DrawContext);
-        drawInfo.ApplyTransform(&transform);
+        drawInfo.ApplyTransform(transform);
 
         // Calculate vertex positions for the capsule
         DLGR::DLVertexPositionColor top_vertex;
@@ -902,7 +902,7 @@ namespace DebugDraw
     void DrawBox(IDrawContext* DrawContext, DLMT::DL_MATRIX44 transform, DLMT::DL_VECTOR3 halfExtents, dl_bool wireframe, DLMT::DL_VECTOR4 color)
     {
         DebugDrawParameters drawInfo(DrawContext);
-        drawInfo.ApplyTransform(&transform);
+        drawInfo.ApplyTransform(transform);
 
         DLMT::DL_VECTOR4 color_f32 = color;
 
@@ -1102,7 +1102,7 @@ namespace DebugDraw
     void DrawBoundingBox(IDrawContext* DrawContext, DLMT::DL_MATRIX44 transform, DLMT::DL_VECTOR3 center, DLMT::DL_VECTOR3 halfExtents, DLMT::DL_VECTOR4 color)
     {
         DebugDrawParameters drawInfo(DrawContext);
-        drawInfo.ApplyTransform(&transform);
+        drawInfo.ApplyTransform(transform);
 
         DLMT::DL_VECTOR4 color_f32 = color;
 
@@ -1191,7 +1191,7 @@ namespace DebugDraw
     void Draw3DArc(IDrawContext* DrawContext, DLMT::DL_MATRIX44 transform, dl_float32 radius, dl_float32 angle, dl_float32 height, dl_bool isFront, DLMT::DL_VECTOR4 color)
     {
         DebugDrawParameters drawInfo(DrawContext);
-        drawInfo.ApplyTransform(&transform);
+        drawInfo.ApplyTransform(transform);
 
 		DLMT::DL_VECTOR4 v_color = color;
 
@@ -1336,7 +1336,7 @@ namespace DebugDraw
     void DrawMesh(IDrawContext* DrawContext, DLMT::DL_MATRIX44 transform, DLUT::DLVector<DLMT::DL_VECTOR3> vertices, DLUT::DLVector<dl_uint> indices, DLUT::DLVector<dl_uint> indicesWireframe, dl_bool wireframe, DLMT::DL_VECTOR4 color)
     {
 		DebugDrawParameters drawInfo(DrawContext);
-		drawInfo.ApplyTransform(&transform);
+		drawInfo.ApplyTransform(transform);
         
         DLMT::DL_VECTOR4 v_color = color;
 		DLUT::DLVector<DLGR::DLVertexPositionColor> dlVertices;
