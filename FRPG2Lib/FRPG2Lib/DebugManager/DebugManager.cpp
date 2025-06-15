@@ -7,7 +7,7 @@ typedef void(_fastcall* oUpdate)(DebugManager* pThis, dl_float32 deltaTime);
 typedef dl_bool(_fastcall* oLoadResources)(DebugManager* pThis);
 typedef void(_fastcall* oFinalize)(DebugManager* pThis);
 
-typedef bool(_fastcall* oApplyShaderPreset)(DebugManager::Resources* pResources, IDrawContext* pDrawContext, dl_int presetIdx);
+typedef bool(_fastcall* oApplyShaderPreset)(DebugManager::Resources* pResources, IDrawContext* pDrawContext, dl_uint presetIdx);
 
 DebugManager::DebugManager()
 {
@@ -34,7 +34,7 @@ void DebugManager::Finalize()
 	FRPG2_CALL(oFinalize, 0xaf48e0, this);
 }
 
-void DebugManager::ApplyPreset(IDrawContext* pDrawContext, dl_int presetIdx)
+void DebugManager::ApplyPreset(IDrawContext* pDrawContext, dl_uint presetIdx)
 {
 	FRPG2_CALL(oApplyShaderPreset, 0xb4f6b0, &this->m_resources, pDrawContext, presetIdx);
 }

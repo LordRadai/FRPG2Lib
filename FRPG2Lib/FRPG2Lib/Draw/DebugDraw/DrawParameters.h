@@ -7,7 +7,7 @@ class DebugDrawParameters
 	int iVar4 = 0;
 	int iVar8 = 0;
 	Matrix m_transform = Matrix::Identity;
-	int m_iVar50 = -1;
+	int m_shaderPreset = -1;
 
 public:
 	DebugDrawParameters(IDrawContext* pDrawContext);

@@ -4,6 +4,16 @@
 class IDrawContext
 {
 public:
+	enum DrawParameter
+	{
+		DRAWPARAM_SCENESTATE = 0,
+		DRAWPARAM_DEPTHTESTING = 6,
+		DRAWPARAM_7,
+		DRAWPARAM_DISPREGIONTYPE,
+		DRAWPARAM_TRANSPARENCY = 25,
+		DRAWPARAM_CLIPPING = 54,
+	};
+
 	IDrawContext() {}
 	~IDrawContext() {}
 

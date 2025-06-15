@@ -28,7 +28,7 @@ public:
 	virtual dl_bool Initialize();
 	virtual void Finalize();
 
-	void ApplyPreset(IDrawContext* pDrawContext, dl_int preset);
+	void ApplyPreset(IDrawContext* pDrawContext, dl_uint preset);
 private:
 	Resources m_resources;
 	dl_int m_iVar110;
