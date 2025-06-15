@@ -116,7 +116,7 @@ public:
     dl_bool m_bSuppressUpdateTime;
     dl_bool m_bKeyboardOperation;
     dl_bool m_bDisableAppCursor;
-    dl_bool m_bDrawAxisGizmo;
+    dl_bool m_bDebugDrawEnabled;
     dl_bool m_bKillTimer;
     dl_bool field37_0x137;
     dl_bool m_bHasUpdated;

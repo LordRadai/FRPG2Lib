@@ -1,29 +1,23 @@
 #pragma once
-#include "dantelion2/dantelion2.h"
-#include "Draw/DrawContext.h"
+#include "ModelTestSceneImpl.h"
+#include "Scene.h"
 
-class Scene
+class ModelTestScene : public Scene
 {
-	dl_int m_sceneID;
-	dl_pointer m_pVar10;
-	dl_pointer m_pVar18;
-	dl_pointer m_pVar20;
-	dl_pointer m_pVar28;
-	dl_pointer m_pVar30;
-
 public:
-	Scene() {};
-	Scene(dl_int sceneID);
+	ModelTestSceneImpl* m_pModelTestSceneImpl;
+	DLTX::DLString m_initMapName;
+	dl_int m_iVar70;
+	CharacterManager::CharacterResources m_characterResources;
 
-	virtual ~Scene() {};
+	virtual ~ModelTestScene() {};
 	virtual void Initialise() {};
 	virtual void Update(float deltaTime) {};
 	virtual void Draw(IDrawContext* pDrawContext) {};
 	virtual void vfunction4(DLGR::DLDrawDevice* pDrawDevice) {};
 	virtual void DestroySceneImpl() {};
 	virtual dl_bool vfunction6() { return true; }
-	virtual void vfunction7() {};
-	virtual void vfunction8() {};
 	virtual void vfunction9() {};
 	virtual void HandleMouseInputs(dl_int* pInputData);
+	virtual dl_pointer GetRuntimeClassImpl();
 };

@@ -65,6 +65,7 @@
     <ClCompile Include="GuiFramework\GUITextureList\GUITextureList.cpp" />
     <ClCompile Include="CharacterManager\CharacterManager.cpp" />
     <ClCompile Include="dantelion2\Core\Kernel\DLPanic.cpp" />
+    <ClCompile Include="Scene\ModelTestScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppGUIRootWindow\AppGUIRootWindow.h" />
@@ -72,7 +73,6 @@
     <ClInclude Include="CameraOperator\CameraOperator.h" />
     <ClInclude Include="CameraOperator\FreeCameraOperator.h" />
     <ClInclude Include="CameraOperator\PerspectiveCameraOperator.h" />
-    <ClInclude Include="CharacterResources\CharacterResources.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGBuffer.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGDepthStencilView.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGRenderTargetView.h" />
@@ -364,6 +364,7 @@
     <ClInclude Include="Network\PacketReceiver\NetPacketReceiver.h" />
     <ClInclude Include="Network\Network.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLPanic.h" />
+    <ClInclude Include="Scene\ModelTestScene.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />

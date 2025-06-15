@@ -1,8 +1,8 @@
 #pragma once
 #include "dantelion2/dantelion2.h"
-#include "Draw/GX/GXDrawItem.h"
-#include "CharacterResources/CharacterResources.h"
+#include "Draw/System/GX/GXDrawItem.h"
 #include "GuiFramework/GuiFramework.h"
+#include "CharacterManager/CharacterManager.h"
 
 class Scene;
 
@@ -26,7 +26,7 @@ public:
 	dl_float32 m_fVar8C;
 	DLTX::DLString* m_pInitMapName;
 	dl_pointer m_pVar98;
-	CharacterResources m_characterResources;
+	CharacterManager::CharacterResources m_characterResources;
 	GuiFramework::GUITweakerDialog* m_pDebugGUI;
 	dl_bool m_bDrawAxis;
 	dl_bool m_bDrawGrid;
@@ -42,4 +42,6 @@ public:
 	dl_bool m_bVar5AB;
 	dl_float32 m_fVar5AC;
 	dl_float32 m_fVar5B0;
+
+	typedef void(_fastcall* oDebugDraw)(ModelTestSceneImpl* pThis, IDrawContext* pDrawContext);
 };

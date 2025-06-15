@@ -81,6 +81,7 @@
     <ClCompile Include="PX\PXRigidBody.cpp" />
     <ClCompile Include="ResourceManager\AppResourceManager.cpp" />
     <ClCompile Include="ResourceObject\FileResourceObject.cpp" />
+    <ClCompile Include="Scene\ModelTestScene.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
   </ItemGroup>
@@ -92,7 +93,6 @@
     <ClInclude Include="CameraOperator\FreeCameraOperator.h" />
     <ClInclude Include="CameraOperator\PerspectiveCameraOperator.h" />
     <ClInclude Include="CharacterManager\CharacterManager.h" />
-    <ClInclude Include="CharacterResources\CharacterResources.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGBuffer.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGDepthStencilView.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGRenderTargetView.h" />
@@ -378,6 +378,7 @@
     <ClInclude Include="ResourceManager\AppResourceManagerBase.h" />
     <ClInclude Include="ResourceManager\LiveResourceManager.h" />
     <ClInclude Include="ResourceManager\ResourceMemoryWatchdog.h" />
+    <ClInclude Include="Scene\ModelTestScene.h" />
     <ClInclude Include="Scene\ModelTestSceneImpl.h" />
     <ClInclude Include="Scene\Scene.h" />
     <ClInclude Include="Scene\SceneManager.h" />
