@@ -1,7 +1,7 @@
 #pragma once
-#include "GameObject/GameObject.h"
+#include "GameEntity/GameEntity.h"
 
-class CharacterCtrlBase : public GameObject
+class CharacterCtrlBase : public GameEntity
 {
 public:
 	enum EntityType : dl_uint8

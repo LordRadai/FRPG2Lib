@@ -14,6 +14,10 @@ public:
 	T GetValue() const { return m_value; }
 	T GetMin() const { return m_min; }
 	T GetMax() const { return m_max; }
+
+	void SetValue(T value) { m_value = value; }
+	void SetMin(T min) { m_min = min; }
+	void SetMax(T max) { m_max = max; }
 };
 
 class CharacterCtrl : public CharacterCtrlBase
