@@ -365,6 +365,11 @@
     <ClInclude Include="Network\Network.h" />
     <ClInclude Include="dantelion2\Core\Kernel\DLPanic.h" />
     <ClInclude Include="Scene\ModelTestScene.h" />
+    <ClInclude Include="GameObject\GameObject.h" />
+    <ClInclude Include="GameEntity\GameEntity.h" />
+    <ClInclude Include="Character\CharacterCtrlBase.h" />
+    <ClInclude Include="Character\CharacterCtrl.h" />
+    <ClInclude Include="PX\PXUserDataCharacterCtrl.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />

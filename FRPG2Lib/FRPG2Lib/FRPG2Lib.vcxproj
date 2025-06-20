@@ -93,6 +93,8 @@
     <ClInclude Include="CameraOperator\FreeCameraOperator.h" />
     <ClInclude Include="CameraOperator\PerspectiveCameraOperator.h" />
     <ClInclude Include="CharacterManager\CharacterManager.h" />
+    <ClInclude Include="Character\CharacterCtrl.h" />
+    <ClInclude Include="Character\CharacterCtrlBase.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGBuffer.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGDepthStencilView.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGRenderTargetView.h" />
@@ -215,9 +217,11 @@
     <ClInclude Include="Draw\Texture.h" />
     <ClInclude Include="FilterManager\FilterManager.h" />
     <ClInclude Include="Flver\AppFlverShaderReloadListener.h" />
+    <ClInclude Include="GameEntity\GameEntity.h" />
     <ClInclude Include="GameManager\GameManagerCallbackObject\GameManagerCallbackObject.inl" />
     <ClInclude Include="GameManager\GameManagerCallbackObj\GameManagerCallbackObjBase.h" />
     <ClInclude Include="GameManager\GameManagerCallbackObject\GameManagerCallbackObjectBase.h" />
+    <ClInclude Include="GameObject\GameObject.h" />
     <ClInclude Include="GuiFramework\GUIDropDownList\GUIDropDownList.h" />
     <ClInclude Include="GuiFramework\GUIListBox\GUIListBox.h" />
     <ClInclude Include="GuiFramework\GUITweakerItem\TGUITweakerItem.h" />
@@ -229,6 +233,7 @@
     <ClInclude Include="Network\Network.h" />
     <ClInclude Include="Network\PacketReceiver\NetPacketReceiver.h" />
     <ClInclude Include="ParamData\ParamData.h" />
+    <ClInclude Include="PX\PXUserDataCharacterCtrl.h" />
     <ClInclude Include="PX\PXWorldPostSimulationListener.h" />
     <ClInclude Include="PX\PXWorldPreSimulationListener.h" />
     <ClInclude Include="ResourceManager\AppResourceManager.h" />
