@@ -95,6 +95,7 @@
     <ClInclude Include="CharacterManager\CharacterManager.h" />
     <ClInclude Include="Character\CharacterCtrl.h" />
     <ClInclude Include="Character\CharacterCtrlBase.h" />
+    <ClInclude Include="Character\PlayerCtrl.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGBuffer.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGDepthStencilView.h" />
     <ClInclude Include="dantelion2\Core\Graphics\Core\CGRenderTargetView.h" />

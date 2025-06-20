@@ -370,6 +370,7 @@
     <ClInclude Include="Character\CharacterCtrlBase.h" />
     <ClInclude Include="Character\CharacterCtrl.h" />
     <ClInclude Include="PX\PXUserDataCharacterCtrl.h" />
+    <ClInclude Include="Character\PlayerCtrl.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dantelion2\Core\Kernel\detail\HeapAllocator.inl" />

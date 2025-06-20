@@ -3,13 +3,11 @@
 #include "ResourceManager/AppResourceManagerBase.h"
 #include "ResourceObject/ParamFileResourceObject.h"
 #include "Network/PacketReceiver/NetPacketReceiver.h"
+#include "Character/PlayerCtrl.h"
 #include "Draw/DrawContext.h"
 
 #define NUM_MAX_CHR 74
 #define NUM_MAX_PLAYER_CHR 6
-
-typedef dl_pointer CharacterCtrl;
-typedef dl_pointer PlayerCtrl;
 
 class CharacterManager
 {
