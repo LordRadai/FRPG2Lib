@@ -36,11 +36,11 @@ class CharacterCtrl : public CharacterCtrlBase
     };
 
     dl_pointer m_pChrResource;
-    DLMT::DL_VECTOR4 m_lookAt;
-    DLMT::DL_VECTOR4 field3_0x70;
-    DLMT::DL_VECTOR4 field4_0x80;
-    DLMT::DL_VECTOR4 m_position;
-    DLMT::DL_VECTOR4 field6_0xa0;
+    alignas(16) DLMT::DL_VECTOR4 m_lookAt;
+    alignas(16) DLMT::DL_VECTOR4 field3_0x70;
+    alignas(16) DLMT::DL_VECTOR4 field4_0x80;
+    alignas(16) DLMT::DL_VECTOR4 m_position;
+    alignas(16) DLMT::DL_VECTOR4 field6_0xa0;
     dl_pointer m_pChrSfxData;
     dl_pointer m_chrFlags;
     dl_pointer m_attackStateFlags;
