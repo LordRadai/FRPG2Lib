@@ -66,6 +66,7 @@
     <ClCompile Include="CharacterManager\CharacterManager.cpp" />
     <ClCompile Include="dantelion2\Core\Kernel\DLPanic.cpp" />
     <ClCompile Include="Scene\ModelTestScene.cpp" />
+    <ClCompile Include="GameManager\GameManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppGUIRootWindow\AppGUIRootWindow.h" />

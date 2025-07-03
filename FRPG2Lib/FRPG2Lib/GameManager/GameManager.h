@@ -108,7 +108,7 @@ public:
     dl_float32 field125_0x2464;
     dl_int field126_0x2468;
     dl_int field127_0x246c;
-    DLMT::DL_VECTOR4 m_cameraFocus;
+    alignas(16) DLMT::DL_VECTOR4 m_cameraFocus;
 };
 
 class GameManagerImp : public GameManager
@@ -187,5 +187,8 @@ public:
     dl_int field35_0x255c;
     CCallback<GameManagerImp, SteamShutdown_t, false> m_steamShutdownCallback;
 
+    GameManagerImp(DLKR::DLAllocator* pAllocator);
+
+	typedef GameManagerImp*(_fastcall* oGetInstance)(DLKR::DLAllocator* pAllocator);
 	typedef void(_fastcall* oGameStateUpdate)(GameManagerImp* pThis, dl_float32* pDeltaTimeData);
 };

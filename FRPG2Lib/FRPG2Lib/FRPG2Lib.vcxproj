@@ -41,6 +41,7 @@
     <ClCompile Include="Draw\FontDrawContext.cpp" />
     <ClCompile Include="Draw\System\MetaInfo\MetaInfoGroup.cpp" />
     <ClCompile Include="Draw\System\MetaInfo\MetaInfoManager.cpp" />
+    <ClCompile Include="GameManager\GameManager.cpp" />
     <ClCompile Include="GuiFramework\GUIComboBox\GUIComboBox.cpp" />
     <ClCompile Include="GuiFramework\GUIComboTweaker\GUIComboTweaker.cpp" />
     <ClCompile Include="GuiFramework\GUIEditBox\GUIEditBox.cpp" />
