@@ -22,6 +22,7 @@ public:
 
 class CharacterCtrl : public CharacterCtrlBase
 {
+public:
     class SpEffectOwner 
     {
         void** _vfptr;
