@@ -7,7 +7,7 @@ namespace GuiFramework
 	typedef void(_fastcall* oDestroyGUIObject)(GUIObject* pThis);
 	typedef void(_fastcall* oResetFlags)(GUIObject* pThis);
 
-	void GUIObject::free()
+	void GUIObject::Finalize()
 	{
 		FRPG2_CALL(oFree, 0x527840, this);
 	}

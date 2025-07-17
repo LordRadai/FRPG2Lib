@@ -36,64 +36,64 @@ namespace GuiFramework
     public:
         GUIWindowBase() : GUIMsgReceiver() {}
 
-        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617520); }
+        virtual UINT64 GetRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617520); }
         virtual ~GUIWindowBase() {}
-        virtual void onDestroy();
-        virtual dl_int onUpdate(GUIWindowBase* param_1) { return 0; }
-        virtual UINT64 getChildren() { return NULL; }
-        virtual dl_int* vf30(dl_int* param_1);
-        virtual GUIWindowBase* vf38(GUIWindowBase* param_1, dl_int param_2) { return nullptr; }
-        virtual dl_int vf40() { return 1; }
-        virtual dl_int vf48() { return 1; }
-        virtual dl_bool handleUserInput(GUIInputData* pInputData);
-        virtual dl_int onMouseOverContent(MousePosData* mousePos) { return 0; }
-        virtual dl_int onMouseOverFrame(MousePosData* mousePos) { return 0; }
-        virtual dl_int onLeftClick(MousePosData* mousePos) { return 0; }
-        virtual dl_int onLeftClickReleased(MousePosData* mousePos) { return 0; }
-        virtual dl_int onRightClick(MousePosData* mousePos) { return 0; }
-        virtual dl_int onRightClickReleased(MousePosData* mousePos) { return 0; }
-        virtual dl_int onMouseWheelPressed(MousePosData* mousePos) { return 0; }
-        virtual dl_int onMouseWheelReleased(MousePosData* mousePos) { return 0; }
-        virtual dl_int input9(MousePosData* mousePos) { return 0; }
-        virtual dl_int input10(MousePosData* mousePos) { return 0; }
-        virtual dl_int input11(MousePosData* mousePos) { return 0; }
-        virtual dl_int onMouseWheelScroll(MousePosData* mousePos) { return 0; }
-        virtual dl_int onActionButtonLeftClick(MousePosData* mousePos) { return 0; }
-        virtual dl_int onActionButtonLeftClickReleased(MousePosData* mousePos) { return 0; }
-        virtual dl_int onActionButtonRightClick(MousePosData* mousePos) { return 0; }
-        virtual dl_int onActionButtonRightClickReleased(MousePosData* mousePos) { return 0; }
-        virtual dl_int input19(MousePosData* mousePos) { return 0; }
-        virtual dl_int input20(MousePosData* mousePos) { return 0; }
-        virtual dl_int input21(MousePosData* mousePos) { return 0; }
-        virtual dl_int input22(MousePosData* mousePos) { return 0; }
-        virtual dl_int input23(MousePosData* mousePos) { return 0; }
-        virtual dl_int input24(MousePosData* mousePos) { return 0; }
-        virtual dl_int input2(MousePosData* mousePos) { return 0; }
-        virtual dl_int input14(MousePosData* mousePos) { return 0; }
-        virtual dl_int vf118(dl_uchar* pUnkAction);
-        virtual dl_int vf120() { return 0; }
-        virtual dl_int calculateContentSize(dl_int* pDst);
-        virtual dl_int vf130(dl_int* pDst);
-        virtual dl_bool handlePopUpMenuSelection(dl_int actionId) { return 0; }
-        virtual dl_int vf140() { return 0; }
-        virtual dl_int vf148() { return 0; }
-        virtual dl_int vf150() { return 0; }
-        virtual dl_int vf158(dl_int16* param_1) { return 0; }
-        virtual dl_int vf160() { return 0; }
-        virtual dl_int handleTextInput(GUITextInputData* textInputData) { return 0; }
-        virtual dl_int vf170() { return 0; }
-        virtual dl_int vf178() { return 0; }
-        virtual dl_int vf180() { return 0; }
-        virtual void vf188() {}
-        virtual void vf190() {}
-        virtual void vf198() {}
-        virtual dl_int initialise() { return 1; }
-        virtual dl_int vf1A8(GUIWindowBase* param_1);
-        virtual void destroyChildren();
-        virtual void draw(AppGUIRender* pAppGUIRender);
-        virtual void vf1C0();
-        virtual void vf1C8();
-        virtual void vf1D0() {}
+        virtual void OnDestroy();
+        virtual dl_int OnUpdate(GUIWindowBase* param_1) { return 0; }
+        virtual UINT64 GetChildren() { return NULL; }
+        virtual dl_int* Vf30(dl_int* param_1);
+        virtual GUIWindowBase* Vf38(GUIWindowBase* param_1, dl_int param_2) { return nullptr; }
+        virtual dl_int Vf40() { return 1; }
+        virtual dl_int Vf48() { return 1; }
+        virtual dl_bool HandleUserInput(GUIInputData* pInputData);
+        virtual dl_int OnMouseOverContent(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnMouseOverFrame(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnLeftClick(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnLeftClickReleased(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnRightClick(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnRightClickReleased(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnMouseWheelPressed(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnMouseWheelReleased(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input9(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input10(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input11(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnMouseWheelScroll(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnActionButtonLeftClick(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnActionButtonLeftClickReleased(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnActionButtonRightClick(MousePosData* mousePos) { return 0; }
+        virtual dl_int OnActionButtonRightClickReleased(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input19(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input20(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input21(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input22(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input23(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input24(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input2(MousePosData* mousePos) { return 0; }
+        virtual dl_int Input14(MousePosData* mousePos) { return 0; }
+        virtual dl_int Vf118(dl_uchar* pUnkAction);
+        virtual dl_int Vf120() { return 0; }
+        virtual dl_int CalculateContentSize(dl_int* pDst);
+        virtual dl_int Vf130(dl_int* pDst);
+        virtual dl_bool HandlePopUpMenuSelection(dl_int actionId) { return 0; }
+        virtual dl_int Vf140() { return 0; }
+        virtual dl_int Vf148() { return 0; }
+        virtual dl_int Vf150() { return 0; }
+        virtual dl_int Vf158(dl_int16* param_1) { return 0; }
+        virtual dl_int Vf160() { return 0; }
+        virtual dl_int HandleTextInput(GUITextInputData* textInputData) { return 0; }
+        virtual dl_int Vf170() { return 0; }
+        virtual dl_int Vf178() { return 0; }
+        virtual dl_int Vf180() { return 0; }
+        virtual void Vf188() {}
+        virtual void Vf190() {}
+        virtual void Vf198() {}
+        virtual dl_int Initialise() { return 1; }
+        virtual dl_int Vf1A8(GUIWindowBase* param_1);
+        virtual void DestroyChildren();
+        virtual void Draw(AppGUIRender* pAppGUIRender);
+        virtual void Vf1C0();
+        virtual void Vf1C8();
+        virtual void Vf1D0() {}
 
         static void* operator new(size_t size)
         {

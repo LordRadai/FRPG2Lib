@@ -10,13 +10,13 @@ namespace GuiFramework
 		GUIHeapList() {}
 		GUIHeapList(GUIWidget* pParent, GUIText* title);
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1878b58); }
+		virtual UINT64 GetRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1878b58); }
 		virtual ~GUIHeapList() {}
-		virtual void onDestroy();
-		virtual void destroyChildren();
-		virtual int initialise();
+		virtual void OnDestroy();
+		virtual void DestroyChildren();
+		virtual int Initialise();
 
-		GUIHeapListItem* getItem(int idx) const { return static_cast<GUIHeapListItem*>(this->m_listViewItems[idx]); }
+		GUIHeapListItem* GetItem(int idx) const { return static_cast<GUIHeapListItem*>(this->m_listViewItems[idx]); }
 
 		GUIHeapListItem* AddHeapListItem(const dl_wchar* title, DLKR::DLAllocator* pAllocator);
 

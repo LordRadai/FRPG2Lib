@@ -22,12 +22,12 @@ namespace GuiFramework
 		}
 
 		virtual ~TGUIComboTweaker() {}
-		virtual void onDestroy()
+		virtual void OnDestroy()
 		{
 			this->Destroy();
 			this->m_pValue = nullptr;
 
-			GUIComboTweaker::onDestroy();
+			GUIComboTweaker::OnDestroy();
 		}
 
 		virtual void update()

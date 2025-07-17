@@ -11,7 +11,7 @@ namespace GuiFramework
 		FRPG2_CALL(oGUIPropertyLabel, 0x5566c0, this, pParent, title, param_3);
 	}
 
-	void GUIPropertyLabel::draw(AppGUIRender* pAppGUIRender)
+	void GUIPropertyLabel::Draw(AppGUIRender* pAppGUIRender)
 	{
 		FRPG2_CALL(oDraw, 0x556920, this, pAppGUIRender);
 	}

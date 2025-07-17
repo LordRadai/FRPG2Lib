@@ -14,7 +14,7 @@ namespace GuiFramework
 		FRPG2_CALL(oGUIMultiTweaker, 0x5b3e30, this, count, title);
 	}
 
-	void GUIMultiTweaker::onDestroy()
+	void GUIMultiTweaker::OnDestroy()
 	{
 		FRPG2_CALL(oOnDestroy, 0x5b40b0, this);
 	}

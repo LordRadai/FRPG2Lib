@@ -20,34 +20,34 @@ namespace GuiFramework
         GUIListView(GUIWidget* pRoot, GUIText* title, GUIWidgetInitData* param_3);
         GUIListView(GUIWidget* pRoot, GUIText* title, int flags, int param_4);
 
-        virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x16185d0); }
+        virtual UINT64 GetRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x16185d0); }
         virtual ~GUIListView() {}
-        virtual void onDestroy();
-        virtual int onMouseOverContent(MousePosData* mousePos);
-        virtual int input9(MousePosData* mousePos);
-        virtual int onMouseWheelScroll(MousePosData* mousePos);
-        virtual int onLeftClick(MousePosData* mousePos);
-        virtual int onLeftClickReleased(MousePosData* mousePos);
-        virtual int onRightClick(MousePosData* mousePos);
-        virtual int vf118(BYTE* pUnkAction);
-        virtual int vf158(short* param_1);
-        virtual int vf170();
-        virtual int initialise();
-        virtual void destroyChildren();
-        virtual void draw(AppGUIRender* pAppGUIRender);
-        virtual void vf200(int* param_1) {}
-        virtual void vf208(int* param_1) {}
-        virtual void vf210(int* param_1) {}
+        virtual void OnDestroy();
+        virtual int OnMouseOverContent(MousePosData* mousePos);
+        virtual int Input9(MousePosData* mousePos);
+        virtual int OnMouseWheelScroll(MousePosData* mousePos);
+        virtual int OnLeftClick(MousePosData* mousePos);
+        virtual int OnLeftClickReleased(MousePosData* mousePos);
+        virtual int OnRightClick(MousePosData* mousePos);
+        virtual int Vf118(BYTE* pUnkAction);
+        virtual int Vf158(short* param_1);
+        virtual int Vf170();
+        virtual int Initialise();
+        virtual void DestroyChildren();
+        virtual void Draw(AppGUIRender* pAppGUIRender);
+        virtual void Vf200(int* param_1) {}
+        virtual void Vf208(int* param_1) {}
+        virtual void Vf210(int* param_1) {}
 
-        bool registerListViewItem(GUIListViewItem* pItem);
-        int getNumListViews() const { return this->m_listViewItems.size(); }
-        int getNumColumns() const { return this->m_columns.size(); }
-        bool addColumn(const wchar_t* label, short width);
-        bool setColumnWidth(short id, short width);
-        bool setColumnLabel(short id, GUIText* label);
+        bool RegisterListViewItem(GUIListViewItem* pItem);
+        int GetNumListViews() const { return this->m_listViewItems.size(); }
+        int GetNumColumns() const { return this->m_columns.size(); }
+        bool AddColumn(const wchar_t* label, short width);
+        bool SetColumnWidth(short id, short width);
+        bool SetColumnLabel(short id, GUIText* label);
 
-        GUIListViewItem* getListView(int idx) { return this->m_listViewItems[idx]; }
-        GUIListViewItem* getListView(int idx) const { return this->m_listViewItems[idx]; }
+        GUIListViewItem* GetListView(int idx) { return this->m_listViewItems[idx]; }
+        GUIListViewItem* GetListView(int idx) const { return this->m_listViewItems[idx]; }
 
         GUIListViewItem* AddListViewItem(const dl_wchar* title);
 
@@ -61,6 +61,7 @@ namespace GuiFramework
             return DLKR::Free(block, GetRootHeap(HEAPTYPE_GUIDEFAULT));
         }
 
+    protected:
         DLUT::DLVector<GUIListViewItem*> m_listViewItems;
         DLUT::DLVector<GUIListViewColumn> m_columns;
         dl_int16 m_textHeight = 0;

@@ -44,9 +44,9 @@ namespace GuiFramework
 
 		GUITweakerBase() : GUITweakerItem() {}
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617198); }
+		virtual UINT64 GetRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617198); }
 		virtual ~GUITweakerBase() {}
-		virtual void onDestroy() {}
+		virtual void OnDestroy() {}
 		virtual void unregister() {}
 
 		dl_uint styleFlags = 0;

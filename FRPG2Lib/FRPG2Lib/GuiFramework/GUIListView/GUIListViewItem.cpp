@@ -11,10 +11,10 @@ namespace GuiFramework
 	{
 		FRPG2_CALL(oGUIListView, 0x5d2d50, this, pListView, label);
 
-		pListView->registerListViewItem(this);
+		pListView->RegisterListViewItem(this);
 	}
 
-	void GUIListViewItem::onDestroy()
+	void GUIListViewItem::OnDestroy()
 	{
 		FRPG2_CALL(oOnDestroy, 0x5d3340, this);
 	}

@@ -7,7 +7,7 @@ namespace GuiFramework
 	{
 	public:
 		virtual ~GUIRootWindow();
-		virtual void draw(AppGUIRender* pAppGUIRender) {}
-		virtual void vf1C0() {}
+		virtual void Draw(AppGUIRender* pAppGUIRender) {}
+		virtual void Vf1C0() {}
 	};
 }

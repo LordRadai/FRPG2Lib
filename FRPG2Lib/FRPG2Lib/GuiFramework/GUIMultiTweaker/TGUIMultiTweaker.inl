@@ -32,7 +32,7 @@ namespace GuiFramework
 		}
 
 		virtual ~TGUIMultiTweaker() {}
-		virtual void onDestroy()
+		virtual void OnDestroy()
 		{
 			if (this->pOldValues)
 			{
@@ -41,7 +41,7 @@ namespace GuiFramework
 				this->pOldValues = nullptr;
 			}
 
-			GUIMultiTweaker::onDestroy();
+			GUIMultiTweaker::OnDestroy();
 		}
 
 		virtual void update()

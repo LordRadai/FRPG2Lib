@@ -12,7 +12,7 @@ namespace GuiFramework
 		FRPG2_CALL(oGUIComboTweaker, 0x547be0, this, pParent, title, param_3);
 	}
 
-	void GUIComboTweaker::onDestroy()
+	void GUIComboTweaker::OnDestroy()
 	{
 		FRPG2_CALL(oOnDestroy, 0x547f60, this);
 	}

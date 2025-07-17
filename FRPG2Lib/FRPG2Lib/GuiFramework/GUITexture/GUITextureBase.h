@@ -19,7 +19,7 @@ namespace GuiFramework
 			return DLKR::Free(block, GetRootHeap(HEAPTYPE_GUIDEFAULT));
 		}
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1616d78); }
+		virtual UINT64 GetRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1616d78); }
 		virtual ~GUITextureBase() {}
 		virtual uint32_t getTextureWidth() { return 0; }
 		virtual uint32_t getTextureHeight() { return 0; }

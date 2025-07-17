@@ -40,7 +40,7 @@ namespace GuiFramework
 		}
 
 		virtual ~TGUIValueStringPairData() {}
-		virtual void onDestroy() {}
+		virtual void OnDestroy() {}
 
 		TValueStringPair<T>* getValueStringPair(int idx)
 		{

@@ -36,96 +36,96 @@ namespace GuiFramework
 		FRPG2_CALL(oGUIListView, 0x5ca510, this, pRoot, title, flags, param_4);
 	}
 
-	void GUIListView::onDestroy()
+	void GUIListView::OnDestroy()
 	{
 		FRPG2_CALL(oOnDestroy, 0x5cd450, this);
 	}
 
-	int GUIListView::onMouseOverContent(MousePosData* mousePos)
+	int GUIListView::OnMouseOverContent(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x5ccf90, this, mousePos);
 	}
 
-	int GUIListView::input9(MousePosData* mousePos)
+	int GUIListView::Input9(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x5ccd60, this, mousePos);
 	}
 
-	int GUIListView::onMouseWheelScroll(MousePosData* mousePos)
+	int GUIListView::OnMouseWheelScroll(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x5cd140, this, mousePos);
 	}
 
-	int GUIListView::onLeftClick(MousePosData* mousePos)
+	int GUIListView::OnLeftClick(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x5ccb10, this, mousePos);
 	}
 
-	int GUIListView::onLeftClickReleased(MousePosData* mousePos)
+	int GUIListView::OnLeftClickReleased(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x5ccf10, this, mousePos);
 	}
 
-	int GUIListView::onRightClick(MousePosData* mousePos)
+	int GUIListView::OnRightClick(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x5cccb0, this, mousePos);
 	}
 
-	int GUIListView::vf118(BYTE* pUnkAction)
+	int GUIListView::Vf118(BYTE* pUnkAction)
 	{
 		return FRPG2_CALL(oVf118, 0x5cbfe0, this, pUnkAction);
 	}
 
-	int GUIListView::vf158(short* param_1)
+	int GUIListView::Vf158(short* param_1)
 	{
 		return FRPG2_CALL(oVf158, 0x5cd240, this, param_1);
 	}
 
-	int GUIListView::vf170()
+	int GUIListView::Vf170()
 	{
 		return FRPG2_CALL(oVf170, 0x5ccae0, this);
 	}
 
-	int GUIListView::initialise()
+	int GUIListView::Initialise()
 	{
 		return FRPG2_CALL(oInitialise, 0x5cc930, this);
 	}
 
-	void GUIListView::destroyChildren()
+	void GUIListView::DestroyChildren()
 	{
 		FRPG2_CALL(oDestroyChildren, 0x5cd570, this);
 	}
 
-	void GUIListView::draw(AppGUIRender* pAppGUIRender)
+	void GUIListView::Draw(AppGUIRender* pAppGUIRender)
 	{
 		FRPG2_CALL(oDraw, 0x5cc3f0, this, pAppGUIRender);
 	}
 
-	bool GUIListView::registerListViewItem(GUIListViewItem* pItem)
+	bool GUIListView::RegisterListViewItem(GUIListViewItem* pItem)
 	{
 		return FRPG2_CALL(oAddListViewItemToListView, 0x5ca910, this, pItem, -1);
 	}
 
-	bool GUIListView::addColumn(const wchar_t* label, short width)
+	bool GUIListView::AddColumn(const wchar_t* label, short width)
 	{
 		GUIText guiTextItem(label);
 
-		const int idx = this->getNumColumns();
+		const int idx = this->GetNumColumns();
 
 		bool status = FRPG2_CALL(oAddListViewColumn, 0x5ca970, this, &guiTextItem, idx, width, -1);
-		this->setColumnWidth(idx, width);
+		this->SetColumnWidth(idx, width);
 
 		guiTextItem.Free();
 
 		return status;
 	}
 
-	bool GUIListView::setColumnWidth(short idx, short width)
+	bool GUIListView::SetColumnWidth(short idx, short width)
 	{
 		return FRPG2_CALL(oSetColumnWidth, 0x5cad90, this, idx, width);
 	}
 
-	bool GUIListView::setColumnLabel(short idx, GUIText* label)
+	bool GUIListView::SetColumnLabel(short idx, GUIText* label)
 	{
 		return FRPG2_CALL(oSetColumnLabel, 0x5cac70, this, idx, label);
 	}

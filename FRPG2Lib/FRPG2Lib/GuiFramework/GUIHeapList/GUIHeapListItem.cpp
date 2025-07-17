@@ -12,13 +12,13 @@ namespace GuiFramework
 		this->m_pHeap = pAllocator;
 	}
 
-	void GUIHeapListItem::onDestroy()
+	void GUIHeapListItem::OnDestroy()
 	{
 		this->m_pHeap = nullptr;
-		GUIListViewItem::onDestroy();
+		GUIListViewItem::OnDestroy();
 	}
 
-	int GUIHeapListItem::onUpdate(GUIText* param_1, int columnIdx)
+	int GUIHeapListItem::OnUpdate(GUIText* param_1, int columnIdx)
 	{
 		DLKR::DLAllocator* pHeap = this->m_pHeap;
 

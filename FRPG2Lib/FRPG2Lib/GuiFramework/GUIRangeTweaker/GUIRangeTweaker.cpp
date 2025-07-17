@@ -8,7 +8,7 @@ namespace GuiFramework
 
 	typedef void(_fastcall* oCreateRangeTweakWidget)(GUIRangeTweaker* pThis, GUIWidget* pParent, GUIText* title);
 
-	void GUIRangeTweaker::onDestroy()
+	void GUIRangeTweaker::OnDestroy()
 	{
 		FRPG2_CALL(oOnDestroy, 0x541fc0, this);
 	}

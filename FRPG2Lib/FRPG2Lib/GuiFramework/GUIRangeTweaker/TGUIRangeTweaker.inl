@@ -24,10 +24,10 @@ namespace GuiFramework
 
 		virtual ~TGUIRangeTweaker() {}
 
-		virtual void onDestroy()
+		virtual void OnDestroy()
 		{
 			this->pValue = nullptr;
-			GUIRangeTweaker::onDestroy();
+			GUIRangeTweaker::OnDestroy();
 		}
 
 		virtual void update()

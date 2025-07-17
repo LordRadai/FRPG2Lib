@@ -20,10 +20,10 @@ namespace GuiFramework
 		GUIHeapListItem() {}
 		GUIHeapListItem(GUIHeapList* pHeapList, GUIText* label, DLKR::DLAllocator* pAllocator);
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1878b68); }
+		virtual UINT64 GetRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1878b68); }
 		virtual ~GUIHeapListItem() {}
-		virtual void onDestroy();
-		virtual int onUpdate(GUIText* param_1, int columnIdx);
+		virtual void OnDestroy();
+		virtual int OnUpdate(GUIText* param_1, int columnIdx);
 
 		static void* operator new(size_t size)
 		{

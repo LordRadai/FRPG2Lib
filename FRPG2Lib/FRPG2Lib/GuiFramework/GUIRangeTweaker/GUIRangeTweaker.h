@@ -10,9 +10,9 @@ namespace GuiFramework
 	public:
 		GUIRangeTweaker() {}
 
-		virtual UINT64 getRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617220); }
+		virtual UINT64 GetRuntimeClassImpl() { return *(UINT64*)(MODULE_ADDR+0x1617220); }
 		virtual ~GUIRangeTweaker() {}
-		virtual void onDestroy();
+		virtual void OnDestroy();
 		virtual void unregister();
 		virtual void vf30() {}
 		virtual GUIRangeDataBase* getRangeData() = 0;

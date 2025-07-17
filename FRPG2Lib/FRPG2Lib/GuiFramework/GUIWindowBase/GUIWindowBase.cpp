@@ -15,57 +15,57 @@ namespace GuiFramework
 	typedef void(_fastcall* oVf1C0)(GUIWindowBase* pThis);
 	typedef void(_fastcall* oVf1C8)(GUIWindowBase* pThis);
 
-	void GUIWindowBase::onDestroy()
+	void GUIWindowBase::OnDestroy()
 	{
 		FRPG2_CALL(oOnDestroy, 0x551c50, this);
 	}
 
-	dl_int* GUIWindowBase::vf30(dl_int* param_1)
+	dl_int* GUIWindowBase::Vf30(dl_int* param_1)
 	{
 		return FRPG2_CALL(oVf30, 0x3c0600, this, param_1);
 	}
 
-	dl_bool GUIWindowBase::handleUserInput(GUIInputData* pInputData)
+	dl_bool GUIWindowBase::HandleUserInput(GUIInputData* pInputData)
 	{
 		return FRPG2_CALL(oHandleUserInput, 0x550f90, this, pInputData);
 	}
 
-	dl_int GUIWindowBase::vf118(dl_uchar* pUnkAction)
+	dl_int GUIWindowBase::Vf118(dl_uchar* pUnkAction)
 	{
 		return FRPG2_CALL(oVf118, 0x551670, this, pUnkAction);
 	}
 
-	dl_int GUIWindowBase::calculateContentSize(dl_int* pDst)
+	dl_int GUIWindowBase::CalculateContentSize(dl_int* pDst)
 	{
 		return FRPG2_CALL(oCalcContentSize, 0x3c2300, this, pDst);
 	}
 
-	dl_int GUIWindowBase::vf130(dl_int* pDst)
+	dl_int GUIWindowBase::Vf130(dl_int* pDst)
 	{
 		return FRPG2_CALL(oVf130, 0x551870, this, pDst);
 	}
 
-	dl_int GUIWindowBase::vf1A8(GUIWindowBase* param_1)
+	dl_int GUIWindowBase::Vf1A8(GUIWindowBase* param_1)
 	{
 		return FRPG2_CALL(oVf1A8, 0x551cf0, this, param_1);
 	}
 
-	void GUIWindowBase::destroyChildren()
+	void GUIWindowBase::DestroyChildren()
 	{
 		FRPG2_CALL(oDestroyChildren, 0x551d30, this);
 	}
 
-	void GUIWindowBase::draw(AppGUIRender* pAppGUIRender)
+	void GUIWindowBase::Draw(AppGUIRender* pAppGUIRender)
 	{
 		FRPG2_CALL(oDraw, 0x551d60, this, pAppGUIRender);
 	}
 
-	void GUIWindowBase::vf1C0()
+	void GUIWindowBase::Vf1C0()
 	{
 		FRPG2_CALL(oVf1C0, 0x551e40, this);
 	}
 
-	void GUIWindowBase::vf1C8()
+	void GUIWindowBase::Vf1C8()
 	{
 		FRPG2_CALL(oVf1C8, 0x5520c0, this);
 	}

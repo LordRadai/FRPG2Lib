@@ -11,11 +11,11 @@ namespace GuiFramework
 		FRPG2_CALL(oGUIHeapList, 0xc531e0, this, pParent, title, &widgetData);
 	}
 
-	void GUIHeapList::onDestroy()
+	void GUIHeapList::OnDestroy()
 	{
 		for (size_t i = 0; i < this->m_listViewItems.size(); i++)
 		{
-			auto item = this->getItem(i);
+			auto item = this->GetItem(i);
 
 			if (item)
 				item->Destroy();
@@ -23,14 +23,14 @@ namespace GuiFramework
 
 		this->m_listViewItems.clear();
 
-		GUIListView::onDestroy();
+		GUIListView::OnDestroy();
 	}
 
-	void GUIHeapList::destroyChildren()
+	void GUIHeapList::DestroyChildren()
 	{
 		for (size_t i = 0; i < this->m_listViewItems.size(); i++)
 		{
-			auto item = this->getItem(i);
+			auto item = this->GetItem(i);
 
 			if (item)
 				item->Destroy();
@@ -38,23 +38,23 @@ namespace GuiFramework
 
 		this->m_listViewItems.clear();
 
-		GUIListView::destroyChildren();
+		GUIListView::DestroyChildren();
 	}
 
-	int GUIHeapList::initialise()
+	int GUIHeapList::Initialise()
 	{
-		int initStatus = GUIListView::initialise();
+		int initStatus = GUIListView::Initialise();
 
 		if (initStatus)
 		{
-			this->addColumn(L"HeapID", 50);
-			this->addColumn(L"AllocatorID", 50);
-			this->addColumn(L"FreeSize", 100);
-			this->addColumn(L"UseSize", 100);
-			this->addColumn(L"Use (%)", 50);
-			this->addColumn(L"Total Size", 100);
-			this->addColumn(L"MaxUseSize", 100);
-			this->addColumn(L"MaxUse (%)", 50);
+			this->AddColumn(L"HeapID", 50);
+			this->AddColumn(L"AllocatorID", 50);
+			this->AddColumn(L"FreeSize", 100);
+			this->AddColumn(L"UseSize", 100);
+			this->AddColumn(L"Use (%)", 50);
+			this->AddColumn(L"Total Size", 100);
+			this->AddColumn(L"MaxUseSize", 100);
+			this->AddColumn(L"MaxUse (%)", 50);
 		}
 
 		return initStatus;

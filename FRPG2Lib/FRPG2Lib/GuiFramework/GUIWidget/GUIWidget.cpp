@@ -25,97 +25,97 @@ namespace GuiFramework
 	typedef void(_fastcall* oEditPosSize)(GUIWidget* pThis, dl_uint pos_x, dl_uint pos_y, dl_uint size_x, dl_uint size_y);
 	typedef void(_fastcall* oDestroy)(GUIWidget* pThis);
 
-	void GUIWidget::onDestroy()
+	void GUIWidget::OnDestroy()
 	{
 		FRPG2_CALL(oDestroy, 0x57abe0, this);
 	}
 
-	int GUIWidget::onUpdate(GUIWindowBase* param_1)
+	int GUIWidget::OnUpdate(GUIWindowBase* param_1)
 	{
 		return FRPG2_CALL(oOnUpdate, 0x57ae10, this, param_1);
 	}
 
-	UINT64 GUIWidget::getChildren()
+	UINT64 GUIWidget::GetChildren()
 	{
 		return FRPG2_CALL(oGetChildren, 0x537a50, this);
 	}
 
-	int* GUIWidget::vf30(int* param_1)
+	int* GUIWidget::Vf30(int* param_1)
 	{
 		return FRPG2_CALL(oVf30, 0x537a00, this, param_1);
 	}
 
-	GUIWindowBase* GUIWidget::vf38(GUIWindowBase* param_1, int param_2)
+	GUIWindowBase* GUIWidget::Vf38(GUIWindowBase* param_1, int param_2)
 	{
 		return FRPG2_CALL(oVf38, 0x57ba90, this, param_1, param_2);
 	}
 
-	int GUIWidget::onMouseOverContent(MousePosData* mousePos)
+	int GUIWidget::OnMouseOverContent(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x57fad0, this, mousePos);
 	}
 
-	int GUIWidget::onMouseOverFrame(MousePosData* mousePos)
+	int GUIWidget::OnMouseOverFrame(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x57e570, this, mousePos);
 	}
 
-	int GUIWidget::onActionButtonLeftClick(MousePosData* mousePos)
+	int GUIWidget::OnActionButtonLeftClick(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x57edd0, this, mousePos);
 	}
 
-	int GUIWidget::onActionButtonLeftClickReleased(MousePosData* mousePos)
+	int GUIWidget::OnActionButtonLeftClickReleased(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x57f700, this, mousePos);
 	}
 
-	int GUIWidget::input2(MousePosData* mousePos)
+	int GUIWidget::Input2(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x57fb00, this, mousePos);
 	}
 
-	int GUIWidget::input14(MousePosData* mousePos)
+	int GUIWidget::Input14(MousePosData* mousePos)
 	{
 		return FRPG2_CALL(oInputAction, 0x57fb30, this, mousePos);
 	}
 
-	int GUIWidget::vf118(BYTE* pUnkAction)
+	int GUIWidget::Vf118(BYTE* pUnkAction)
 	{
 		return FRPG2_CALL(oVf118, 0x57fcf0, this, pUnkAction);
 	}
 
-	int GUIWidget::calculateContentSize(int* pDst)
+	int GUIWidget::CalculateContentSize(int* pDst)
 	{
 		return FRPG2_CALL(oCalcContentSize, 0x57cd90, this, pDst);
 	}
 
-	int GUIWidget::vf130(int* pDst)
+	int GUIWidget::Vf130(int* pDst)
 	{
 		return FRPG2_CALL(oVf130, 0x537df0, this, pDst);
 	}
 
-	int GUIWidget::initialise()
+	int GUIWidget::Initialise()
 	{
 		return FRPG2_CALL(oInitialise, 0x57cb70, this);
 	}
 
-	int GUIWidget::vf1A8(GUIWindowBase* param_1)
+	int GUIWidget::Vf1A8(GUIWindowBase* param_1)
 	{
 		return FRPG2_CALL(oVf1A8, 0x57cc40, this, (GUIWidget*)param_1);
 	}
 
-	void GUIWidget::destroyChildren()
+	void GUIWidget::DestroyChildren()
 	{
 		return FRPG2_CALL(oDestroyChildren, 0x57e460, this);
 	}
 
-	void GUIWidget::draw(AppGUIRender* pAppGUIRender)
+	void GUIWidget::Draw(AppGUIRender* pAppGUIRender)
 	{
 		return FRPG2_CALL(oDraw, 0x57bec0, this, pAppGUIRender);
 	}
 
-	void GUIWidget::vf1C0()
+	void GUIWidget::Vf1C0()
 	{
 		return FRPG2_CALL(oVf1C0, 0x57bf50, this);
 	}

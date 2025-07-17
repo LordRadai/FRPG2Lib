@@ -28,8 +28,8 @@ public:
     };
 
     DLKR::DLAllocator* m_pAllocator;
-    DLUT::DLVector<CharacterCtrl> m_characterList;
-    DLUT::DLVector<CharacterCtrl> m_newEntities;
+    DLUT::DLVector<CharacterCtrl*> m_characterList;
+    DLUT::DLVector<CharacterCtrl*> m_newEntities;
     PlayerCtrl* m_pPlayerCharacters[NUM_MAX_PLAYER_CHR];
     CharacterCtrl* m_pCharacters[NUM_MAX_CHR];
     PlayerCtrl* m_pPlayerCharacters2[NUM_MAX_PLAYER_CHR];
