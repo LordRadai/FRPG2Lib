@@ -61,7 +61,6 @@ namespace GuiFramework
             return DLKR::Free(block, GetRootHeap(HEAPTYPE_GUIDEFAULT));
         }
 
-    protected:
         DLUT::DLVector<GUIListViewItem*> m_listViewItems;
         DLUT::DLVector<GUIListViewColumn> m_columns;
         dl_int16 m_textHeight = 0;
